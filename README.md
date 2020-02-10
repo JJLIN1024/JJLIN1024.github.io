@@ -1,2 +1,2 @@
-# JJLIN1024.github.io
-My portfolio
+# Welcome to my personal website
+
