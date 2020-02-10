@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://JJLIN1024.github.io/dist",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "sass": "node-sass -w scss/ -o css/",
     "deploy": "gh-pages -d dist"
   },
   "author": "Jimmy Lin",
