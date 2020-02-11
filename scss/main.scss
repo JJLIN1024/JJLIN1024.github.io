@@ -115,42 +115,82 @@ main {
 .about-info {
   width: 65%;
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  grid-template-columns: repeat(2, 1fr);
 
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    height: 250px;
-    width: 325px;
-    border-radius: 5px;
-    border: $secondary-color 3px solid;
+  h3 {
+    font-size: 2rem;
+  }
+  .bio {
+    font-size: 1.2rem;
   }
 
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
+  .skill-bars {
+    list-style: none;
+    margin-top: 1.2rem;
+    padding-left: 0;
+
+    .progress-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      &.percent80 {
+        width: 80%;
+      }
+      &.percent60 {
+        width: 60%;
+      }
+      &.percent50 {
+        width: 50%;
+      }
+    }
+
+    li {
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    .progress {
+      width: 100%;
+      height: 5px;
+      background-color: $secondary-color;
+      &.percent80 {
+        width: 80%;
+      }
+      &.percent60 {
+        width: 60%;
+      }
+      &.percent50 {
+        width: 50%;
+      }
+    }
   }
 
   .job-1 {
-    grid-area: job1;
   }
 
   .job-2 {
-    grid-area: job2;
+    a {
+      text-decoration: underline;
+    }
+    a:hover{
+      color: $secondary-color;
+    }
   }
 
   .job-3 {
-    grid-area: job3;
   }
 
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    font-size: 1.2rem;
+    .blank-heading {
+      visibility: hidden;
+    }
   }
 }
 
