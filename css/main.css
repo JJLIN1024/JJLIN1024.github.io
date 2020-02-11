@@ -137,7 +137,7 @@ h3 {
     align-items: center;
     justify-content: center;
     font-size: 8rem;
-    margin-bottom: 5rem; }
+    margin-bottom: 2rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -147,6 +147,21 @@ h3 {
     display: inline;
     border: 3px solid #66FCF1;
     border-radius: 5px; }
+  h1.lg-heading.about,
+  h2.lg-heading.about,
+  h3.lg-heading.about {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase; }
+  h1.sm-heading.about,
+  h2.sm-heading.about,
+  h3.sm-heading.about {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    border: none;
+    padding: none;
+    margin-top: 0;
+    color: #66FCF1; }
 
 a {
   color: #fff;
@@ -186,6 +201,7 @@ main {
       margin-top: 20vh; }
 
 .about-info {
+  width: 65%;
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
