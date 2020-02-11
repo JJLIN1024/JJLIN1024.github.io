@@ -65,6 +65,9 @@ main {
   min-height: calc(100vh - 60px);
 
   .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
     margin-top: 1rem;
 
     a {
@@ -83,6 +86,7 @@ main {
       }
     }
   }
+
 
   &#home {
     overflow: hidden;
@@ -103,7 +107,9 @@ main {
   .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
+    height: 250px;
+    width: 325px;
+    border-radius: 5px;
     border: $secondary-color 3px solid;
   }
 

@@ -103,9 +103,10 @@
 
     .portrait {
       width: 250px;
-      height: 250px;
-      background: url('../img/portrait.jpg');
-      border-radius: 50%;
+      height: 170px;
+      background: url('../img/JimmyLin.JPG') no-repeat;
+      background-size: 100% auto;
+      border-radius: 5px;
       border: solid 3px $secondary-color;
     }
   }
