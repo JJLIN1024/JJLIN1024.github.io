@@ -1,3 +1,17 @@
+.menu-text {
+  position: absolute;
+  z-index: 3;
+  right: 80px;
+  top: 35px;
+  font-weight: 300;
+
+  &.show {
+    visibility: hidden;
+    right: 300px;
+    top: 35px;
+  }
+}
+
 // Menu Button
 .menu-btn {
   position: absolute;
@@ -10,8 +24,8 @@
   .btn-line {
     width: 28px;
     height: 3px;
-    margin: 0 0 5px 0;
-    background: set-text-color($primary-color);
+    margin: 0 0 7px 0;
+    background: $secondary-color;
     @include easeOut;
   }
 
@@ -32,7 +46,7 @@
 
       // Line 3 - Rotate
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(8.5px, -9px);
       }
     }
   }

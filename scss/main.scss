@@ -23,18 +23,25 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    margin-bottom: 5rem;
   }
+
 
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(darken($primary-color, 2), 0.5);
+    display: inline;
+    border: 3px solid $secondary-color;
+    border-radius: 5px;
   }
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
@@ -49,6 +56,10 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 4rem;
   // height: 100%;
   min-height: calc(100vh - 60px);
@@ -62,6 +73,13 @@ main {
 
       &:hover {
         color: $secondary-color;
+      }
+    }
+
+    i {
+      &:hover {
+        color: $secondary-color;
+        transform: scale(1.1, 1.1);
       }
     }
   }
