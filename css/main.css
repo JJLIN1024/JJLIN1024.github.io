@@ -64,8 +64,8 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 170px;
+      width: 350px;
+      height: 250px;
       background: url("../img/JimmyLin.JPG") no-repeat;
       background-size: 100% auto;
       border-radius: 5px;
@@ -346,6 +346,8 @@ main {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  .menu-branding .portrait {
+    visibility: hidden; }
   main {
     align-items: center;
     text-align: center; }

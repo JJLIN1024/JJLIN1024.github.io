@@ -31,6 +31,11 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  .menu-branding {
+    .portrait {
+      visibility: hidden;
+    }
+  }
   main {
     align-items: center;
     text-align: center;
