@@ -240,14 +240,22 @@ main {
 
   img {
     width: 100%;
+    min-height: 150px;
     border: 3px #fff solid;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
+    // &:hover {
+    //   opacity: 0.5;
+    //   @include easeOut;
+    // }
   }
+
+  .imgOverlay {
+    position: relative;
+    top: -73%;
+    right: -10%;
+    width: 10%;
+    height: 10%;
+  }
+
 }
 
 // Contact Page
