@@ -240,20 +240,51 @@ main {
 
   img {
     width: 100%;
-    min-height: 150px;
+    height: auto;
+    opacity: 1;
+    transition: .5s ease;
     border: 3px #fff solid;
-    // &:hover {
-    //   opacity: 0.5;
-    //   @include easeOut;
-    // }
+    backface-visibility: hidden;
+  }
+
+  .item {
+    position: relative;
+    &:hover image {
+      opacity: 0.3;
+    }
+
+    &:hover .description {
+      opacity: 1;
+    }
+
+    &:hover .imgOverlay {
+      opacity: 1;
+    }
+
+    
   }
 
   .imgOverlay {
-    position: relative;
-    top: -73%;
-    right: -10%;
-    width: 10%;
-    height: 10%;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    // transform: translate(-50%, -50%);
+    // -ms-transform: translate(-50%, -50%);
+    // text-align: center;
+  }
+
+  .description {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 1.4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;  
   }
 
 }
