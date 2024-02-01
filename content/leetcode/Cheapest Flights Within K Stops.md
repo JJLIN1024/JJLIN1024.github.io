@@ -62,10 +62,7 @@ The optimal path with no stops from city 0 to 2 is marked in red and has cost 50
 
 ## Code 
 
-- [[notes/algorithm/Correctness of Dijkstra_s Algorithm]]
-- [[notes/algorithm/use Bellman-Ford to Detect Negative Cycle]]
-
-### Dijkstra(TLE)
+### Dijkstra (TLE now)
 
 $O((V+E) \log V)$
 
@@ -91,10 +88,7 @@ public:
                 pq.push(make_tuple(neighbor, cost + w, stops - 1));
             }
         }
-
-
         return -1;
-
     }
 };
 ```
@@ -107,24 +101,24 @@ $O(VE)$.
 Bellman Ford 的關鍵在於：不會有任何一條 shortest path 有超過 $V - 1$ 條 edge。在此題中，因為不能超過 $k$ stops，所以 for loop 做 $k + 1$ 次。
 
 ```cpp
-typedef tuple<int, int, int> tp;
 class Solution {
 public:
     int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
-        
         vector<int> dp(n, INT_MAX);
         dp[src] = 0;
         for(int i = 0; i < k + 1; i++) {
             vector<int> temp(dp);
             for(auto flight: flights) {
-                if(dp[flight[0]] != INT_MAX)
-                    temp[flight[1]] = min(temp[flight[1]], dp[flight[0]] + flight[2]);
+                int u = flight[0];
+                int v = flight[1];
+                int w = flight[2];
+                if(dp[u] != INT_MAX)
+                    temp[v] = min(temp[v], dp[u] + w);
             }
             dp = temp;
         }
 
         return dp[dst] == INT_MAX ? -1 : dp[dst];
-
     }
 };
 ```
