@@ -1,7 +1,7 @@
 ---
 title: Algorithm to find SCC
-updated: 2022-06-17 08:55:36Z
-created: 2022-05-13 00:38:35Z
+updated: 2022-06-17
+created: 2022-05-13
 ---
 
 ## Steps

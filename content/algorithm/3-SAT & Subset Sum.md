@@ -1,7 +1,7 @@
 ---
 title: 3-SAT & Subset Sum
-updated: 2022-06-17 08:41:42Z
-created: 2022-05-18 02:32:54Z
+updated: 2022-06-17
+created: 2022-05-18
 tags:
   - ongoing
 ---

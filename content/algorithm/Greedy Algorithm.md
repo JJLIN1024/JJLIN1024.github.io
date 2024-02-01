@@ -1,7 +1,6 @@
 ---
 title: Greedy Algorithm
-date: 2022-12-1413:49
-lastmod: "2022-12-21"
+date: 2022-12-14
 author: Jimmy Lin
 tags: [""]
 draft: false
