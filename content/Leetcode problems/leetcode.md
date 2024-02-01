@@ -48,6 +48,6 @@ draft: false
 	- [[Sorting Problems]]
 	- [[Heap(Priority Queue) Problems]]
 	- [[Line Sweep Problems]]
-	- [[Math Problems]]
+	- 
 	- [[Game Theory Problems]]
 	- [[Balanced Search Tree Problems]]
