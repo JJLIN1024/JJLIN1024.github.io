@@ -1,7 +1,7 @@
 ---
-title: Leetcode
-date: 2022-12-24
-lastmod: 2022-12-24
+title: leetcode
+date: 2023-07-01
+lastmod: 2024-02-01
 author:
   - Jimmy Lin
 tags: 

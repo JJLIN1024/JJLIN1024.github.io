@@ -26,8 +26,8 @@ draft: false
 ## Book I Read
 - [[Books]]
 ## Tech I Learned
-- [[Algorithm]]
-- [[Leetcode]]
+- [[algorithm]]
+- [[leetcode]]
 - [[C]]
 - [[C++]]
 - [[Operating System]]

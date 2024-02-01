@@ -9,6 +9,9 @@ tags:
   - bellman_ford
   - review
 draft: false
+sr-due: 2024-02-05
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description

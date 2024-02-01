@@ -1,5 +1,5 @@
 ---
-title: Algorithm
+title: algorithm
 date: 2024-02-01
 lastmod: 2024-02-01
 author:
