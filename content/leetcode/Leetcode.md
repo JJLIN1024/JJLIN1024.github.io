@@ -28,7 +28,7 @@ draft: false
 	- [system-design-primer](https://github.com/donnemartin/system-design-primer)
 	- [A summary: how to use bit manipulation to solve problems easily and efficiently](https://leetcode.com/problems/sum-of-two-integers/solutions/84278/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently)
 - Problems
-	- [[Array Problems]] #done
+	- [[Array Problems]]
 	- [[Prefix Sum Problems]]
 	- [[Linked List Problems|Linked List Problems]] 
 	- [[Hash Table Problems]]
@@ -42,10 +42,8 @@ draft: false
 	- [[Disjoint Set Problems]]
 	- [[Graph Problems]]
 	- [[Dynamic Programming Problems]]
-	- 
 	- [[Greedy Problems]]
 	- [[Divide and Conquer Problems]]
-	- 
 	- [[Bit Manipulation Problems|Bit Manipulation Problems]]
 	- [[Sorting Problems]]
 	- [[Heap(Priority Queue) Problems]]
@@ -53,4 +51,3 @@ draft: false
 	- [[Math Problems]]
 	- [[Game Theory Problems]]
 	- [[Balanced Search Tree Problems]]
-- 
