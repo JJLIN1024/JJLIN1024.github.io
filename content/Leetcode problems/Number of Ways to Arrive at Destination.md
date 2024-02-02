@@ -2,9 +2,18 @@
 title: Number of Ways to Arrive at Destination
 date: 2023-04-24
 lastmod: 2023-04-24
-author: Jimmy Lin
-tags: ["shortest path", "priority_queue", "multiset"]
+author:
+  - Jimmy Lin
+tags:
+  - priority_queue
+  - multiset
+  - shortest_path
+  - Dijkstra
+  - review
 draft: false
+sr-due: 2024-02-06
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description
@@ -49,10 +58,7 @@ The four ways to get there in 7 minutes are:
 
 標準 Dijkstra's Algorithm 的應用，當 path cost 有被更新，ways 一路傳承下去，當發現有另外一條 path 其 cost 和原本相等，則 ways 相加。
 
-`if(d > dist[u]) continue;` 背後原因是因為在更新 path cost 時，我們有可能會將同一個 node push 到 heap 上兩次，cost 較小的那次會先被 pop 出來，但是在 Dijkstra's Algorithm 中並沒有 push 兩次的問題，而是不斷 update value，會有 push 兩次的問題是因為 C++ `priority_queue` 並不 support heap element value update，也不支持 `delete`。
-
 也可以考慮使用 `multiset`，可以先 delete 再 insert 來達成 update 的目的。
-
 ### priority_queue
 ```cpp
 typedef pair<long long, long long> pa;

@@ -2,8 +2,12 @@
 title: Network Delay Time
 date: 2023-04-24
 lastmod: 2023-04-24
-author: Jimmy Lin
-tags: ["shortest path", "Dijkstra", "Bellman Ford"]
+author:
+  - Jimmy Lin
+tags:
+  - shortest_path
+  - Dijkstra
+  - bellman_ford
 draft: false
 ---
 
@@ -45,6 +49,9 @@ We will send a signal from a given node `k`. Return _the **minimum** time it tak
 same as [[Cheapest Flights Within K Stops]], 都是 shortest path 的題目。
 
 ### Dijkstra
+
+$O((V+E)(\log V))$
+
 ```cpp
 typedef pair<int, int> pa;
 class Solution {
@@ -75,6 +82,9 @@ public:
 ```
 
 ### Bellman Ford
+
+$O(VE)$
+
 ```cpp
 class Solution {
 public:

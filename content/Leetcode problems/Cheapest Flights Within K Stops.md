@@ -101,7 +101,7 @@ public:
 
 $O(VE)$.
 
-Bellman Ford 的關鍵在於：不會有任何一條 shortest path 有超過 $V - 1$ 條 edge。在此題中，因為不能超過 $k$ stops，所以 for loop 做 $k + 1$ 次。
+see [[Bellman-Ford Algorithm]].
 
 ```cpp
 class Solution {

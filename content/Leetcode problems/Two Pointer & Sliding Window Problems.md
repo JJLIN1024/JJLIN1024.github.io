@@ -42,6 +42,7 @@ draft: false
 - [[Maximum Beauty of an Array After Applying Operation]]
 - [[Fruit Into Baskets|Fruit Into Baskets]]
 - [[Subarray Product Less Than K|Subarray Product Less Than K]]
+- [[Sequential Digits]]
 - 
 - 
 - [[Frequency of the Most Frequent Element|Frequency of the Most Frequent Element]] 

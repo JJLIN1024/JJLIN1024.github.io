@@ -8,9 +8,9 @@ tags:
   - permuation
   - review
 draft: false
-sr-due: 2024-01-30
-sr-interval: 3
-sr-ease: 254
+sr-due: 2024-02-22
+sr-interval: 20
+sr-ease: 274
 ---
 
 ## Description
@@ -48,37 +48,32 @@ Given a collection of numbers, `nums`, that might contain duplicates, return _a
 
 ```cpp
 class Solution {
+    vector<vector<int>> res;
 public:
     vector<vector<int>> permuteUnique(vector<int>& nums) {
-        vector<vector<int>> answer;
+        vector<int> cur;
         sort(nums.begin(), nums.end());
         int n = nums.size();
-        vector<int> curr;
         vector<bool> used(n, false);
-        helper(answer, nums, curr, used);
-        return answer;
+        dfs(nums, cur, used);
+        return res;
     }
 
-    void helper(vector<vector<int>> &answer, vector<int> nums, vector<int> curr, vector<bool> used) {
-        if(curr.size() == nums.size()) {
-            answer.push_back(curr);
+    void dfs(vector<int>& nums, vector<int>& cur, vector<bool> used) {
+        if(cur.size() == nums.size()) {
+            res.push_back(cur);
             return;
         }
 
         for(int i = 0; i < nums.size(); i++) {
-		    // avoid duplicate
-            if(used[i] || i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;
-            curr.push_back(nums[i]);
+            if(used[i] || i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) continue;
+            cur.push_back(nums[i]);
             used[i] = true;
-            // backtracking
-            helper(answer, nums, curr, used);
-            curr.pop_back();
+            dfs(nums, cur, used);
+            cur.pop_back();
             used[i] = false;
-
         }
-        
     }
-
 };
 ```
 

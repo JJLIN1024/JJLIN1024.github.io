@@ -9,6 +9,7 @@ draft: false
 ---
 - [[Dynamic Memory Allocation]]
 - [[Move Semantics]]
-- [[Smart Pointer]]
+- [[Smart Pointers]]
 - [[This Pointer]]
+- [[API Design]]
 - 

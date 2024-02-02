@@ -1,16 +1,16 @@
 ---
 title: Set Matrix Zeroes
 date: 2023-04-23
-lastmod: 2023-04-23
+lastmod: 2024-02-02
 author:
   - Jimmy Lin
 tags:
   - array
   - review
 draft: false
-sr-due: 2024-01-30
-sr-interval: 17
-sr-ease: 290
+sr-due: 2024-04-23
+sr-interval: 81
+sr-ease: 310
 ---
 
 ## Description
@@ -47,6 +47,8 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 *   Could you devise a constant space solution?
 
 ## Code 
+
+row 0 和 col 0 的資訊會衝突，因此只能選一個，另外一個就用 col0 來記錄。
 
 關鍵在於 row 0 & col 0，所以 for loop 必須要由 `i = 1, j = 1` 開始 iterate。row 0 & col 0 的元素要另外紀錄，不能因為其中一個為零就將其他人設為 0 ，因為這樣會導致 `i = 1, j = 1` 之後的元素被錯誤的設為 0。
 
@@ -93,7 +95,7 @@ public:
 };
 ```
 
-其實可以再進一步縮減需要紀錄的資訊，只需要紀錄 `col0` 即可，但就要注意先後順序。
+其實可以再進一步縮減需要紀錄的資訊，只需要紀錄 `col0` 即可，但就要注意先後順序。要從右下角填回左上角，因為記錄是否為 0 的資訊都儲存在左邊和上面。
 
 ```cpp
 class Solution {

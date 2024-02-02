@@ -2,8 +2,12 @@
 title: Swim in Rising Water
 date: 2023-07-22
 lastmod: 2023-07-22
-author: Jimmy Lin
-tags: ["binary search", "heap"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - review
+  - heap
 draft: false
 ---
 
@@ -49,6 +53,8 @@ We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
 ### Binary Search
 Time Complexity: $O(n^2 \log n)$, Space Complexity: $O(n^2)$
 
+類似 [[Path With Minimum Effort]]。
+
 ```cpp
 class Solution {
 public:
@@ -82,10 +88,52 @@ public:
 
 
 ### Heap
-Time Complexity: $O()$, Space Complexity: $O()$
+Time Complexity: $O(n^2 \log n)$, Space Complexity: $O(n^2)$
+
+heap 幫我們 keep track of the minimum so far until we meet the destination.
 
 ```cpp
+class Solution {
+public:
+    int swimInWater(vector<vector<int>>& grid) {
+    using T = tuple<int, int, int>;
+    int n = grid.size();
 
+    // min heap
+    auto cmp = [](const auto& t1, const auto& t2) { 
+        return get<0>(t1) > get<0>(t2); 
+    };
+    priority_queue<T, vector<T>, decltype(cmp)> pq(cmp);
+
+    vector<vector<bool>> visited(n, vector<bool>(n, false));
+    pq.push(make_tuple(grid[0][0], 0, 0));
+    visited[0][0] = true;
+    int res = 0;
+    vector<pair<int, int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    while (!pq.empty())
+    {
+        auto t = pq.top();
+        pq.pop();
+        res = max(res, get<0>(t));
+        int x = get<1>(t), y = get<2>(t);
+        if (x == n-1 && y == n-1)
+        {
+            return res;
+        }
+        for (const auto& p : directions)
+        {
+            int x_neigh = x+p.first, y_neigh = y+p.second;
+            if (0 <= x_neigh && x_neigh < n && 0 <= y_neigh && y_neigh < n && !visited[x_neigh][y_neigh])
+            {
+                visited[x_neigh][y_neigh] = true;
+                pq.push(make_tuple(grid[x_neigh][y_neigh], x_neigh, y_neigh));
+            }
+        }
+    }
+    return 0;
+}
+
+};
 ```
 
 ## Source

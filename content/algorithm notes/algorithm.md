@@ -13,7 +13,7 @@ draft: false
 - [[use Bellman-Ford to Detect Negative Cycle]]
 - [[Floyd’s Cycle Finding Algorithm]]
 - [[Algorithm to find SCC]]
-- [[APSP -  Floyd-Warshall]]
+- [[All Pair Shortest Path - Floyd-Warshall]]
 - [[APSP - Johnson_s Algorithm]]
 - [[Greedy Algorithm]]
 - 

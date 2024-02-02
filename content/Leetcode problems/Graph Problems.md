@@ -72,11 +72,12 @@ draft: false
 - [[Cheapest Flights Within K Stops]]
 - [[Network Delay Time]]
 - [[Number of Ways to Arrive at Destination]]
-- [[Path With Minimum Effort]]
 - [[Path with Maximum Probability]]
+- 
+- 
 
 ## All Pair Shortest Path
-- [[Find the City With the Smallest Number of Neighbors at a Threshold Distance]]
+- [[Find the City With the Smallest Number of Neighbors at a Threshold Distance 1]]
 
 ## Minimum Spanning Tree
 

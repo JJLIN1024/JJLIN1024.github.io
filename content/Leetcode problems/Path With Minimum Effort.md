@@ -2,8 +2,11 @@
 title: Path With Minimum Effort
 date: 2023-07-17
 lastmod: 2023-07-17
-author: Jimmy Lin
-tags: ["binary search", "bfs"]
+author:
+  - Jimmy Lin
+tags:
+  - review
+  - binary_search
 draft: false
 ---
 

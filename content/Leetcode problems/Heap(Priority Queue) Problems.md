@@ -9,6 +9,7 @@ draft: false
 
 - [[Top K Frequent Words|Top K Frequent Words]]
 - [[Top K Frequent Elements|Top K Frequent Elements]]
+- [[Swim in Rising Water]]
 - 
 - [[The K Weakest Rows in a Matrix|The K Weakest Rows in a Matrix]]
 - [[Reduce Array Size to The Half|Reduce Array Size to The Half]]
