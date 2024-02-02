@@ -2,8 +2,10 @@
 title: This Pointer
 date: 2024-01-30
 lastmod: 2024-01-30
-author: Jimmy Lin
-tags: 
+author:
+  - Jimmy Lin
+tags:
+  - c_plus_plus
 draft: false
 ---
 

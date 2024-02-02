@@ -2,8 +2,10 @@
 title: Move Semantics
 date: 2024-01-31
 lastmod: 2024-01-31
-author: Jimmy Lin
-tags: 
+author:
+  - Jimmy Lin
+tags:
+  - c_plus_plus
 draft: false
 ---
 ## The use of a r-value reference is a l-value

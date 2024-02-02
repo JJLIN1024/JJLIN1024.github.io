@@ -7,6 +7,7 @@ author:
 tags:
   - pointer
   - smart_pointer
+  - c_plus_plus
 draft: false
 ---
 - [Smart pointers (Modern C++)](https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170)

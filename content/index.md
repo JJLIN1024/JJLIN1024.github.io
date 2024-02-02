@@ -31,3 +31,8 @@ draft: false
 - [[C]]
 - [[C++]]
 - [[Operating System]]
+
+## Life I Lived
+- [[Teddy]]
+- [[Coffee]]
+- [[法式吐司]]
