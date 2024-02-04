@@ -1,7 +1,7 @@
 ---
 title: Four Thousand Weeks - Time Management for Mortals
 date: 2023-06-13
-description: ""
+description: 
 tags:
   - Life
 ---

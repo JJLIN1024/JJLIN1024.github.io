@@ -28,6 +28,7 @@ draft: false
 ## Tech I Learned
 - [[algorithm]]
 - [[leetcode]]
+- [[Codeforces]]
 - [[C]]
 - [[C++]]
 - [[Operating System]]
