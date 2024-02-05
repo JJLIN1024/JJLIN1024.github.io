@@ -1,7 +1,8 @@
 ---
 title: Circuit-SAT & SAT
-updated: 2022-06-17 08:19:28Z
-created: 2022-05-17 06:21:49Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
 
 ## Circuit-SAT

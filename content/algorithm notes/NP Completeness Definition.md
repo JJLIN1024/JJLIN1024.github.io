@@ -1,9 +1,9 @@
 ---
 title: NP Completeness Definition
-updated: 2022-06-17 06:28:16Z
-created: 2022-05-14 06:55:57Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
-
 ## Content
 
 - P & NP

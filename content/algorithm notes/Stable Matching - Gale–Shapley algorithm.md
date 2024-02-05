@@ -1,9 +1,9 @@
 ---
 title: Stable Matching - Gale–Shapley algorithm
-updated: 2022-06-17 08:49:34Z
-created: 2022-05-15 23:49:09Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
-
 ![](https://i.imgur.com/vg0wT6A.png)
 
 ## Stability proof

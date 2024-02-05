@@ -1,7 +1,6 @@
 ---
 title: Kadane Algorithm(Maximum Subarray Problem)
 date: 2022-12-25
-lastmod: 2022-12-25
 author: Jimmy Lin
 tags:
   - DP

@@ -1,9 +1,9 @@
 ---
 title: 3-SAT & Subset Sum
-updated: 2022-06-17
-created: 2022-05-18
-tags:
-  - ongoing
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
+---
 ---
 
 

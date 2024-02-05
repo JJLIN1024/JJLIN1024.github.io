@@ -1,7 +1,9 @@
 ---
 title: Clique & Independent Set & Vertex Cover
-updated: 2022-06-17 08:00:02Z
-created: 2022-05-18 02:03:20Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
+---
 ---
 
 

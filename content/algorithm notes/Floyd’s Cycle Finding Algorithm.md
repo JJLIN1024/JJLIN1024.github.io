@@ -1,7 +1,6 @@
 ---
 title: Floyd’s Cycle Finding Algorithm
 date: 2023-02-03
-lastmod: 2023-02-03
 author:
   - Jimmy Lin
 tags:

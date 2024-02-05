@@ -1,9 +1,9 @@
 ---
 title: Hall's Theorem
-updated: 2022-06-17 08:43:41Z
-created: 2022-05-17 00:42:03Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
-
 ## Theorem
 
 A bipartite graph $(V \cup W, E)$, with $|V| \le |W|$, has a perfect matching  $\iff$ for every subset $S \subseteq V$, $|N(S)| \ge |S|$.

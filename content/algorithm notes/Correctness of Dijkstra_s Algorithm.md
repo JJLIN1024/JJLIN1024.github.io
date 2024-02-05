@@ -1,9 +1,8 @@
 ---
 title: Correctness of Dijkstra's Algorithm
-updated: 2022-06-17 07:55:36Z
-created: 2022-05-13 01:31:53Z
-tags:
-  - shortest_path
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
 
 

@@ -1,7 +1,9 @@
 ---
 title: Algorithm to find SCC
-updated: 2022-06-17
-created: 2022-05-13
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
+---
 ---
 
 ## Steps

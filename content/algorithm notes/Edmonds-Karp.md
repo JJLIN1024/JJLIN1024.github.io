@@ -1,9 +1,9 @@
 ---
 title: Edmonds-Karp
-updated: 2022-06-17 07:48:55Z
-created: 2022-05-15 23:49:06Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
-
 ![](https://i.imgur.com/D5XYcin.png)
 
 ## Time Complexity 

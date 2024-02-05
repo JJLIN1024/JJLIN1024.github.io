@@ -1,7 +1,8 @@
 ---
 title: Clique & Vertex Cover
-updated: 2022-06-17 08:45:17Z
-created: 2022-05-18 01:37:45Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
 
 

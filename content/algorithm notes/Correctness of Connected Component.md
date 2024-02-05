@@ -1,7 +1,8 @@
 ---
 title: Correctness of Connected Component
-updated: 2022-06-17 07:57:02Z
-created: 2022-05-13 00:25:28Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
 
 

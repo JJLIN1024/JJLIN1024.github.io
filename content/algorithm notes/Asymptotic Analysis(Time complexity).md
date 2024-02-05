@@ -1,7 +1,6 @@
 ---
 title: Asymptotic Analysis(Time complexity)
 date: 2022-12-14
-lastmod: "2022-12-21"
 author: Jimmy Lin
 tags: ["Algorithm"]
 draft: false

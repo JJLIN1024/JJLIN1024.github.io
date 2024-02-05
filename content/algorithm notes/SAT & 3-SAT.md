@@ -1,11 +1,9 @@
 ---
 title: SAT & 3-SAT
-updated: 2022-06-17 08:39:45Z
-created: 2022-05-18 00:19:52Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
-
-
-
 ## SAT $\le_p$ 3-SAT
 
 Key Idea: use boolean logic to convert SAT in to the form of 3-SAT, since they are logically equivalent, hence the iff relationship.

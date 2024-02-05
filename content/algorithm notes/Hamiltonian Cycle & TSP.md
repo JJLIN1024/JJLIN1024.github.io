@@ -1,7 +1,8 @@
 ---
 title: Hamiltonian Cycle & TSP
-updated: 2022-06-17 07:35:59Z
-created: 2022-05-18 02:09:57Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
 
 ## HAM-Cycle $\le_p$ TSP

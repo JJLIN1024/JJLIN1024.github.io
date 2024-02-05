@@ -1,7 +1,8 @@
 ---
 title: Max-flow Min-cut
-updated: 2022-06-17 08:54:24Z
-created: 2022-05-15 23:49:04Z
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
 
 

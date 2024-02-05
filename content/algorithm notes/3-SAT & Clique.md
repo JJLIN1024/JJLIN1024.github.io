@@ -1,9 +1,9 @@
 ---
 title: 3-SAT & Clique
-updated: 2022-06-17
-created: 2022-05-18
+date: 2022-06-17
+author: Jimmy Lin
+tags: 
 ---
-
 
 ## 3-SAT $\le_p$ Clique 
 
