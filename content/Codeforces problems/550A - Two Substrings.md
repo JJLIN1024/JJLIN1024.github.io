@@ -127,4 +127,4 @@ int main() {
 
 ```
 ## Source
-- 
+-  [Two Substrings](https://codeforces.com/problemset/problem/550/A)

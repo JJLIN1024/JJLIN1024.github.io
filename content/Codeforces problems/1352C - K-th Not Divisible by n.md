@@ -59,4 +59,4 @@ int main() {
 ```
 
 ## Source
-- 
+-  [K-th Not Divisible by n](https://codeforces.com/problemset/problem/1352/C)

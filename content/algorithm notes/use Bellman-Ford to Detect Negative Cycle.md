@@ -1,7 +1,7 @@
 ---
 title: use Bellman-Ford to Detect Negative Cycle
-updated: 2022-06-17 07:34:27Z
-created: 2022-05-13 06:26:28Z
+date: 2022-06-17
+created: 2022-05-13
 tags:
   - bellman_ford
   - negative_cycle

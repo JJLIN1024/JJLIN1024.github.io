@@ -44,6 +44,8 @@ draft: false
 	- [[Dynamic Programming Problems]]
 	- [[Greedy Problems]]
 	- [[Divide and Conquer Problems]]
+	- [[Segment Tree Problems]]
+	- 
 	- [[Bit Manipulation Problems|Bit Manipulation Problems]]
 	- [[Sorting Problems]]
 	- [[Heap(Priority Queue) Problems]]

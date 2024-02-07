@@ -28,6 +28,10 @@ draft: false
 	- [[545C - Woodcutters]]
 - 1700
 	- [[466C - Number of Ways]]
+	- [[339D - Xenia and Bit Operations]]
 - 1800
 	- [[478C - Table Decorations]]
-	- 
+	- [[448D - Multiplication Table]]
+	- [[161D - Distance in Tree]]
+	- [[1509C - The Sports Festival]]
+	- [[1398D - Colored Rectangles]]

@@ -7,6 +7,7 @@ author:
 tags: 
 draft: false
 ---
+- [[蒙格之道]]
 - [[Four-Thousand-Weeks]]
 - [[艱困時代的經濟學思考 Good Economics for Hard Times]]
 - [[Die-With-Zero]]

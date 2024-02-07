@@ -59,4 +59,4 @@ int main() {
 ```
 
 ## Source
-- 
+-  [Boredom](https://codeforces.com/problemset/problem/455/A)

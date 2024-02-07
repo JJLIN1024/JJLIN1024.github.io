@@ -80,4 +80,4 @@ int main() {
 ```
 
 ## Source
-- 
+-  [Kefa and Park](https://codeforces.com/problemset/problem/580/C)

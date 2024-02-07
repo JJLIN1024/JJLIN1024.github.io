@@ -72,4 +72,4 @@ int main() {
 ```
 
 ## Source
-- 
+- [Number of Ways](https://codeforces.com/problemset/problem/466/C/)

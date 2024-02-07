@@ -67,4 +67,4 @@ int main() {
 ```
 
 ## Source
-- 
+-  [Kefa and Company](https://codeforces.com/problemset/problem/580/B)
