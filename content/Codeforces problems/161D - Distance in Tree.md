@@ -10,7 +10,7 @@ draft: false
 
 ## Thinking Process
 
-![[161D - Distance in Tree - DP Graph|1200x800]]
+![[161D - Distance in Tree - DP Graph.png]]
 
 ## Code
 

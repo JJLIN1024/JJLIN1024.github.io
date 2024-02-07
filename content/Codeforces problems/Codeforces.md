@@ -35,3 +35,8 @@ draft: false
 	- [[161D - Distance in Tree]]
 	- [[1509C - The Sports Festival]]
 	- [[1398D - Colored Rectangles]]
+	- [[1396B - Stoned Game]]
+	- [[271D - Good Substrings]]
+	- [[1475D - Cleaning the Phone]]
+	- [[1326D1 - Prefix-Suffix Palindrome (Easy version)]]
+	- 

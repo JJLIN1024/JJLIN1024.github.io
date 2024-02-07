@@ -51,8 +51,8 @@ numArray.sumRange(0, 2); // return 1 + 2 + 5 = 8
 Time Complexity: $O(n)$, Space Complexity: $O(n)$
 
 segment tree 背後的精神是 divide and conquer。
+![[segment tree.png]]
 
-![[segment tree|800x600]]
 用原本的 array 的 left right mid 去做 divide and conquer，而 index parameter 是 for segment tree array 使用的，更新方式是 left child = 2 index + 1, right child = 2 index + 2(zero based)。
 
 ```cpp

@@ -7,6 +7,8 @@ author:
 tags: 
 draft: false
 ---
+- [[查理蒙格 - 人類誤判心理學]]
+- [[Same as Ever - A Guide to What Never Changes]]
 - [[蒙格之道]]
 - [[Four-Thousand-Weeks]]
 - [[艱困時代的經濟學思考 Good Economics for Hard Times]]
