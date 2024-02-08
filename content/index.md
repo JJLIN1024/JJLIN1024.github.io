@@ -37,3 +37,4 @@ draft: false
 - [[Teddy]]
 - [[Coffee]]
 - [[法式吐司]]
+- [[Stoicism]]

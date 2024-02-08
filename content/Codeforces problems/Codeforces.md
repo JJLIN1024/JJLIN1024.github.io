@@ -39,4 +39,5 @@ draft: false
 	- [[271D - Good Substrings]]
 	- [[1475D - Cleaning the Phone]]
 	- [[1326D1 - Prefix-Suffix Palindrome (Easy version)]]
+	- [[118D - Caesar's Legions]]
 	- 

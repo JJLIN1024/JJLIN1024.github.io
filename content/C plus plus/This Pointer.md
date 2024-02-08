@@ -16,4 +16,17 @@ draft: false
 - 
 
 
+```cpp
+#include <iostream>
 
+struct A {
+    void printAddress() {std::cout << (void*)this << std::endl;}
+};
+
+int main() {
+    A a;
+    std::cout << (void*)(&a) << std::endl;
+    a.printAddress();
+    return 0;
+}
+```

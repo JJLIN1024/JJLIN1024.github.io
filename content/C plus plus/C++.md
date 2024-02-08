@@ -12,4 +12,5 @@ draft: false
 - [[Smart Pointers]]
 - [[This Pointer]]
 - [[API Design]]
-- 
+- [[Debugging]]
+- [[Templates]]
