@@ -9,12 +9,11 @@ tags:
 draft: false
 ---
 
-- The "this" pointer is passed as a hidden argument to all non-static member function calls and is available as a local variable within the body of all non-static functions. "this" pointer is not available in static member functions as static member functions can be called without any object (with class name).
-- "this" pointer is a r-value
+- The "this" pointer is passed as a hidden argument to all non-static member function calls and is available as a local variable within the body of all non-static functions. 
+- "this" pointer is not available in static member functions as static member functions can be called without any object (with class name).
+- "this" pointer is a r-value([prvalue](https://en.cppreference.com/w/cpp/language/value_category#prvalue "cpp/language/value category") [expression](https://en.cppreference.com/w/cpp/language/expressions "cpp/language/expressions"))
 - `delete this;` destroy the object itself
 - `return *this;` 常用來讓 member function 回傳自身的 reference
-- 
-
 
 ```cpp
 #include <iostream>
@@ -30,3 +29,6 @@ int main() {
     return 0;
 }
 ```
+
+## Reference
+- [The this pointer](https://en.cppreference.com/w/cpp/language/this)

@@ -7,6 +7,8 @@ author:
 tags: 
 draft: false
 ---
+
+- [[藝術的故事]]
 - [[查理蒙格 - 人類誤判心理學]]
 - [[Same as Ever - A Guide to What Never Changes]]
 - [[蒙格之道]]
