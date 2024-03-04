@@ -2,9 +2,16 @@
 title: The Skyline Problem
 date: 2023-07-18
 lastmod: 2023-07-18
-author: Jimmy Lin
-tags: ["line sweep", "balanced search tree"]
+author:
+  - Jimmy Lin
+tags:
+  - balanced_binary_tree
+  - line_sweep
+  - review
 draft: false
+sr-due: 2024-03-20
+sr-interval: 16
+sr-ease: 290
 ---
 
 ## Description
@@ -48,6 +55,14 @@ Figure B shows the skyline formed by those buildings. The red points in figure B
 ## Code 
 
 Time Complexity: $O(n \log n)$, Space Complexity: $O(n)$
+
+// negative -> start event
+// positive -> end event
+
+之所以這樣設定，是因為 sorting 小的在前面，如果 end event 先的話，會造成不必要的斷點，以 `buildings = [[0,2,3],[2,5,3]]` 為例，若 end event 排在前，就會造成  `[[0,3],[2,0],[2,3],[5,0]]` 的 output，但其實應該是  `[[0,3],[5,0]]` 才對。
+
+
+要注意 `multiset<int> pq{0};`的 initial base case。
 
 ```cpp
 class Solution {

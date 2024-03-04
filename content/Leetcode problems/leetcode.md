@@ -34,6 +34,9 @@ draft: false
 	- [[Linked List Problems|Linked List Problems]] 
 	- [[Hash Table Problems]]
 	- [[Heap(Priority Queue) Problems]]
+	- [[Balanced Search Tree Problems]]
+	- [[Line Sweep Problems]]
+	- 
 	- [[Bit Manipulation Problems|Bit Manipulation Problems]]
 	- [[Sorting Problems]]
 	- [[Binary Search Problems]]
@@ -51,6 +54,4 @@ draft: false
 	- [[Trie Problems]]
 	- 
 	- [[Math Problems]]
-	- [[Line Sweep Problems]]
 	- [[Game Theory Problems]]
-	- [[Balanced Search Tree Problems]]

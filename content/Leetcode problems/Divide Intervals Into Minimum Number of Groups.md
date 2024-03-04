@@ -2,9 +2,15 @@
 title: Divide Intervals Into Minimum Number of Groups
 date: 2023-07-18
 lastmod: 2023-07-18
-author: Jimmy Lin
-tags: ["difference array"]
+author:
+  - Jimmy Lin
+tags:
+  - difference_array
+  - review
 draft: false
+sr-due: 2024-03-19
+sr-interval: 15
+sr-ease: 290
 ---
 
 ## Description
@@ -49,22 +55,19 @@ Time Complexity: $O(n \log n)$, Space Complexity: $O(n)$
 class Solution {
 public:
     int minGroups(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());
         map<int, int> mp;
-
-        for(auto i: intervals) {
-            mp[i[0]]++;
-            mp[i[1] + 1]--;
+        for(auto interval: intervals) {
+            mp[interval[0]]++;
+            mp[interval[1] + 1]--;
         }
 
-        int overlap = 0;
-        int overlapMax = 0;
-        for(auto it = mp.begin(); it != mp.end(); it++) {
-            overlap += it->second;
-            overlapMax = max(overlapMax, overlap);
+        int minGroup = 1, curGroup = 0;
+        for(auto it: mp) {
+            curGroup += it.second;
+            minGroup = max(minGroup, curGroup);
         }
-        
-        return overlapMax == 0 ? 1 : overlapMax;
+
+        return minGroup;
     }
 };
 ```

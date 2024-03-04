@@ -2,8 +2,11 @@
 title: Corporate Flight Bookings
 date: 2023-07-18
 lastmod: 2023-07-18
-author: Jimmy Lin
-tags: ["difference array", "line sweep"]
+author:
+  - Jimmy Lin
+tags:
+  - difference_array
+  - line_sweep
 draft: false
 ---
 

@@ -4,9 +4,13 @@ date: 2024-02-06
 tags:
   - segment_tree
   - divide_and_conquer
+  - review
 author:
   - Jimmy Lin
 draft: false
+sr-due: 2024-03-05
+sr-interval: 1
+sr-ease: 230
 ---
 
 ## Description

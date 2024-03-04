@@ -14,12 +14,14 @@ draft: false
 - [[Search a 2D Matrix|Search a 2D Matrix]]
 - [[Search a 2D Matrix II|Search a 2D Matrix II]]
 - [[Search in Rotated Sorted Array]]
+- [[H-Index II]]
 - [[Find Minimum in Rotated Sorted Array]]
 - [[Time Based Key-Value Store]]
 - [[Koko Eating Bananas]]
 - [[Capacity To Ship Packages Within D Days]]
 - [[Median of Two Sorted Arrays]]
 - [[Maximum Number That Sum of the Prices Is Less Than or Equal to K]]
+- [[Distribute Elements Into Two Arrays II]]
 - 
 - [[Count Negative Numbers in a Sorted Matrix|Count Negative Numbers in a Sorted Matrix]]
 - [[Find Target Indices After Sorting Array|Find Target Indices After Sorting Array]]
@@ -34,7 +36,7 @@ draft: false
 - [[Find Positive Integer Solution for a Given Equation|Find Positive Integer Solution for a Given Equation]]
 - [[Peak Index in a Mountain Array|Peak Index in a Mountain Array]]
 - [[Maximum Number of Groups Entering a Competition|Maximum Number of Groups Entering a Competition]]
-- [[Capacity To Ship Packages Within D Days|Capacity To Ship Packages Within D Days]]
+- 
 - [[Maximum Tastiness of Candy Basket|Maximum Tastiness of Candy Basket]]
 - [[Kth Smallest Element in a Sorted Matrix|Kth Smallest Element in a Sorted Matrix]]
 - [[Compare Strings by Frequency of the Smallest Character|Compare Strings by Frequency of the Smallest Character]]
@@ -48,7 +50,6 @@ draft: false
 - [[Find K Closest Elements|Find K Closest Elements]]
 - 
 - [[Swim in Rising Water|Swim in Rising Water]]
-
 - 
 - [[Minimized Maximum of Products Distributed to Any Store]]
 - [[Find the Smallest Divisor Given a Threshold]]
@@ -58,8 +59,7 @@ draft: false
 - [[Sum of Mutated Array Closest to Target]]
 - [[Find K Closest Elements]]
 
-- [[H-Index II]]
-- Hard
+- 
 - [[Split Array Largest Sum]]
 - [[Kth Smallest Number in Multiplication Table]]
 - [[Find K-th Smallest Pair Distance]]

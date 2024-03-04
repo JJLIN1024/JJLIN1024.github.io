@@ -20,6 +20,7 @@ draft: false
 - [[Non-overlapping Intervals]]
 - [[Merge Triplets to Form Target Triplet]]
 - [[Task Scheduler]]
+- [[Bag of Tokens]]
 - 
 - [[K Items With the Maximum Sum|K Items With the Maximum Sum]]
 - [[Longest Palindrome|Longest Palindrome]]

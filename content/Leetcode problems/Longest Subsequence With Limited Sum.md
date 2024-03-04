@@ -9,9 +9,9 @@ tags:
   - sliding_window
   - review
 draft: false
-sr-due: 2024-03-04
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-03-18
+sr-interval: 14
+sr-ease: 290
 ---
 You are given an integer array `nums` of length `n`, and an integer array `queries` of length `m`.
 

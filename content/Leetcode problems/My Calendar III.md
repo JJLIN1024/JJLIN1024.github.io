@@ -2,9 +2,16 @@
 title: My Calendar III
 date: 2023-07-18
 lastmod: 2023-07-18
-author: Jimmy Lin
-tags: ["difference array", "ordered map"]
+author:
+  - Jimmy Lin
+tags:
+  - difference_array
+  - balanced_binary_tree
+  - review
 draft: false
+sr-due: 2024-03-19
+sr-interval: 15
+sr-ease: 292
 ---
 
 ## Description

@@ -16,5 +16,6 @@ draft: false
 - [[Subarray Sum Equals K]]
 - [[Subarray Sums Divisible by K]]
 - [[Number of Submatrices That Sum to Target]]
+- [[Count Submatrices with Top-Left Element and Sum Less Than k]]
 - [[Sum of Total Strength of Wizards]]
 - [[Random Pick with Weight]]

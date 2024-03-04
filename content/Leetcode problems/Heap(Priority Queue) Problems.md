@@ -18,8 +18,8 @@ draft: false
 - [[Kth Largest Element in an Array|Kth Largest Element in an Array]]
 - [[K Closest Points to Origin|K Closest Points to Origin]]
 - [[The K Weakest Rows in a Matrix|The K Weakest Rows in a Matrix]]
-- [[Reduce Array Size to The Half|Reduce Array Size to The Half]]
 - 
+- [[Reduce Array Size to The Half|Reduce Array Size to The Half]]
 - 
 - [[Maximum Score From Removing Stones|Maximum Score From Removing Stones]]
 - [[Seat Reservation Manager|Seat Reservation Manager]]

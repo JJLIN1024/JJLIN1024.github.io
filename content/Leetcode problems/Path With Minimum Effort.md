@@ -8,6 +8,9 @@ tags:
   - review
   - binary_search
 draft: false
+sr-due: 2024-03-07
+sr-interval: 4
+sr-ease: 272
 ---
 
 ## Description

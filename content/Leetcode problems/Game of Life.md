@@ -9,9 +9,9 @@ tags:
   - bit_manipulation
   - review
 draft: false
-sr-due: 2024-03-03
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-03-17
+sr-interval: 14
+sr-ease: 290
 ---
 
 ## Description

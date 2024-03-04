@@ -8,9 +8,9 @@ tags:
   - heap
   - review
 draft: false
-sr-due: 2024-03-03
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-03-19
+sr-interval: 16
+sr-ease: 290
 ---
 
 ## Description

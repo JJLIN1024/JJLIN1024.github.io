@@ -60,32 +60,32 @@ Time Complexity: $O(\log n)$, Space Complexity: $O(n)$
 
 ```cpp
 class StockPrice {
-    map<int, int> rec;
-    multiset<int> count;
 public:
+    map<int, int> record;
+    multiset<int> prices;
     StockPrice() {
         
     }
     
     void update(int timestamp, int price) {
-        if(rec.find(timestamp) != rec.end()) {
-            count.erase(count.find(rec[timestamp]));
-        }
-        rec[timestamp] = price;
-        count.insert(price);
+        if(record.find(timestamp) != record.end()) {
+            prices.erase(prices.find(record[timestamp]));
+        } 
+        record[timestamp] = price;
+        prices.insert(price);
+
     }
     
     int current() {
-        return rec.rbegin()->second;
+        return record.rbegin()->second;
     }
     
     int maximum() {
-        return *count.rbegin();
+        return *prices.rbegin();
     }
     
     int minimum() {
-        return *count.begin();
-        
+        return *prices.begin();
     }
 };
 

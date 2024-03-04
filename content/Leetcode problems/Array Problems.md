@@ -32,3 +32,5 @@ draft: false
 - [[Candy]]
 - [[Game of Life]]
 - [[Summary Ranges]]
+- [[Minimum Operations to Write the Letter Y on a Grid]]
+- 

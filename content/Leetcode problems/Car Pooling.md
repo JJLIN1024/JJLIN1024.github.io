@@ -2,8 +2,10 @@
 title: Car Pooling
 date: 2023-07-18
 lastmod: 2023-07-18
-author: Jimmy Lin
-tags: ["difference array", "line sweep"]
+author:
+  - Jimmy Lin
+tags:
+  - difference_array
 draft: false
 ---
 
@@ -41,17 +43,10 @@ Time Complexity: $O(n \log n)$, Space Complexity: $O(n)$
 
 ```cpp
 class Solution {
-    struct compare {
-        bool operator() (const vector<int>& v1, const vector<int>& v2) {
-            return v1[1] < v2[1];
-        }
-    };
-
-    map<int, int> mp;
 public:
+    map<int, int> mp;
     bool carPooling(vector<vector<int>>& trips, int capacity) {
-        sort(trips.begin(), trips.end(), compare());
-
+        
         for(auto& trip: trips) {
             mp[trip[1]] += trip[0];
             mp[trip[2]] -= trip[0];

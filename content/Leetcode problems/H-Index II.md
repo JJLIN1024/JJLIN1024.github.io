@@ -2,8 +2,10 @@
 title: H-Index II
 date: 2023-04-30
 lastmod: 2023-04-30
-author: Jimmy Lin
-tags: ["binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
 draft: false
 ---
 

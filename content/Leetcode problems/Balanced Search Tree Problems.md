@@ -7,11 +7,9 @@ tags: [""]
 draft: false
 ---
 
-在 C++ STL 中，紅黑樹使用 `std::set` 和 `std::multiset` 實現。AVL 樹使用 `std::map` 和 `std::multimap` 實現。
+在 C++ STL 中， `std::set` 和 `std::multiset` 使用 紅黑樹實現，`std::map` 和 `std::multimap` 使用 AVL 樹實現。
 
-- Medium
-	- [[Stock Price Fluctuation|Stock Price Fluctuation]]
-	- [[Display Table of Food Orders in a Restaurant|Display Table of Food Orders in a Restaurant]]
-- Hard
-	- [[Sequentially Ordinal Rank Tracker|Sequentially Ordinal Rank Tracker]]
-	- 
+- [[Stock Price Fluctuation|Stock Price Fluctuation]]
+- 
+- [[Display Table of Food Orders in a Restaurant|Display Table of Food Orders in a Restaurant]]
+- [[Sequentially Ordinal Rank Tracker|Sequentially Ordinal Rank Tracker]]

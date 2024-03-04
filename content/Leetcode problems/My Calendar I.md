@@ -2,9 +2,17 @@
 title: My Calendar I
 date: 2023-07-17
 lastmod: 2023-07-17
-author: Jimmy Lin
-tags: ["binary search", "ordered map", "difference array"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - balanced_binary_tree
+  - difference_array
+  - review
 draft: false
+sr-due: 2024-03-21
+sr-interval: 17
+sr-ease: 290
 ---
 
 ## Description
@@ -146,8 +154,8 @@ Time Complexity: $O(n)$, Space Complexity: $O(n)$
 
 ```cpp
 class MyCalendar {
-    map<int, int> mp;
 public:
+    map<int, int> mp;
     MyCalendar() {
         
     }
@@ -157,7 +165,7 @@ public:
         mp[end]--;
         int booked = 0;
         for(auto it = mp.begin(); it != mp.end(); it++) {
-            booked += it->second();
+            booked += it->second;
             if(booked == 2) {
                 mp[start]--;
                 mp[end]++;
