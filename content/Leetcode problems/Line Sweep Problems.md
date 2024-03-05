@@ -16,5 +16,3 @@ draft: false
 - [[The Skyline Problem|The Skyline Problem]]
 - [[Falling Squares]]
 - [[Shifting Letters II]]
-- 
-- 

@@ -4,8 +4,13 @@ date: 2024-02-24
 lastmod: 2024-02-24
 author:
   - Jimmy Lin
-tags: 
+tags:
+  - DP
+  - review
 draft: false
+sr-due: 2024-03-07
+sr-interval: 2
+sr-ease: 250
 ---
 
 ## Description
@@ -43,10 +48,80 @@ As shown below, there are 5 ways you can generate "bag" from s.
 
 ## Code 
 
-Time Complexity: $O()$, Space Complexity: $O()$
+### Top-Down DP with memo
+
+Time Complexity: $O(mn)$, Space Complexity: $O(mn)$
 
 ```cpp
+class Solution {
+public:
+    
+    int numDistinct(string s, string t) {
+        int m = s.length(), n = t.length();
+        vector<vector<int>> memo(m + 1, vector<int>(n + 1, -1));
+
+        int j = 0;
+        int res = 0;
+        for(int i = 0; i < s.length(); i++) {
+            if(s[i] == t[j])
+                res += dfs(s, t, i + 1, j + 1, memo);
+        }   
+        return res;
+    }
+
+    int dfs(string& s, string& t, int i, int j, vector<vector<int>>& memo) {
+        if(memo[i][j] != -1)
+            return memo[i][j];
+        if(j == t.length()) 
+            return memo[i][j] = 1;
+        if(i >= s.length())
+            return memo[i][j] = 0;
+        
+        int res = 0;
+        for(int k = i; k < s.length(); k++) {
+            if(s[k] == t[j])
+                res += dfs(s, t, k + 1, j + 1, memo);
+        }
+        return  memo[i][j] = res;
+    }
+};
 ```
 
+
+### Bottom Up
+Time Complexity: $O(mn)$, Space Complexity: $O(mn)$
+
+```
+s = "babgbag", t = "bag"
+
+1 0 0 0 
+1 1 0 0 
+1 1 1 0 
+1 2 1 0 
+1 2 1 1 
+1 3 1 1 
+1 3 4 1 
+1 3 4 5 
+```
+
+t 不可以被 skip，s 可以，不 match 就跳過即可。
+
+```cpp
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+        int m = t.length(), n = s.length();
+        vector<vector<unsigned>> dp(m + 1, vector<unsigned>(n + 1, 0));
+        for(int j = 0; j <= n; j++) dp[0][j] = 1;
+        for(int j = 1; j <= n; j++) {
+            for(int i = 1; i <= m; i++) {
+                dp[i][j] = dp[i][j - 1] + ((t[i - 1] == s[j - 1]) ? dp[i - 1][j - 1] : 0);
+                dp[i][j] %= INT_MAX;
+            }
+        }
+        return dp[m][n];
+    }
+};
+```
 ## Source
 - [Distinct Subsequences - LeetCode](https://leetcode.com/problems/distinct-subsequences/description/)

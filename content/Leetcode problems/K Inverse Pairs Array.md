@@ -7,9 +7,9 @@ tags:
   - DP
   - review
 draft: false
-sr-due: 2024-03-05
-sr-interval: 6
-sr-ease: 250
+sr-due: 2024-03-25
+sr-interval: 20
+sr-ease: 270
 ---
 
 ## Description
@@ -41,13 +41,30 @@ Time Complexity: $O(nk)$, Space Complexity: $O(nk)$
 
 寫出 DP 定義：
 
-`dp[i][j]` 代表組成為 1, 2, 3, ..., i，且有 j 個 inverse pair 的  array 數量。
+`dp[n][k]` 代表組成為 1, 2, 3, ..., n，且有 k 個 inverse pair 的 array 數量。
 
-觀察 `dp[i + 1][j]` 和 `dp[i][j]` 的關係：
+觀察 `dp[n][k]` 和 `dp[n - 1][k]` 的關係：
 
-把 i 加進一個已經有 1, 2, ..., i - 1 的 array，擺放位置有 i 種。
+把 n 加進一個由 1, 2, ..., n - 1 組成的 array，擺放位置（insert 的 index）有 n 種。
 
-`dp[n][k] = dp[n-1][k] + dp[n-1][k-1] + dp[n-1][k-2] + ... + dp[n-1][k+1 n+1] + dp[n-1][k-n+1]`  
+舉例：
+
+`[1, 3, 2]` 代表 `dp[3][1]`，若要將 4 加入，可以創造出：
+
+1. `[4, 1, 3, 2] -> (dp[4][4])
+2. `[1, 4 ,3, 2] -> (dp[4][3])`
+3. `[1, 3, 4, 2] -> (dp[4][2])`
+4. `[1, 3, 2, 4] -> (dp[4][1])`
+
+因為要加入的是最大的，所以可以選擇插入的位置，去創造出想要的 inverse 數量，例如上例的 2. 就是將 4 放在 2, 3 之前，創造出 2 個 inverse pair，再加上原本就有的 1 個（3, 2），總共會是 3 個，對應到 `dp[4][3]`。
+
+因此我們可知：
+
+`dp[n][k] = dp[n-1][k] + dp[n-1][k-1] + dp[n-1][k-2] + ... + dp[n-1][k-n+2] + dp[n-1][k-n+1]`  
+
+`dp[n-1][k-n+1]` 就是 `dp[n-1][k - (n - 1)]`，即是完全利用原本的 array 的每個元素去創造最多（原本只有 `n - 1` 個元素）的 inverse pair 時，例如：
+
+`dp[4][4]` 對應到 `dp[3][1]`，也就是將 4 放在 `[1, 3, 2]` 的最前面變成 `[4, 1, 3, 2]`。
 
 對於 `dp[n][k]` 來說，就相當於在 `dp[n][k]` 的情況下，把 `n` 放在最後面，`k` 就不會變，因為 `n` 是最大的，不會增加任何 inverse pair。而 `dp[n-1][k-1]` 代表原本有 `k - 1` 個 inverse pair，因此只要把 `n` 放到剛好可以產生一個 inverse pair 的位置，就會形成 `dp[n][k]`，以此類推。
 
@@ -55,25 +72,12 @@ Time Complexity: $O(nk)$, Space Complexity: $O(nk)$
 
 觀察下一項：
 
-`dp[n][k+1] = dp[n-1][k+1]+dp[n-1][k]+dp[n-1][k-1]+dp[n-1][k-2]+...+dp[n-1][k+1-n+1]`
+1. `dp[n][k] = dp[n-1][k] + dp[n-1][k-1] + dp[n-1][k-2] + ... + dp[n-1][k-n+2] + dp[n-1][k-n+1]`  
+2.  `dp[n][k+1] = dp[n-1][k+1] + dp[n-1][k] + dp[n-1][k-1] + dp[n-1][k-2] + ... + dp[n-1][k+1-n+1]`
 
 綜合兩式：
 
-`dp[n][k+1] = dp[n-1][k+1] + (dp[n-1][k] + dp[n-1][k-1] + dp[n-1][k-2] + ... + dp[n-1][k-n+1]) + dp[n-1][k+1-n+1] = dp[n][k] + dp[n-1][k+1] - dp[n-1][k+1-n]`
-
-```
-First look for 2D dp,
-
-1. If n=0, no inverse pairs exist. Thus, dp[0][k]=0.
-    
-2. If k=0, only one arrangement is possible, which is all numbers sorted in ascending order. Thus, dp[n][0]=1.
-    
-3. Otherwise, dp[i,j] = sum( for(p=0 to min(j, i-1) dp[i-1][j-p] ) )
-    
-Now, in the 3rd step, in the loop every time we are just adding a value to right and removing a value from left  
-Thus our next optimization in this step =>  
-dp[i][j] = d[i][j-1] + (dp[i-1][j-1] - (i>=j ? dp[i-1][j-i] : 0));
-```
+`dp[n][k+1] = dp[n-1][k+1] + (dp[n-1][k] + dp[n-1][k-1] + dp[n-1][k-2] + ... + dp[n-1][k+1-n+1] + dp[n-1][k-n+1]) - dp[n-1][k-n+1] = dp[n-1][k+1] + dp[n][k] - dp[n-1][k-n+1]`
 
 ```cpp
 class Solution {

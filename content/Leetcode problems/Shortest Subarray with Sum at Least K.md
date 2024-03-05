@@ -9,9 +9,9 @@ tags:
   - prefix_sum
   - review
 draft: false
-sr-due: 2024-02-20
-sr-interval: 20
-sr-ease: 230
+sr-due: 2024-06-24
+sr-interval: 111
+sr-ease: 250
 ---
 
 ## Description
@@ -43,6 +43,9 @@ A **subarray** is a **contiguous** part of an array.
 
 ## Code 
 
+這題有負數，若直接使用 [[Minimum Size Subarray Sum]] 的 sliding window approach 會出錯，例如：
+
+`nums = [84,-37,32,40,95], k = 167`，sliding window approach 會回傳 5，但答案應該是 3，原因就在於 `-37` 使得 sliding window 在 shrink 的過程中，會停在 `-37`，`32 + 40 + 95 = 167`，但是沒有了 `84` 把 `-37` 帶來的影響給抵銷，就會使得 sliding window 誤判。
 ### Monotonic Queue
 Time Complexity: $O(n)$, Space Complexity: $O(n)$
 
@@ -83,5 +86,5 @@ public:
 };
 ```
 
-	## Source
+## Source
 - [Shortest Subarray with Sum at Least K - LeetCode](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/)

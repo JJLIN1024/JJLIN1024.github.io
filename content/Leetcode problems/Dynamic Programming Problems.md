@@ -39,13 +39,14 @@ draft: false
 - [[Best Time to Buy and Sell Stock with Transaction Fee|Best Time to Buy and Sell Stock with Transaction Fee]]
 - [[Coin Change|Coin Change]]
 - [[Coin Change II|Coin Change II]]
+- [[Ones and Zeroes]]
 - [[Partition Equal Subset Sum|Partition Equal Subset Sum]]
 - [[Longest Increasing Path in a Matrix]]
 - [[Interleaving String]]
 - [[Edit Distance]]
 - [[Regular Expression Matching]]
-- 
 - [[Distinct Subsequences]]
+- [[Distinct Subsequences II]]
 - 
 - [[Burst Balloons]]
 - [[Maximal Square]]
@@ -55,7 +56,7 @@ draft: false
 - [[Minimum Swaps To Make Sequences Increasing]]
 - [[Number of Great Partitions]]
 - [[Number of Ways to Earn Points]]
-- [[Ones and Zeroes]]
+- 
 - [[Painting the Walls]]
 - [[Profitable Schemes]]
 - [[Shopping Offers]]

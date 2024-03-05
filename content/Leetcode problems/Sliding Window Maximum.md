@@ -10,9 +10,9 @@ tags:
   - monotonic_queue
   - review
 draft: false
-sr-due: 2024-08-09
-sr-interval: 197
-sr-ease: 310
+sr-due: 2026-06-28
+sr-interval: 845
+sr-ease: 330
 ---
 =
 ## Description
@@ -121,7 +121,7 @@ public:
         
         for(int i = 0; i < nums.size(); i++) {
             if(!d.empty() && d.front() <= i - k) d.pop_front();
-            while(!d.empty() && nums[d.back()] < nums[i]) {
+            while(!d.empty() && nums[d.back()] <= nums[i]) {
                 d.pop_back();
             }
             d.push_back(i);

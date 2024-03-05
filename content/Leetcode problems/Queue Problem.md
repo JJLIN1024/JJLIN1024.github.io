@@ -31,13 +31,10 @@ For example, with sliding window of fixed length 3,
 
 The head of the increasing queue is the **running max**!
 
+- [[Implement Queue using Stacks|Implement Queue using Stacks]]
 - [[Sliding Window Maximum]]
 - [[Shortest Subarray with Sum at Least K|Shortest Subarray with Sum at Least K]]
-- 
-- 
-- [[Implement Queue using Stacks|Implement Queue using Stacks]]
+- [[Constrained Subsequence Sum|Constrained Subsequence Sum]]
 - [[Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit|Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit]]
 - [[Continuous Subarrays|Continuous Subarrays]]
-- [[Sliding Window Maximum|Sliding Window Maximum]]
-- [[Constrained Subsequence Sum|Constrained Subsequence Sum]]
 - [[Count Subarrays With Fixed Bounds|Count Subarrays With Fixed Bounds]]

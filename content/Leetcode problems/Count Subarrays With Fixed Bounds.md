@@ -8,7 +8,11 @@ tags:
   - monotonic_queue
   - two_pointer
   - sliding_window
+  - review
 draft: false
+sr-due: 2024-03-08
+sr-interval: 3
+sr-ease: 250
 ---
 
 ## Description
@@ -46,6 +50,15 @@ A **subarray** is a **contiguous** part of an array.
 一開始我覺得這題和 [[Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit|Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit]] 很像。
 
 後來看了解答發現不需要這麼麻煩，只需要單純的 two pointer 就行了。
+
+```
+1. start , minFound ... maxFound
+2. start , maxFound ... minFound
+3. start ..., ..... min/max Found
+
+1.2. 兩種情況的 subarray 個數都是 + 1，而 3. 代表 min max 重疊的狀況，例如 1111，因此要用  min(minFound, maxFound) - start 來計算。
+```
+
 
 Time Complexity: $O(n)$, Space Complexity: $O(n)$
 

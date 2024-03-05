@@ -8,7 +8,11 @@ tags:
   - monotonic_queue
   - two_pointer
   - sliding_window
+  - review
 draft: false
+sr-due: 2024-03-09
+sr-interval: 4
+sr-ease: 274
 ---
 
 ## Description
@@ -53,6 +57,10 @@ Total continuous subarrays = 3 + 2 + 1 = 6.
 Time Complexity: $O(n)$, Space Complexity: $O(n)$
 
 這題和 [[Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit]] 很像。
+
+`j - i + 1` 的原理和 [[Binary Subarrays With Sum]] 中提到的一樣，今天找到一個 j 使 sliding window 為 valid window 時，不管前面的 i 怎麼移動，都是 j 使得新的 sub array 得以產生。
+
+以 `[5, 4, 2]` 為例：一開始先找到 `[5]`，然後找到 `[5, 4]`，這時，`4` 可以使得 `[5, 4], [4]` 兩個新的 subarray 產生，而 `[5]` 在上一步就考慮過了，不需要計入這次的累加中，所以新的 subarray 數量就是 `j - i + 1 = 2`。
 
 ```cpp
 class Solution {

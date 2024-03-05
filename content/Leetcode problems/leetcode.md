@@ -36,13 +36,13 @@ draft: false
 	- [[Heap(Priority Queue) Problems]]
 	- [[Balanced Search Tree Problems]]
 	- [[Line Sweep Problems]]
+	- [[Queue Problem]]
+	- [[Stack Problems]]
 	- 
 	- [[Bit Manipulation Problems|Bit Manipulation Problems]]
 	- [[Sorting Problems]]
 	- [[Binary Search Problems]]
 	- 
-	- [[Queue Problem]]
-	- [[Stack Problems]]
 	- [[Tree Problems]]
 	- [[Two Pointer & Sliding Window Problems]]
 	- [[Graph Problems]]

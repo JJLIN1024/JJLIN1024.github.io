@@ -8,9 +8,9 @@ tags:
   - next_permutation
   - review
 draft: false
-sr-due: 2024-08-06
-sr-interval: 159
-sr-ease: 292
+sr-due: 2025-12-10
+sr-interval: 645
+sr-ease: 312
 ---
 
 ## Description
