@@ -10,9 +10,9 @@ tags:
   - memoization
   - review
 draft: false
-sr-due: 2024-04-28
-sr-interval: 60
-sr-ease: 310
+sr-due: 2024-11-17
+sr-interval: 257
+sr-ease: 330
 ---
 
 ## Description

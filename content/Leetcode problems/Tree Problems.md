@@ -44,6 +44,8 @@ draft: false
 - [[Count Complete Tree Nodes]]
 - [[Find Bottom Left Tree Value]]
 - [[Even Odd Tree]]
+- [[Sum Root to Leaf Numbers]]
+- [[Recover Binary Search Tree]]
 - 
 - [[Symmetric Tree]]
 - [[Subtree of Another Tree]]

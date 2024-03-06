@@ -8,9 +8,9 @@ tags:
   - stack
   - review
 draft: false
-sr-due: 2024-03-06
-sr-interval: 1
-sr-ease: 245
+sr-due: 2024-03-09
+sr-interval: 3
+sr-ease: 265
 ---
 
 ## Description

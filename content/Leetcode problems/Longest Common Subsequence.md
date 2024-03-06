@@ -7,8 +7,8 @@ tags:
   - DP
   - review
 draft: false
-sr-due: 2024-06-20
-sr-interval: 113
+sr-due: 2025-02-18
+sr-interval: 350
 sr-ease: 310
 ---
 

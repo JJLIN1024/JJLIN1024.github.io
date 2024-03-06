@@ -2,8 +2,11 @@
 title: Number of Great Partitions
 date: 2023-09-25
 lastmod: 2023-09-25
-author: Jimmy Lin
-tags: ["dynamic programming", "knapsack"]
+author:
+  - Jimmy Lin
+tags:
+  - knapsack
+  - DP
 draft: false
 ---
 

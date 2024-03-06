@@ -30,6 +30,7 @@ draft: false
 - [[3Sum Closest]] 
 - [[4Sum]]
 - [[Trapping Rain Water]] 
+- [[Largest Rectangle in Histogram]]
 - [[Container With Most Water]] 
 - [[Longest Substring Without Repeating Characters|Longest Substring Without Repeating Characters]] 
 - [[Longest Repeating Character Replacement|Longest Repeating Character Replacement]]
@@ -43,11 +44,10 @@ draft: false
 - [[Fruit Into Baskets|Fruit Into Baskets]]
 - [[Subarray Product Less Than K|Subarray Product Less Than K]]
 - [[Sequential Digits]]
-- 
-- 
 - [[Frequency of the Most Frequent Element|Frequency of the Most Frequent Element]] 
 - [[Max Consecutive Ones III|Max Consecutive Ones III]]
 - [[Get Equal Substrings Within Budget|Get Equal Substrings Within Budget]]
+- 
 - [[Longest Subarray of 1's After Deleting One Element|Longest Subarray of 1's After Deleting One Element]]
 - [[Maximum Erasure Value|Maximum Erasure Value]]
 - [[Maximize the Confusion of an Exam|Maximize the Confusion of an Exam]]
@@ -56,11 +56,9 @@ draft: false
 - [[Count Subarrays With Fixed Bounds|Count Subarrays With Fixed Bounds]]
 - [[Minimum Number of Operations to Make Array Continuous|Minimum Number of Operations to Make Array Continuous]]
 - [[Maximum Score of a Good Subarray|Maximum Score of a Good Subarray]]
-- [[Largest Rectangle in Histogram|Largest Rectangle in Histogram]]
-- [[Trapping Rain Water|Trapping Rain Water]]
+- 
 - [[Move Zeroes]]
 - [[Find the Duplicate Number]]
 - [[Sort Colors]]
-- [[Squares of a Sorted Array]]
 
 

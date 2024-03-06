@@ -55,7 +55,7 @@ There is a cycle in a linked list if there is some node in the list that can be 
 
 Time Complexity: $O(N)$, Space Complexity: $O(1)$
 
-一脈相承 [[Linked List Cycle|Linked List Cycle]]。找 Cycle 起點可參考 [[notes/algorithm/Floyd’s Cycle Finding Algorithm|Floyd’s Cycle Finding Algorithm]]。
+一脈相承 [[Linked List Cycle|Linked List Cycle]]。找 Cycle 起點可參考 [[Floyd’s Cycle Finding Algorithm]]。
 
 ```c
 /**

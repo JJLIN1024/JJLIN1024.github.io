@@ -89,7 +89,7 @@ public:
 - [Kadane's Algorithm(Maximum Subarray Problem)](https://en.wikipedia.org/wiki/Maximum_subarray_problem)
 - [Largest Sum Contiguous Subarray (Kadane’s Algorithm)](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)
 
-由 [[notes/algorithm/Kadane Algorithm(Maximum Subarray Problem)|Kadane Algorithm(Maximum Subarray Problem)]] 可寫成以下版本（注意因為題目給的是當日的 price，因此在計算時要自己換算成兩日之間的差）：
+由 [[Kadane Algorithm(Maximum Subarray Problem)]] 可寫成以下版本（注意因為題目給的是當日的 price，因此在計算時要自己換算成兩日之間的差）：
 
 類似題目 : [[Maximum Subarray|Maximum Subarray]]
 

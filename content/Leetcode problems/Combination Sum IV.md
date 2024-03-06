@@ -8,8 +8,6 @@ tags:
   - DP
   - dfs
   - memoization
-  - unboundedKnapsack
-  - knapsack
 draft: false
 ---
 
@@ -84,7 +82,7 @@ public:
 ### Bottom Up DP
 Time Complexity: $O(nt)$, Space Complexity: $O(t)$
 
-其實這題有些類似 [[Coin Change II|Coin Change II]] ，Unbounded Knapsack 類型的題目。
+其實這題有些類似 [[Coin Change II|Coin Change II]] ，差別在於 order 是否 matters。
 
 ```cpp
 class Solution {

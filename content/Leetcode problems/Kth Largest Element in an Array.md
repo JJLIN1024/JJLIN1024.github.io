@@ -12,9 +12,9 @@ tags:
   - review
   - counting_sort
 draft: false
-sr-due: 2024-03-06
-sr-interval: 3
-sr-ease: 250
+sr-due: 2024-03-15
+sr-interval: 9
+sr-ease: 270
 ---
 
 ## Description

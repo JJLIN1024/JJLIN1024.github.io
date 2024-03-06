@@ -9,6 +9,9 @@ tags:
   - DP
   - review
 draft: false
+sr-due: 2024-03-22
+sr-interval: 17
+sr-ease: 290
 ---
 
 ## Description
@@ -113,5 +116,48 @@ public:
 };
 
 ```
+
+不可以寫成以下的形式！
+
+```cpp
+class Solution {
+public:
+    int change(int amount, vector<int>& coins) {
+        vector<int> dp(amount + 1, 0);
+        dp[0] = 1;
+
+        for(int i = 1; i < amount + 1; i++) {
+            for(auto c: coins) {
+                dp[i] = dp[i] + (i >= c ? dp[i - c] : 0);
+            }
+        }
+
+        return dp[amount];
+    }
+};
+```
+
+這樣會有重複計算的問題，因為這題不像 [[Combination Sum IV]] ㄧ樣順序不重要，這題中，順序重要，例如：
+
+`**Input:** amount = 5, coins = \[1,2,5\]
+**Output:** 4
+**Explanation:** there are four ways to make up the amount:
+5=5
+5=2+2+1
+5=2+1+1+1
+5=1+1+1+1+1
+
+而不會有 1 + 2 + 2 （或 2 + 1 + 2) 的解答。
+
+正確的形式是：
+
+```cpp
+for(auto c: coins) {
+	for(int i = 0; i < amount + 1; i++) {
+		dp[i] = dp[i] + (i >= c ? dp[i - c] : 0);
+	}
+}
+```
+
 ## Source
 - [Coin Change II - LeetCode](https://leetcode.com/problems/coin-change-ii/description/)

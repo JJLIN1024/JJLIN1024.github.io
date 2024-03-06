@@ -8,7 +8,11 @@ tags:
   - linked_list
   - binary_tree
   - slow_and_fast_pointer
+  - review
 draft: false
+sr-due: 2024-03-10
+sr-interval: 4
+sr-ease: 272
 ---
 
 ## Description

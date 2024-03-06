@@ -2,8 +2,10 @@
 title: Convert Sorted Array to Binary Search Tree
 date: 2023-03-19
 lastmod: 2023-03-19
-author: Jimmy Lin
-tags: ["divide and conquer"]
+author:
+  - Jimmy Lin
+tags:
+  - divide_and_conquer
 draft: false
 ---
 

@@ -8,9 +8,9 @@ tags:
   - sorting
   - review
 draft: false
-sr-due: 2024-03-07
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-03-23
+sr-interval: 17
+sr-ease: 290
 ---
 
 ## Description

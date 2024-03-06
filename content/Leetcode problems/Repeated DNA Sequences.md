@@ -7,7 +7,11 @@ author:
 tags:
   - hashmap
   - bit_manipulation
+  - review
 draft: false
+sr-due: 2024-03-10
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description

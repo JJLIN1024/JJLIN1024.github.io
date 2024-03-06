@@ -11,7 +11,6 @@ draft: false
 - [Graph algorithms + problems to practice](https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice)
 	
 ## Backtracking
-
 - [[Word Search]]
 - [[N-Queens]]
 - [[N-Queens II]]
@@ -29,10 +28,7 @@ draft: false
 - [[All Paths From Source to Target]]
 - [[Unique Paths III]]
 - [[Minimum Genetic Mutation]]
-- 
-
 ## DFS/BFS
-
 - [[Number of Islands]]
 - [[Clone Graph]]
 - [[Max Area of Island]]
@@ -45,6 +41,7 @@ draft: false
 - [[Flood Fill|Flood Fill]]
 - [[Word Ladder|Word Ladder]]
 - [[Time Needed to Inform All Employees]]
+- [[Restore IP Addresses]]
 - 
 - 
 - [[Get Watched Videos by Your Friends|Get Watched Videos by Your Friends]]
@@ -59,11 +56,8 @@ draft: false
 - [[As Far from Land as Possible]]
 - [[Number of Enclaves]]
 - [[Minimum Height Trees]]
-
 ## Topological Sort
 - [[Find the Town Judge]]
-- 
-
 ## Connected Component (Disjoint Set)
 - [[Number of Provinces]]
 - [[Number of Operations to Make Network Connected]]
@@ -78,23 +72,16 @@ draft: false
 - 
 - [[Count Unreachable Pairs of Nodes in an Undirected Graph]]
 - Longest Consecutive Sequence
-
 ## Bridges, Articulation Points
-
 - [[Critical Connections in a Network]]
-
 ## Shortest Path
-	
 - [[Cheapest Flights Within K Stops]]
 - [[Network Delay Time]]
 - [[Number of Ways to Arrive at Destination]]
 - [[Path with Maximum Probability]]
-- 
-- 
-
 ## All Pair Shortest Path
 - [[Find the City With the Smallest Number of Neighbors at a Threshold Distance 1]]
-
 ## Minimum Spanning Tree
+
 
 

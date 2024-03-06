@@ -20,7 +20,8 @@ Return _the **maximum possible frequency** of an element after performing **at m
 **Example 1:**
 
 **Input:** nums = \[1,2,4\], k = 5
-**Output:** 3 **Explanation:** Increment the first element three times and the second element two times to make nums = \[4,4,4\].
+**Output:** 3 
+**Explanation:** Increment the first element three times and the second element two times to make nums = \[4,4,4\].
 4 has a frequency of 3.
 
 **Example 2:**
