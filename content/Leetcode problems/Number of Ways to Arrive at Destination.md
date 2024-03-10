@@ -11,9 +11,9 @@ tags:
   - Dijkstra
   - review
 draft: false
-sr-due: 2024-02-06
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-07-13
+sr-interval: 128
+sr-ease: 290
 ---
 
 ## Description
@@ -60,6 +60,7 @@ The four ways to get there in 7 minutes are:
 
 也可以考慮使用 `multiset`，可以先 delete 再 insert 來達成 update 的目的。
 ### priority_queue
+
 ```cpp
 typedef pair<long long, long long> pa;
 class Solution {

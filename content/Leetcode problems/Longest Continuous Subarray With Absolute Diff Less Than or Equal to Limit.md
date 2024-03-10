@@ -10,9 +10,9 @@ tags:
   - sliding_window
   - review
 draft: false
-sr-due: 2024-03-08
-sr-interval: 3
-sr-ease: 250
+sr-due: 2024-03-23
+sr-interval: 14
+sr-ease: 270
 ---
 
 ## Description
@@ -105,6 +105,7 @@ public:
 
             while(!Max.empty() && nums[Max.back()] <= nums[j]) Max.pop_back();
             while(!Min.empty() && nums[Min.back()] >= nums[j]) Min.pop_back();
+			// insert here! not after the while loop down below
             Max.push_back(j);
             Min.push_back(j);
 

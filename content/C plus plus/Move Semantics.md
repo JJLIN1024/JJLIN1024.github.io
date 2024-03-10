@@ -8,6 +8,37 @@ tags:
   - c_plus_plus
 draft: false
 ---
+## Without Move Semantics (C++03)
+
+- unnecessary copies
+
+```cpp
+// Vector.hpp
+template <typename T>
+class Vector {
+	public:
+		...
+		void push_back(const T& elem); 
+		...
+		void push_back(T&& elem);
+};
+```
+
+```cpp
+#include <utility> // std::move
+
+std::vector<std::string> coll;
+std::string s = getData();
+...
+coll.push_back(s); // void push_back(const T& elem) is called
+coll.push_back(getData()); // temporary object, void push_back(T&& elem) is called
+coll.push_back(s + s); // temporary object, void push_back(T&& elem) is called
+coll.push_back(std::move(s)); // void push_back(T&& elem) is called
+...
+
+```
+
+
 ## The use of a r-value reference is a l-value
 
 ```cpp
@@ -50,5 +81,5 @@ constexpr remove_reference_t<T>&& move(T&& t) noexcept {
 }
 ```
 
-std::move does not move anything, it just cast the parameter into a r-value, so that it can be bound to a r-value reference.
+`std::move` does not move anything, it just cast the parameter into a r-value, so that it can be bound to a r-value reference.
 

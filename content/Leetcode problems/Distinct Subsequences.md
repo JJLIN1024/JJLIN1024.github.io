@@ -8,9 +8,9 @@ tags:
   - DP
   - review
 draft: false
-sr-due: 2024-03-07
-sr-interval: 2
-sr-ease: 250
+sr-due: 2024-03-24
+sr-interval: 15
+sr-ease: 270
 ---
 
 ## Description
@@ -91,17 +91,33 @@ public:
 ### Bottom Up
 Time Complexity: $O(mn)$, Space Complexity: $O(mn)$
 
+`dp[i][j]`: the number of distinct subsequences of `s[0:i]` which equals `t[0:j]`.
+
+Base case:
+
+```cpp
+// base case
+for(int j = 0; j <= m; j++) 
+	dp[j][0] = 1;
+```
+
+考慮下面的例子，最左邊那排都是 1 ，因為這排代表的是當 s 某個 index 和 t 的第一個 index 的 char 相等時，會產生的 distinct subsequence 的數量。
+
+以 babgb 和 b 一組為例，要計算的是 `dp[5][1]`，因為 b 都相等，因此要 + 1，也就是 `dp[4][0]` 的值，但同時，先前已經計算好 babg 和 b 會有多少個 distinct subsequence 了，也就是 `dp[4][1] = 2`，所以說 `dp[5][1] = 2 + 1 = 3`。
+
 ```
 s = "babgbag", t = "bag"
 
-1 0 0 0 
-1 1 0 0 
-1 1 1 0 
-1 2 1 0 
-1 2 1 1 
-1 3 1 1 
-1 3 4 1 
-1 3 4 5 
+	   b a g
+------------
+	|1 0 0 0 
+b	|1 1 0 0 
+a	|1 1 1 0 
+b	|1 2 1 0 
+g	|1 2 1 1 
+b	|1 3 1 1 
+a	|1 3 4 1 
+g	|1 3 4 5 
 ```
 
 t 不可以被 skip，s 可以，不 match 就跳過即可。
@@ -110,15 +126,19 @@ t 不可以被 skip，s 可以，不 match 就跳過即可。
 class Solution {
 public:
     int numDistinct(string s, string t) {
-        int m = t.length(), n = s.length();
+        int m = s.length(), n = t.length();
         vector<vector<unsigned>> dp(m + 1, vector<unsigned>(n + 1, 0));
-        for(int j = 0; j <= n; j++) dp[0][j] = 1;
-        for(int j = 1; j <= n; j++) {
-            for(int i = 1; i <= m; i++) {
-                dp[i][j] = dp[i][j - 1] + ((t[i - 1] == s[j - 1]) ? dp[i - 1][j - 1] : 0);
+		// base case
+        for(int j = 0; j <= m; j++) 
+            dp[j][0] = 1;
+
+        for(int i = 1; i < m + 1; i++) {
+            for(int j = 1; j < n + 1; j++) {
+                dp[i][j] = dp[i - 1][j] + ((s[i - 1] == t[j - 1]) ? dp[i - 1][j - 1] : 0);
                 dp[i][j] %= INT_MAX;
             }
         }
+
         return dp[m][n];
     }
 };

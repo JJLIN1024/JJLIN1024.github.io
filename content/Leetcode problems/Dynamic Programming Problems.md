@@ -7,7 +7,11 @@ tags: [""]
 draft: false
 ---
 	
+## Resources
 - [[Most consistent ways of dealing with the series of stock problems]]
+- [Solved all dynamic programming (dp) problems in 7 months.](https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months)
+
+## Problems
 
 - [[Triangle]]
 - [[Longest Common Subsequence]]
