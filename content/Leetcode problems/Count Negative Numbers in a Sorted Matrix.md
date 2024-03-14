@@ -2,8 +2,10 @@
 title: Count Negative Numbers in a Sorted Matrix
 date: 2023-07-01
 lastmod: 2023-07-01
-author: Jimmy Lin
-tags: ["binary search", "two pointer"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
 draft: false
 ---
 
@@ -38,6 +40,19 @@ Given a `m x n` matrix `grid` which is sorted in non-increasing order both row-w
 Time Complexity: $O(m \log n)$, Space Complexity: $O(1)$
 
 基本概念同 [[Binary Search 101|Binary Search 101]]。
+
+```cpp
+class Solution {
+public:
+    int countNegatives(vector<vector<int>>& grid) {
+        int res = 0;
+        for(auto& row: grid) {
+            res += lower_bound(row.rbegin(), row.rend(), 0) - row.rbegin();
+        }
+        return res;
+    }
+};
+```
 
 ```cpp
 class Solution {

@@ -2,9 +2,15 @@
 title: Kth Missing Positive Number
 date: 2023-07-01
 lastmod: 2023-07-01
-author: Jimmy Lin
-tags: ["binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - review
 draft: false
+sr-due: 2024-03-18
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description
@@ -36,27 +42,25 @@ Return _the_ `kth` _**positive** integer that is **missing** from this array._
 
 Could you solve this problem in less than O(n) complexity?
 
-基本概念同 [[Binary Search 101|Binary Search 101]]。
-
 ## Code 
 ### Linear Search
-Time Complexity: $O(n)$, Space Complexity: $O(n)$
+Time Complexity: $O(n)$, Space Complexity: $O(1)$
 
 ```cpp
 class Solution {
 public:
     int findKthPositive(vector<int>& arr, int k) {
-        unordered_set<int> S(arr.begin(), arr.end());
-        int count = 0;
-        for(int i = 1; i <= 1000 + k; i++) {
-            if(S.find(i) == S.end())
-                count++;
-            if(count == k) return i;
-            S.insert(i);
+        int i, j = 0;
+        for(i = 1; i <= arr.back(); i++) {
+            if(i == arr[j])
+                j++;
+            else
+                k--;
+            if(k == 0)
+                break;
         }
 
-        return -1; 
-
+        return k == 0 ? i : i - 1 + k;
     }
 };
 ```
@@ -71,21 +75,22 @@ public:
         int l = 0, r = arr.size();
         while(l < r) {
             int m = (l + r) / 2;
-            if((arr[m] - m - 1) < k) 
+            int n_missing_number = (arr[m] - (m + 1));
+            if(n_missing_number < k) 
                 l = m + 1;
             else 
                 r = m;
         }
-        // (A[l - 1]) + (k - (A[l - 1] - l)) = l + k
-        // A[l -1](the largest number in A that is less than result) + K - B[l - 1](offset, how far from result)
+        // since we're considering A[l - 1], so r has to be set as arr.size(), not arr.size() - 1;
+        // A[l - 1]: the largest number in A that is less than result)
+        // A[l - 1] - ((l - 1) + 1): how many number are missing up until A[l - 1]
+        // k - (A[l - 1] - ((l - 1) + 1)) = k - A[l - 1] + l: how many number we still have to find after A[l - 1]
+        // A[l - 1] + (k - A[l - 1] + l) -> answer = l + k;
         return l + k; 
 
     }
 };
 
-// 0 1 2 3 4 5
-// 1 1 1 3 6
-// 2,3,4,7,11
 ```
 
 ## Source

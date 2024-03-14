@@ -8,9 +8,9 @@ tags:
   - binary_tree
   - review
 draft: false
-sr-due: 2024-03-10
-sr-interval: 11
-sr-ease: 270
+sr-due: 2024-05-05
+sr-interval: 53
+sr-ease: 290
 ---
 
 ## Description

@@ -38,6 +38,8 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 
 ## Code 
 
+用 binary search 加速 [[H-Index]] 而已。
+
 ```cpp
 class Solution {
 public:

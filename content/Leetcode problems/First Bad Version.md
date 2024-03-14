@@ -2,8 +2,10 @@
 title: First Bad Version
 date: 2022-12-24
 lastmod: 2022-12-24
-author: Jimmy Lin
-tags: ["Binary Search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
 draft: false
 ---
 

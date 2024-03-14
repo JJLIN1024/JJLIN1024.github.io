@@ -8,9 +8,9 @@ tags:
   - bit_manipulation
   - review
 draft: false
-sr-due: 2024-03-10
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-04-08
+sr-interval: 26
+sr-ease: 290
 ---
 
 ## Description
@@ -55,9 +55,9 @@ The binary representation of \[0,1,3,2\] is \[00,01,11,10\].
 觀察：
 
 ```
-n = 1 : {0, 1}
-n = 2 : {0, 1, 10, 11}
-n = 3 : {0, 1, 10, 11, 110, 111, 101, 100}
+n = 1 : {00, 01}
+n = 2 : {00, 01, 10, 11}
+n = 3 : {000, 001, 010, 011, 110, 111, 101, 100}
 ...
 ```
 

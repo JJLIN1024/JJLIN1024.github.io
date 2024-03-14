@@ -8,9 +8,9 @@ tags:
   - bit_manipulation
   - review
 draft: false
-sr-due: 2024-03-10
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-04-07
+sr-interval: 25
+sr-ease: 290
 ---
 
 ## Description
@@ -55,20 +55,33 @@ public:
     int divide(int dividend, int divisor) {
         if(dividend == divisor) return 1;
         int sign = (dividend ^ divisor) < 0 ? -1 : 1;
+
         unsigned int a = (unsigned int) abs(dividend);
         unsigned int b = (unsigned int) abs(divisor);
         unsigned int quotient = 0;
+
         while(a >= b) {
             int q = 0;
             while(a > (b << (q + 1))) {
                 q++;
             }
+
             quotient += (1 << q);
             a -= (b << q);
         }
+
+        /*
+        For this problem, if the quotient is strictly greater 
+        than 2^31 - 1, then return 2^31 - 1, and if the quotient 
+        is strictly less than -2^31, then return -2^31.
+
+        for case like -2147483648 / -1, we should 
+        return 2147483647 instead of -2147483648
+        */
         if(quotient == (1 << 31)) {
             return sign == 1 ? INT_MAX : INT_MIN;
         }
+
         return sign * quotient;
     }
 };

@@ -2,8 +2,10 @@
 title: Sqrt(x)
 date: 2023-04-21
 lastmod: 2023-04-21
-author: Jimmy Lin
-tags: ["math", "binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
 draft: false
 ---
 
@@ -35,6 +37,7 @@ You **must not use** any built-in exponent function or operator.
 
 基本概念同 [[Binary Search 101|Binary Search 101]]。
 
+可以用除法避免 integer overflow。
 ```cpp
 class Solution {
 public:
@@ -53,6 +56,27 @@ public:
         }
 
         return l == x / l ? l : l - 1;
+    }
+};
+```
+
+和 [[Valid Perfect Square]] 是同個概念。
+
+```cpp
+class Solution {
+public:
+    int mySqrt(int x) {
+        long long l = 1, r = x;
+        while(l < r) {
+            long long m = l + (r - l) / 2;
+            long long product = m * m;
+            if(product < x) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+        return l * l > x ? l - 1 : l;
     }
 };
 ```

@@ -8,9 +8,9 @@ tags:
   - linked_list
   - review
 draft: false
-sr-due: 2024-01-31
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-08-29
+sr-interval: 169
+sr-ease: 290
 ---
 
 ## Description
@@ -100,26 +100,26 @@ class Solution {
 public:
     Node* flatten(Node* head) {
         Node *ptr = head, *tmp_next, *runner;
-        
-        while (ptr) {
-            if (ptr->child) {
-                
-                // Save the current next and connect the child to next
+
+        while(ptr) {
+            if(ptr->child) {
                 tmp_next = ptr->next;
                 ptr->next = ptr->child;
-                ptr->next->prev = ptr;
-                ptr->child = NULL;
-                
-                // Run till the end of the current list and connect last node to saved next
+                ptr->next->prev= ptr;
+                ptr->child = nullptr;
+
                 runner = ptr->next;
-                while (runner->next) runner = runner->next;
+                while(runner->next)
+                    runner = runner->next;
+                
                 runner->next = tmp_next;
-                if (runner->next) runner->next->prev = runner;
+                if(runner->next)
+                    runner->next->prev = runner;
             }
-            
+
             ptr = ptr->next;
         }
-        
+
         return head;
     }
 };

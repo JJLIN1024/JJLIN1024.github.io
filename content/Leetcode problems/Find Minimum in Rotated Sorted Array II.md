@@ -2,9 +2,15 @@
 title: Find Minimum in Rotated Sorted Array II
 date: 2023-04-26
 lastmod: 2023-04-26
-author: Jimmy Lin
-tags: ["binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - review
 draft: false
+sr-due: 2024-03-15
+sr-interval: 1
+sr-ease: 238
 ---
 
 ## Description

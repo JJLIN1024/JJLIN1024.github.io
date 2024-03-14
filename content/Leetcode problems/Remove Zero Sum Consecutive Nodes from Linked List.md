@@ -9,7 +9,11 @@ tags:
   - indirect_pointer
   - two_pointer
   - sliding_window
+  - review
 draft: false
+sr-due: 2024-03-16
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description
@@ -60,20 +64,23 @@ class Solution {
 public:
     ListNode* removeZeroSumSublists(ListNode* head) {
         ListNode** indirect = &head;
+
         while(*indirect) {
-            ListNode* j = *indirect;
-            int curSum = j->val;
-            ListNode* jj = j->next;
-            while(jj && curSum != 0) {
-                curSum += jj->val;
-                jj = jj->next;
+            ListNode* cur = *indirect;
+            ListNode* runner = cur->next;
+            int curSum = cur->val;
+            while(runner && curSum != 0) {
+                curSum += runner->val;
+                runner = runner->next;
             }
+
             if(curSum == 0) {
-                *indirect = jj;
+                *indirect = runner;
             } else {
                 indirect = &((*indirect)->next);
             }
         }
+
         return head;
     }
 };

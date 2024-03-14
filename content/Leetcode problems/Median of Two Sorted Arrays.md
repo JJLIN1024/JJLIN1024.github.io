@@ -7,9 +7,9 @@ tags:
   - binary_search
   - review
 draft: false
-sr-due: 2024-04-11
-sr-interval: 39
-sr-ease: 210
+sr-due: 2024-04-03
+sr-interval: 20
+sr-ease: 190
 ---
 
 ## Description

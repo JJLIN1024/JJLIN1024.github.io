@@ -8,9 +8,9 @@ tags:
   - review
   - binary_search
 draft: false
-sr-due: 2024-03-07
+sr-due: 2024-03-15
 sr-interval: 1
-sr-ease: 230
+sr-ease: 210
 ---
 
 ## Description
@@ -53,7 +53,7 @@ if(nums[mid] == nums[r]) // we don't know which half is sorted, O(n)
 	r--; 
 ```
 
-的狀況。
+的狀況。和 [[Find Minimum in Rotated Sorted Array II]] 裡用到的技巧相同。
 
 回到沒有 duplicate 的簡單例子，透過比較 m, r，我們可以知道哪半邊是 sorted 的。
 

@@ -9,9 +9,10 @@ tags:
   - two_pointer
   - atMost
   - review
+  - hashmap
 draft: false
-sr-due: 2024-02-23
-sr-interval: 24
+sr-due: 2024-06-21
+sr-interval: 99
 sr-ease: 290
 ---
 
@@ -43,6 +44,30 @@ A **subarray** is a contiguous part of the array.
 *   `0 <= goal <= nums.length`
 
 ## Code 
+
+### Hashmap
+
+和 [[Subarray Sum Equals K]] 同樣概念。
+
+```cpp
+class Solution {
+public:
+    int numSubarraysWithSum(vector<int>& nums, int goal) {
+
+        unordered_map<int, int> mp = {{0, 1}};
+        int cur = 0, res = 0;
+        for(auto n: nums) {
+            cur += n;
+            if(mp.find(cur - goal) != mp.end()) {
+                res += mp[cur - goal];
+            }
+            mp[cur]++;
+        }
+        return res;
+    }
+};
+```
+
 
 ### The atMost Trick
 

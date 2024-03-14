@@ -2,9 +2,15 @@
 title: Peak Index in a Mountain Array
 date: 2023-07-15
 lastmod: 2023-07-15
-author: Jimmy Lin
-tags: ["binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - review
 draft: false
+sr-due: 2024-03-18
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description
@@ -47,27 +53,8 @@ Time Complexity: $O(\log n)$, Space Complexity: $O(1)$
 
 因為使用 `int m = l + (r - l) / 2;`，此種計算 middle 的方式是偏左邊，因此對於 `arr[m]` 而言，比較的對象會是 `if(arr[m] < arr[m + 1])`，就不用擔心 array index out of range 的問題。
 
-Either way，我們要尋找的都是第一個不滿足 `arr[m] < arr[m + 1]` 的 `m`，也就代表開始下坡，也就是我們的山頂。
+因為只有一個山頂，所以第一個不滿足 `arr[m] < arr[m + 1]` 的 `m`，也就代表開始下坡，也就是我們的山頂。
 
-### Version 1
-```cpp
-class Solution {
-public:
-    int peakIndexInMountainArray(vector<int>& arr) {
-        int l = 0, r = arr.size() - 1;
-        while(l <= r) {
-            int m = l + (r - l) / 2;
-            if(arr[m] < arr[m + 1]) 
-                l = m + 1;
-            else
-                r = m - 1;
-        }
-        return l;
-    }
-};
-```
-
-### Version 2
 ```cpp
 class Solution {
 public:

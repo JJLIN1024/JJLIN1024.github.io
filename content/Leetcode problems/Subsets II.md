@@ -7,9 +7,9 @@ tags:
   - backtracking
   - review
 draft: false
-sr-due: 2024-01-31
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-09-03
+sr-interval: 174
+sr-ease: 290
 ---
 
 ## Description

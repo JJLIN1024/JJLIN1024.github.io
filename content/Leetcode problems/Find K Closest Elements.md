@@ -2,9 +2,16 @@
 title: Find K Closest Elements
 date: 2023-04-19
 lastmod: 2023-04-19
-author: Jimmy Lin
-tags: ["two pointer", "binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - two_pointer
+  - review
 draft: false
+sr-due: 2024-03-15
+sr-interval: 1
+sr-ease: 230
 ---
 
 ## Description

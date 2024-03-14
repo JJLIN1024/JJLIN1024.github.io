@@ -9,9 +9,9 @@ tags:
   - hashmap
   - review
 draft: false
-sr-due: 2024-03-13
-sr-interval: 13
-sr-ease: 250
+sr-due: 2024-04-27
+sr-interval: 45
+sr-ease: 270
 ---
 
 ## Description
@@ -83,6 +83,7 @@ public:
     bool remove(int val) {
         auto result = mp.find(val) != mp.end();
         if(result) {
+	        
             int index = *mp[val].begin();
             if (mp[val].size() == 1) {
                 mp.erase(val);
