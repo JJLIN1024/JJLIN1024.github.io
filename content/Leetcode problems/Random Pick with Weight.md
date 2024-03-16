@@ -9,9 +9,9 @@ tags:
   - prefix_sum
   - review
 draft: false
-sr-due: 2024-03-04
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-05-06
+sr-interval: 53
+sr-ease: 290
 ---
 
 ## Description
@@ -71,9 +71,27 @@ and so on.
 - [rand](https://cplusplus.com/reference/cstdlib/rand/)
 - [upper_bound](https://cplusplus.com/reference/algorithm/upper_bound/)
 
-因為 `rand() % n` 代表在 `0 ~ n - 1` 當中隨機選一個數，且題目的限制 `1 <= w[i] <= 105`，所以 `int random_number = rand() % w_.back() + 1;`（要加一）。
+因為 `rand() % n` 代表在 `0 ~ n - 1` 當中隨機選一個數，且題目的限制 `1 <= w[i] <= 105`，所以 `int random_number = rand() % w_.back() + 1;`（要加一，產生 `1 ~ n`）。
 
-以 `w = [1, 3, 4]` 為例，prefix sum 為 `[1, 4, 8]`，random 出來的數字落在`0` 回傳的結果是 `0`，落在 `1,2,3` 回傳的結果都是 `3`，落在 `4,5,6,7` 的結果都是 `4`。
+以 `w = [1, 3, 4]` 為例，prefix sum 為 `[1, 4, 8]`，random 出來的數字落在`1` 回傳的結果是 `1`，落在 `2,3,4` 回傳的結果都是 `2`，落在 `5,6,7,8` 的結果都是 `3`，所以我們使用 `lower_bound` 而非 `upper_bound`。
+
+```cpp
+class Solution {
+public:
+    vector<int> w_;
+    Solution(vector<int>& w) {
+        w_ = move(w);
+        for(int i = 1; i < w_.size(); i++) {
+            w_[i] += w_[i - 1];
+        }
+    }
+    
+    int pickIndex() {
+        int random_number = rand() % w_.back() + 1;
+        return lower_bound(w_.begin(), w_.end(), random_number) - w_.begin();
+    }
+};
+```
 
 ```cpp
 class Solution {

@@ -8,9 +8,9 @@ tags:
   - prefix_sum
   - review
 draft: false
-sr-due: 2025-01-02
-sr-interval: 308
-sr-ease: 330
+sr-due: 2028-01-15
+sr-interval: 1401
+sr-ease: 350
 ---
 
 ## Description

@@ -7,7 +7,9 @@ author:
 tags: 
 draft: false
 ---
-
+## Resources
+- [Array cheatsheet for coding interviews](https://www.techinterviewhandbook.org/algorithms/array/)
+## Problems
 - [[Pascal's Triangle]] 
 - [[Pascal's Triangle II]] 
 - [[Spiral Matrix]]

@@ -8,9 +8,9 @@ tags:
   - DP
   - review
 draft: false
-sr-due: 2024-02-03
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-09-08
+sr-interval: 176
+sr-ease: 290
 ---
 ## Description
 
@@ -65,37 +65,37 @@ public:
 
 ### DP
 
-Denote $M$ as `target`, and $N$ as `nums.size()`.
-Time Complexity: $O(MN)$, Space Complexity: $O(MN)$
-注意 base case 的設定，若不知道該怎麼設，就 dry run 幾組 test case 就會知道了。
-
-注意 `DP` 的 size 為 $(n + 1) \cdot (m + 1)$。
-
 ```cpp
 class Solution {
 public:
     bool canPartition(vector<int>& nums) {
         int sum = accumulate(nums.begin(), nums.end(), 0);
-        if(sum % 2 != 0) return false;
-        int target = sum / 2;
-        int n = nums.size();
-        vector<vector<int>> DP(n + 1, vector<int>(target + 1, 0));
-        
-		// Base case
-        for(int i = 0; i < n + 1; i++) {
-            DP[i][0] = 1;
-        }
-        
+        if(sum % 2 != 0)
+            return false;
+        int target = sum / 2, n = nums.size();
+        /*
+        dp[i][j]: can use nums[0:i] to add up to j
+        so dp[i][0] = true because we can always use
+        0 to add up to 0.
+
+        dp[i][j] = dp[i - 1][j] || dp[i - 1][j - nums[i - 1]];
+        dp[i - 1][j]: do not use nums[i - 1], use only nums[0: i - 2] to adds up to j;
+        dp[i - 1][j - nums[i - 1]]: use nums[i - 1], and use nums[0: i - 2] to adds up to j - nums[i - 1];
+        */
+        vector<vector<bool>> dp(n + 1, vector<bool>(target + 1, false));
+        // base case
+        for(int i = 0; i < n + 1; i++)
+            dp[i][0] = true;
+
         for(int i = 1; i < n + 1; i++) {
-            for(int j = 0; j < target + 1; j++) {
-                if(j >= nums[i - 1]) {
-                    if(DP[i-1][j - nums[i - 1]] == 1) DP[i][j] = 1;
-                }
-                if(DP[i-1][j] == 1) DP[i][j] = 1;
+            for(int j = 1; j < target + 1; j++) {
+                dp[i][j] = dp[i][j] || dp[i - 1][j];
+                if(j >= nums[i - 1])
+                    dp[i][j] = dp[i][j] || dp[i - 1][j - nums[i - 1]];
             }
         }
 
-        return DP[n][target];
+        return dp[n][target];
     }
 };
 ```

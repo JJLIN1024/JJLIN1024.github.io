@@ -59,38 +59,33 @@ public:
             mp[c]++;
         }
 
-        int count = mp.size();
-        int i = 0, j = 0;
-        int n = s.length();
-        int res = n;
-        int start = 0;
-        bool find = false;
-        while(j < n) {
-            while(i < n && count > 0) {
-                if(mp.find(s[i]) != mp.end()) {
-                    mp[s[i]]--;
-                    if(mp[s[i]] == 0) count--;
+        int j = 0, n = s.length(), count = mp.size(), window = INT_MAX, start = -1;
+        for(int i = 0; i < n; i++) {
+            while(j < n && count > 0) {
+                if(mp.find(s[j]) != mp.end()) {
+                    mp[s[j]]--;
+                    if(mp[s[j]] == 0) 
+                        count--;
                 }
-                i++;
+                j++;
             }
 
             if(count == 0) {
-                find = true;
-                if(i - j < res) {
-                    res = i - j;
-                    start = j;
+                if(j - i < window) {
+                    window = j - i;
+                    start = i;
                 }
+            }
                 
+            
+            if(mp.find(s[i]) != mp.end()) {
+                mp[s[i]]++;
+                if(mp[s[i]] == 1)
+                    count++;
             }
-
-            if(mp.find(s[j]) != mp.end()) {
-                if(mp[s[j]] == 0) count++;
-                mp[s[j]]++;
-            }
-            j++;
         }
 
-        return find ? s.substr(start, res) : "";
+        return window == INT_MAX ? "" : s.substr(start, window);
     }
 };
 ```

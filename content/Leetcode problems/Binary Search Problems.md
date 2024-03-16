@@ -39,6 +39,11 @@ draft: false
 - [[Single Element in a Sorted Array]]
 - [[Peak Index in a Mountain Array|Peak Index in a Mountain Array]]
 - [[Valid Triangle Number]]
+- [[Successful Pairs of Spells and Potions]]
+- [[Longest Increasing Subsequence]]
+- [[Russian Doll Envelopes]]
+- [[House Robber IV]]
+- 
 - [[Find K Closest Elements]]
 - [[Median of Two Sorted Arrays]]
 - 

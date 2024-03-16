@@ -2,9 +2,15 @@
 title: Maximum Tastiness of Candy Basket
 date: 2023-07-15
 lastmod: 2023-07-15
-author: Jimmy Lin
-tags: ["binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - binary_search
+  - review
 draft: false
+sr-due: 2024-03-19
+sr-interval: 3
+sr-ease: 250
 ---
 
 ## Description
@@ -48,36 +54,42 @@ It can be proven that 2 is the maximum tastiness that can be achieved.
 
 Time Complexity: $O(n \log n  + n \log 10^9)$, Space Complexity: $O(1)$
 
+`check` 使用 greedy，因為 price 為 sorted ，所以從第一個 element 開始找，如果說有更後面的元素也可以當作起點，那第一個元素一定更可以當作起點。
+
+以 `1, 2, 5, 8, 13, 21, gap = 8` 為例，`5, 13, 21` 是一組解，但是 `1, 13, 21` 也是。
+
 ```cpp
 class Solution {
 public:
     int maximumTastiness(vector<int>& price, int k) {
         sort(price.begin(), price.end());
-        int l = 0, r = 1e9 - 1;
+
+        int l = 0;
+        int r = 1e9 - 1;
+
         while(l < r) {
-            int m = l + (r - l + 1) / 2;
+            int m = l + (r - l) / 2;
             if(check(m, price, k)) {
-                l = m;
+                l = m + 1;
             } else {
-                r = m - 1;
+                r = m;
             }
         }
-        return l;
+        return check(l, price, k) ? l : l - 1;
     }
 
-    bool check(int x, vector<int>& price, int k) {
-        int last = price[0], count = 1, i = 1;
-        while (count < k && i < price.size()) {
-            if (price[i] - last >= x)
-                last = price[i], count++;
-            i++;
+    bool check(int gap, vector<int>& price, int k) {
+        int prev = price[0];
+        k--;
+        for(int i = 1; i < price.size(); i++) {
+            if(price[i] - prev >= gap) {
+                prev = price[i];
+                k--;
+            }
         }
-        return count == k;
+        return k <= 0;
     }
 };
-
-
-
 ```
 
 ## Source

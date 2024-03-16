@@ -13,6 +13,7 @@ draft: false
 	- [neetcode roadmap](https://neetcode.io/roadmap)
 	- Grind 75, 169
 - Resources
+	- [Tech Interview Handbook's algorithm study cheatsheets.](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/)
 	- [[How to practice for 2200+ rating in LC]]
 	- [演算法筆記](https://web.ntnu.edu.tw/~algo/)
 	- [Algorithms for Competitive Programming](https://github.com/cp-algorithms/cp-algorithms)
@@ -38,20 +39,16 @@ draft: false
 	- [[Line Sweep Problems]]
 	- [[Queue Problem]]
 	- [[Stack Problems]]
-	- 
 	- [[Bit Manipulation Problems|Bit Manipulation Problems]]
 	- [[Sorting Problems]]
 	- [[Binary Search Problems]]
-	- 
 	- [[Tree Problems]]
 	- [[Two Pointer & Sliding Window Problems]]
 	- [[Graph Problems]]
 	- [[Dynamic Programming Problems]]
 	- [[Greedy Problems]]
 	- [[Divide and Conquer Problems]]
-	- 
 	- [[Segment Tree Problems]]
 	- [[Trie Problems]]
-	- 
 	- [[Math Problems]]
 	- [[Game Theory Problems]]

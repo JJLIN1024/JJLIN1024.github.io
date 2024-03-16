@@ -9,9 +9,9 @@ tags:
   - DP
   - review
 draft: false
-sr-due: 2024-02-04
-sr-interval: 4
-sr-ease: 270
+sr-due: 2026-01-06
+sr-interval: 661
+sr-ease: 310
 ---
 
 ## Description

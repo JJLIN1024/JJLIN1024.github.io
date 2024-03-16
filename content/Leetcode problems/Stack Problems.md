@@ -21,6 +21,7 @@ draft: false
 - [[Largest Rectangle in Histogram|Largest Rectangle in Histogram]]
 - [[Basic Calculator]]
 - [[Basic Calculator II]]
+- [[Number of Visible People in a Queue]]
 - 
 - [[Maximum Score of a Good Subarray|Maximum Score of a Good Subarray]]
 - [[Trapping Rain Water|Trapping Rain Water]]

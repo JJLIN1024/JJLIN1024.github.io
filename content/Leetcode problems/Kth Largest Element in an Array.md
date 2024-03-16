@@ -12,9 +12,9 @@ tags:
   - review
   - counting_sort
 draft: false
-sr-due: 2024-03-15
-sr-interval: 9
-sr-ease: 270
+sr-due: 2024-04-23
+sr-interval: 38
+sr-ease: 290
 ---
 
 ## Description
@@ -54,6 +54,7 @@ Time Complexity: $O(n)$, Space Complexity: $O(n)$
 若沒有 randonmized input，runtime 會慢很多（240ms），有的話只需要（102ms）。
 
 - [[Sorting]]
+- [[Quick Sort]]
 
 ```cpp
 class Solution {

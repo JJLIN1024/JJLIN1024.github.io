@@ -8,9 +8,9 @@ tags:
   - binary_search
   - review
 draft: false
-sr-due: 2024-03-15
-sr-interval: 1
-sr-ease: 238
+sr-due: 2024-03-25
+sr-interval: 9
+sr-ease: 258
 ---
 
 ## Description
@@ -47,6 +47,32 @@ You must decrease the overall operation steps as much as possible.
 
 ## Code 
 
+```cpp
+class Solution {
+public:
+    int findMin(vector<int>& nums) {
+        int l = 0, r = nums.size() - 1;
+
+        while(l < r) {
+            int m = l + (r - l) / 2;
+            if(nums[m] < nums[r]) {
+            // the right half is sorted
+                r = m;
+            } else if(nums[m] > nums[r]) {
+            // the left half is sorted
+                l = m + 1;
+            } else if(nums[m] == nums[r]) {
+            // we have no clue
+                r--;
+            }
+        }
+
+        return nums[l];
+    }
+};
+```
+
+
 和 [[Find Minimum in Rotated Sorted Array]] 的差別？
 
 以 `0, 1, 2, 4, 4, 4, 4` 為例：
@@ -66,28 +92,6 @@ l        mid      r
 1, 2, 4, 4, 4, 4, 0   l < m > r
 ```
 
-
-
-```cpp
-class Solution {
-public:
-    int findMin(vector<int>& nums) {
-        int l = 0, r = nums.size() - 1;
-        while(l < r) {
-            int mid = (l + r) / 2;
-            if(nums[mid] < nums[r]) {
-                r = mid;
-            } else if (nums[mid] > nums[r]) {
-                l = mid + 1;
-            } else {
-                r--;
-            }
-        }
-
-        return nums[l];
-    }
-};
-```
 
 ## Source
 - [Find Minimum in Rotated Sorted Array II - LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/)

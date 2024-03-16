@@ -8,9 +8,9 @@ tags:
   - two_pointer
   - review
 draft: false
-sr-due: 2024-03-23
-sr-interval: 59
-sr-ease: 310
+sr-due: 2024-11-23
+sr-interval: 253
+sr-ease: 330
 ---
 
 ## Description
@@ -56,25 +56,34 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         sort(nums.begin(), nums.end());
-        int i = 0, l, r;
+
         int n = nums.size();
         vector<vector<int>> res;
-        while(i < n) {
+        for(int i = 0; i < n; i++) {
             int target = -nums[i];
-            l = i + 1, r = n - 1;
+            int l = i + 1, r = n - 1;
             while(l < r) {
-                if(nums[l] + nums[r] < target) l++;
-                else if(nums[l] + nums[r] > target) r--;
-                else if(nums[l] + nums[r] == target) {
+                if(nums[l] + nums[r] == target) {
                     res.push_back({nums[i], nums[l], nums[r]});
-                    int left = nums[l];
-                    int right = nums[r];
-                    while(l < r && nums[l] == left) l++;
-                    while(l < r && nums[r] == right) r--;
+                    int left = nums[l], right = nums[r];
+                    // skip duplicate
+                    while(l < r && nums[l] == left)
+                        l++;
+                    while(l < r && nums[r] == right)
+                        r--;
+                } else if(nums[l] + nums[r] > target) {
+                    r--;
+                } else if(nums[l] + nums[r] < target) {
+                    l++;
                 }
             }
-            while(i + 1 < n && nums[i] == nums[i + 1]) i++;
-            i++;
+            // skip duplicate of i
+            // case like [-1, -1, -1, 2, ...] 
+            // i should point to the last 
+            // -1 after this while loop, and then the for loop 
+            // will increment it by 1, which points to 2
+            while(i + 1 < n && nums[i] == nums[i + 1])
+                i++;
         }
         return res;
     }

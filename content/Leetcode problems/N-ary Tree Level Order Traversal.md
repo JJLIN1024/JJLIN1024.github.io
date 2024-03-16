@@ -9,9 +9,9 @@ tags:
   - tree_traversal
   - review
 draft: false
-sr-due: 2024-02-04
-sr-interval: 21
-sr-ease: 290
+sr-due: 2024-11-21
+sr-interval: 250
+sr-ease: 310
 ---
 
 ## Description

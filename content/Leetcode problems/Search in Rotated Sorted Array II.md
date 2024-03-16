@@ -8,9 +8,9 @@ tags:
   - review
   - binary_search
 draft: false
-sr-due: 2024-03-15
-sr-interval: 1
-sr-ease: 210
+sr-due: 2024-03-18
+sr-interval: 3
+sr-ease: 230
 ---
 
 ## Description
@@ -46,29 +46,15 @@ You must decrease the overall operation steps as much as possible.
 
 Time Complexity: $O(n)$, Space Complexity: $O(1)$
 
-類似 [[Search in Rotated Sorted Array]]，但有 duplicate，因此會有
+和 [[Search in Rotated Sorted Array]] 一樣，只是 duplicate，因此會有
 
 ```cpp
-if(nums[mid] == nums[r]) // we don't know which half is sorted, O(n)
-	r--; 
+else if(nums[m] == nums[r]) {
+	r--;    
+}
 ```
 
 的狀況。和 [[Find Minimum in Rotated Sorted Array II]] 裡用到的技巧相同。
-
-回到沒有 duplicate 的簡單例子，透過比較 m, r，我們可以知道哪半邊是 sorted 的。
-
-```
-l        mid      r
-0, 1, 2, 4, 5, 6, 7   l < m < r
-7, 0, 1, 2, 4, 5, 6   l > m < r
-6, 7, 0, 1, 2, 4, 5   l > m < r
-5, 6, 7, 0, 1, 2, 4   l > m < r
-
-4, 5, 6, 7, 0, 1, 2   l < m > r
-2, 4, 5, 6, 7, 0, 1   l < m > r
-1, 2, 4, 5, 6, 7, 0   l < m > r
-```
-
 
 ```cpp
 class Solution {
@@ -77,26 +63,25 @@ public:
         int n = nums.size();
         int l = 0, r = n - 1;
         while(l < r) {
-            int mid = (l + r) / 2;
-            if(nums[mid] == target)
-                return true;
-            
-            if(nums[mid] == nums[r]) { // we don't know which half is sorted
-                r--; 
-            } else if(nums[mid] > nums[r]) { // the left half is sorted
-                if(nums[l] <= target && target < nums[mid]) {
-                    r = mid;
-                } else {
-                    l = mid + 1;
-                }
-            } else { // the right half is sorted
-                if(nums[mid] < target && target <= nums[r]) {
-                    l = mid + 1;
-                } else {
-                    r = mid;
-                }
+            int m = l + (r - l) / 2;
+
+            if(nums[m] > nums[r]) {
+                // the left half is sorted
+                if(target < nums[l] || target > nums[m]) 
+                    l = m + 1;
+                else 
+                    r = m;
+            } else if(nums[m] < nums[r]) {
+                // the right half is sorted
+                if(target > nums[m] && target <= nums[r])
+                    l = m + 1;
+                else 
+                    r = m;
+            } else if(nums[m] == nums[r]) {
+                r--;    
             }
         }
+
         return nums[l] == target;
     }
 };

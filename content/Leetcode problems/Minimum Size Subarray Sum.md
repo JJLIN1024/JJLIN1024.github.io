@@ -8,8 +8,8 @@ tags:
   - sliding_window
   - review
 draft: false
-sr-due: 2024-02-26
-sr-interval: 26
+sr-due: 2024-06-26
+sr-interval: 103
 sr-ease: 290
 ---
 

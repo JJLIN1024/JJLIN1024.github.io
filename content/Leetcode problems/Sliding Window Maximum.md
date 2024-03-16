@@ -10,9 +10,9 @@ tags:
   - monotonic_queue
   - review
 draft: false
-sr-due: 2026-06-28
-sr-interval: 845
-sr-ease: 330
+sr-due: 2034-09-24
+sr-interval: 3845
+sr-ease: 350
 ---
 =
 ## Description
@@ -120,12 +120,14 @@ public:
         vector<int> res;
         
         for(int i = 0; i < nums.size(); i++) {
-            if(!d.empty() && d.front() <= i - k) d.pop_front();
+            if(!d.empty() && d.front() <= i - k) 
+	            d.pop_front();
             while(!d.empty() && nums[d.back()] <= nums[i]) {
                 d.pop_back();
             }
             d.push_back(i);
-            if(i - k + 1 >= 0) res.push_back(nums[d.front()]);
+            if(i - k + 1 >= 0) 
+	            res.push_back(nums[d.front()]);
         }
 
         return res;

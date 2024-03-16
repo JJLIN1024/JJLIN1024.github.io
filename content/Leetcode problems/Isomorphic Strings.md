@@ -9,9 +9,9 @@ tags:
   - string
   - review
 draft: false
-sr-due: 2024-03-16
-sr-interval: 15
-sr-ease: 290
+sr-due: 2024-05-15
+sr-interval: 60
+sr-ease: 310
 ---
 Given two strings `s` and `t`, _determine if they are isomorphic_.
 

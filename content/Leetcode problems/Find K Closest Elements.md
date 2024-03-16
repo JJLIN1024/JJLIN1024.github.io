@@ -9,9 +9,9 @@ tags:
   - two_pointer
   - review
 draft: false
-sr-due: 2024-03-15
-sr-interval: 1
-sr-ease: 230
+sr-due: 2024-03-26
+sr-interval: 10
+sr-ease: 250
 ---
 
 ## Description
@@ -42,9 +42,9 @@ An integer `a` is closer to `x` than an integer `b` if:
 
 ## Code 
 
-### Two pointer + Sort
+### Binary Search + Two pointer 
 
-$O(\log n) + O(k) + O(k \log k)$
+$O(\log n) + O(k)$
 ```cpp
 class Solution {
 public:
@@ -62,24 +62,20 @@ public:
         vector<int> res;
         while(l >= 0 && r < arr.size() && k) {
             k--;
-            if(abs(arr[l] - x) <= abs(arr[r] - x)) {
-                res.push_back(arr[l--]);
-            } else {
-                res.push_back(arr[r++]);
-            }
+            if(abs(arr[l] - x) <= abs(arr[r] - x)) l--;
+            else r++;
         }
 
         while(k) {
             k--;
-            if(l >= 0) {
-                res.push_back(arr[l--]);
-            } else if (r < arr.size()){
-                res.push_back(arr[r++]);
-            }
+            if(l >= 0) l--;
+            else if(r < arr.size()) r++;
         }
-        
 
-        sort(res.begin(), res.end());
+        for(int i = l + 1; i < r; i++) {
+            res.push_back(arr[i]);
+        }
+
         return res;
     }
 };
@@ -89,7 +85,8 @@ public:
 
 $O(\log(n - k) + k)$
 
-Assume we are taking `A[i] ~ A[i + k -1]`.  
+```
+Assume we are taking `A[i] ~ A[i + k - 1]`.  
 We can binary research `i`  
 We compare the distance between `x - A[mid]` and `A[mid + k] - x`
 
@@ -112,6 +109,8 @@ If `x - A[mid] > A[mid + k] - x`,
 it means `A[mid + 1] ~ A[mid + k]` is better than `A[mid] ~ A[mid + k - 1]`,  
 and we have `mid` smaller than the right `i`.  
 So assign `left = mid + 1`.
+```
+
 
 ```cpp
 class Solution {

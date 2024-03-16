@@ -7,9 +7,9 @@ tags:
   - DP
   - review
 draft: false
-sr-due: 2024-02-02
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-09-07
+sr-interval: 176
+sr-ease: 290
 ---
 
 ## Description
@@ -50,16 +50,47 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
-        int n = nums.size(), res = nums[0], l = 0, r = 0;
-        for(int i = 0; i < n; i++) {
-            l = (l == 0 ? 1 : l) * nums[i];
-            r = (r == 0 ? 1 : r) * nums[n - i - 1];
-            res = max(res, max(l, r));
+        int pos = nums[0], neg = nums[0], res = nums[0];
+        for(int i = 1; i < nums.size(); i++) {
+            int new_pos, new_neg;
+            if(nums[i] >= 0) {
+                new_pos = max(pos * nums[i], nums[i]);
+                new_neg = min(neg * nums[i], nums[i]);
+            } else if(nums[i] < 0) {
+                new_pos = max(neg * nums[i], nums[i]);
+                new_neg = min(pos * nums[i], nums[i]);
+            } 
+            pos = new_pos;
+            neg = new_neg;
+            res = max(res, pos);
         }
         return res;
     }
 };
 ```
+
+```cpp
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        int positive = nums[0];
+        int negative = nums[0];
+        int maxP = nums[0];
+
+        for(int i = 1; i < nums.size(); i++) {
+            if(nums[i] < 0) swap(positive, negative);
+
+            positive = max(nums[i], positive * nums[i]);
+            negative = min(nums[i], negative * nums[i]);
+
+            maxP = max(maxP, positive);
+        }
+
+        return maxP;
+    }
+};
+```
+
 
 ## Source
 - [Maximum Product Subarray - LeetCode](https://leetcode.com/problems/maximum-product-subarray/)

@@ -21,6 +21,7 @@ draft: false
 - [[Permutations II]]
 - [[Subsets]]
 - [[Subsets II]]
+- [[Partition to K Equal Sum Subsets]]
 - [[Combinations]]
 - [[Combination Sum]]
 - [[Combination Sum II]]

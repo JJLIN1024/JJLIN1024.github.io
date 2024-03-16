@@ -7,9 +7,9 @@ tags:
   - binary_search
   - review
 draft: false
-sr-due: 2027-11-13
-sr-interval: 1347
-sr-ease: 350
+sr-due: 2026-01-18
+sr-interval: 674
+sr-ease: 330
 ---
 
 ## Description
@@ -48,6 +48,45 @@ You must write an algorithm with `O(log n)` runtime complexity.
 ## Code 
 
 Time Complexity: $O(\log n)$, Space Complexity: $O(1)$
+
+重點在於決定  `l = m + 1`的條件（因為 `int m = l + (r - l) / 2;` 算出來的 middle 會偏左）。
+
+```cpp
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int n = nums.size();
+        int l = 0, r = n - 1;
+        while(l < r) {
+            int m = l + (r - l) / 2;
+
+            if(nums[m] > nums[r]) {
+                // the left half is sorted
+                if(target < nums[l] || target > nums[m]) 
+                // case: [4,5,6,7,8,1,2,3], target = 8
+                // case: [4,5,6,7,0,1,2], target = 0
+                    l = m + 1;
+                else 
+                // case: [4,5,6,7,8,1,2,3], target = 5
+                // case: [4,5,6,7,0,1,2], target = 6
+                    r = m;
+            } else if(nums[m] < nums[r]) {
+                // the right half is sorted
+                if(target > nums[m] && target <= nums[r])
+                // case: [6,7,0,1,2,4,5], target = 4
+                    l = m + 1;
+                else 
+                // case: [6,7,0,1,2,4,5], target = 1
+                // case: [6,7,0,1,2,4,5], target = 6
+                    r = m;
+            }
+        }
+
+        return nums[l] == target ? l : -1;
+    }
+};
+```
+
 
 找尋偏移量：`if(nums[mid] > nums[r])`
 
