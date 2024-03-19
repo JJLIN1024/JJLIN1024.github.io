@@ -8,8 +8,8 @@ tags:
   - two_pointer
   - review
 draft: false
-sr-due: 2024-03-18
-sr-interval: 4
+sr-due: 2024-03-29
+sr-interval: 11
 sr-ease: 270
 ---
 
@@ -51,7 +51,7 @@ Number of valid subsequences (63 - 2 = 61).
 
 ## Code 
 
-類似 [[Two Sum]]，先找到最接近 target 的組合，中間就都是解，可選可不選。
+Intuition: 因為找 subsequence，so order does not mater -> sorting。
 
 Time Complexity: $O(n \log n)$, Space Complexity: $O(1)$
 
@@ -59,26 +59,25 @@ Time Complexity: $O(n \log n)$, Space Complexity: $O(1)$
 class Solution {
 public:
     int numSubseq(vector<int>& nums, int target) {
-        long M = 1e9 + 7;
+        int mod = 1e9 + 7;
         int n = nums.size();
         sort(nums.begin(), nums.end());
-        vector<long> power(n + 1);
-        power[0] = 1;
-        for(int i = 1; i <= n; i++) {
-            power[i] = power[i - 1] * 2 % M;
+
+        vector<int> power(n, 1);
+        for(int i = 1; i < n; i++) {
+            power[i] = power[i - 1] * 2 % mod;
         }
 
-        int j = n - 1;
-        int res = 0;
+        int j = n - 1, res = 0;
         for(int i = 0; i < n; i++) {
-            while(j >= 0 && nums[i] + nums[j] > target)
+            while(j >= 0 && nums[j] + nums[i] > target)
                 j--;
-            if(j < i) break;
-            res = (res + power[j - i]) % M;
+            if(j < i)
+                break;
+            res += power[j - i];
+            res = res % mod;
         }
-
         return res;
-
     }
 };
 ```

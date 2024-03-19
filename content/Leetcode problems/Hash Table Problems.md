@@ -33,3 +33,4 @@ draft: false
 - [[Roman to Integer]]
 - [[Integer to Roman]]
 - [[First Unique Character in a String]]
+- [[Minimum Deletions to Make String K-Special]]

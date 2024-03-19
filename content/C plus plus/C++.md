@@ -7,6 +7,7 @@ author:
 tags: 
 draft: false
 ---
+- [[class]]
 - [[Dynamic Memory Allocation]]
 - [[Move Semantics]]
 - [[Smart Pointers]]

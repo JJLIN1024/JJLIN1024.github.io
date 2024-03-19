@@ -7,9 +7,9 @@ tags:
   - binary_tree
   - review
 draft: false
-sr-due: 2024-02-06
-sr-interval: 20
-sr-ease: 290
+sr-due: 2024-11-14
+sr-interval: 242
+sr-ease: 310
 ---
 
 ## Description
@@ -59,11 +59,15 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        if(!root) return nullptr;
-        TreeNode* left = root->left;
-        TreeNode* right = root->right;
-        root->left = invertTree(right);
-        root->right = invertTree(left);
+        if(!root)
+            return nullptr;
+
+        auto left_inverted = invertTree(root->left);
+        auto right_inverted = invertTree(root->right);
+
+        root->right = left_inverted;
+        root->left = right_inverted;
+
         return root;
     }
 };

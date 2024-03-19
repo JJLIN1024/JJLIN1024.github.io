@@ -9,8 +9,8 @@ tags:
   - review
   - greedy
 draft: false
-sr-due: 2024-03-17
-sr-interval: 3
+sr-due: 2024-03-26
+sr-interval: 9
 sr-ease: 254
 ---
 
@@ -44,6 +44,8 @@ Return _the maximum number of envelopes you can Russian doll (i.e., put one insi
 ## Code 
 
 [[Longest Increasing Subsequence]] 的 2D 版本。不過這題巧妙的運用了 sorting 將 width sort in increasing order while height is sort in decreasing order ，使得 2D 變成了 1D 的題目。
+
+以 `[2, 3], [5, 4], [6, 7], [6, 5], [6, 4]` 為例：`[2, 3], [5, 4], [6, 5]` 會是答案。不過在計算過程中 `[6, 4]` 會取代 `[5, 4]` ，不過這不影響最終答案。
 
 Time Complexity: $O(n \log n)$, Space Complexity: $O(n)$
 

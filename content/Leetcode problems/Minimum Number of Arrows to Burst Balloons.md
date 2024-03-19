@@ -45,7 +45,7 @@ Given the array `points`, return _the **minimum** number of arrows that must be 
 
 ## Code 
 
-類似 [[Insert Interval]]。關鍵都在於看後者的開頭是否小於前者的尾巴，再去做處理。
+類似 [[Insert Interval]]，不同之處在於如何處理重疊的部分。在這裏，重疊的部分是越來越小的，在前者，merge 後的 interval 會是越來越大的。
 
 和 [[Maximum Length of Pair Chain]] 是同一種題目。
 
