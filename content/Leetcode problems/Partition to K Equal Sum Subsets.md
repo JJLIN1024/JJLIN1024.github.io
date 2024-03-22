@@ -8,8 +8,8 @@ tags:
   - backtracking
   - review
 draft: false
-sr-due: 2024-03-20
-sr-interval: 4
+sr-due: 2024-04-01
+sr-interval: 11
 sr-ease: 270
 ---
 
@@ -39,6 +39,8 @@ Given an integer array `nums` and an integer `k`, return `true` if it is possibl
 [[Partition Equal Subset Sum]] 的延伸題，但是這題並不是 DP，而是類似 [[Subsets]] 的概念。
 
 Time Complexity: $O()$, Space Complexity: $O()$
+
+注意 `visited[j] = true;` 放的位置。
 
 ```cpp
 class Solution {

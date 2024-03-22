@@ -9,8 +9,8 @@ tags:
   - line_sweep
   - review
 draft: false
-sr-due: 2024-03-20
-sr-interval: 16
+sr-due: 2024-05-07
+sr-interval: 47
 sr-ease: 290
 ---
 
@@ -61,42 +61,39 @@ Time Complexity: $O(n \log n)$, Space Complexity: $O(n)$
 
 之所以這樣設定，是因為 sorting 小的在前面，如果 end event 先的話，會造成不必要的斷點，以 `buildings = [[0,2,3],[2,5,3]]` 為例，若 end event 排在前，就會造成  `[[0,3],[2,0],[2,3],[5,0]]` 的 output，但其實應該是  `[[0,3],[5,0]]` 才對。
 
-
-要注意 `multiset<int> pq{0};`的 initial base case。
-
 ```cpp
 class Solution {
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
         vector<vector<int>> events;
-        for(auto b: buildings) {
-            events.push_back({b[0], -b[2]}); // negative -> start event
-            events.push_back({b[1], b[2]}); // positive -> end event
+        for(auto& b: buildings) {
+            int start = b[0];
+            int end = b[1];
+            int h = b[2];
+            events.push_back({start, -h});
+            events.push_back({end, h});
         }
-
         sort(events.begin(), events.end());
 
-        multiset<int> pq{0};
+        multiset<int, greater<int>> max_heap;
         vector<vector<int>> res;
-        int currMaxHeight = 0;
-        for(auto event: events) {
-            auto time = event[0];
-            auto height = event[1];
-
-            if(height < 0) {
-                pq.insert(-height);
+        int skyline = 0;
+        for(auto& event: events) {
+            int t = event[0];
+            int h = event[1];
+            if(h < 0) {
+                max_heap.insert(-h);
             } else {
-                pq.erase(pq.find(height));
+                max_heap.erase(max_heap.find(h));
             }
-
-            auto maxHeight = *pq.rbegin();
-            if(currMaxHeight != maxHeight) {
-                currMaxHeight = maxHeight;
-                res.push_back({time, currMaxHeight});
+            int curMax = *max_heap.begin();
+            if(curMax != skyline) {
+                skyline = curMax;
+                res.push_back({t, skyline});
             }
         }
-
         return res;
+
     }
 };
 ```

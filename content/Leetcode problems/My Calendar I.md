@@ -10,9 +10,9 @@ tags:
   - difference_array
   - review
 draft: false
-sr-due: 2024-03-21
-sr-interval: 17
-sr-ease: 290
+sr-due: 2024-05-28
+sr-interval: 68
+sr-ease: 310
 ---
 
 ## Description

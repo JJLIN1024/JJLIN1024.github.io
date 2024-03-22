@@ -6,11 +6,7 @@ author:
   - Jimmy Lin
 tags:
   - sliding_window
-  - review
 draft: false
-sr-due: 2024-03-19
-sr-interval: 1
-sr-ease: 230
 ---
 
 ## Description

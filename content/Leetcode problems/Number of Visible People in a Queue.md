@@ -9,9 +9,9 @@ tags:
   - stack
   - review
 draft: false
-sr-due: 2024-03-19
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-04-12
+sr-interval: 22
+sr-ease: 290
 ---
 
 ## Description
@@ -53,6 +53,12 @@ Person 5 can see no one since nobody is to the right of them.
 Time Complexity: $O(n)$, Space Complexity: $O(n)$
 
 [[Next Greater Element I]] with a little modification.
+
+while 迴圈裡 `res[st.top()]++;` 計算的是比自己高的。
+
+`if (!st.empty()) res[st.top()]++;` 計算的是比自己矮的。
+
+重點在於：第二個以及之後比自己矮的人，你看不到。
 
 ```cpp
 class Solution {

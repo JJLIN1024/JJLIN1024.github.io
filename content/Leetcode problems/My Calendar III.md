@@ -9,9 +9,9 @@ tags:
   - balanced_binary_tree
   - review
 draft: false
-sr-due: 2024-03-19
-sr-interval: 15
-sr-ease: 292
+sr-due: 2024-05-29
+sr-interval: 69
+sr-ease: 312
 ---
 
 ## Description

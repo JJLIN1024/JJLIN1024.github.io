@@ -9,6 +9,7 @@ tags:
   - container
 draft: false
 ---
+- [《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbook.io/docker_practice)
 - [Building a container from scratch in Go - Liz Rice (Microscaling Systems)](https://youtu.be/Utf-A4rODH8?si=MhhXrEEQ2oIB4i_Y)
 - [unshare(1) — Linux manual page](https://man7.org/linux/man-pages/man1/unshare.1.html)
 - Namespace
@@ -70,8 +71,6 @@ lrwxrwxrwx 1 jimmylin jimmylin 0 Mar 19 05:27 uts -> 'uts:[4026531838]'
 > We can see there are symlinks
 
 Reading the symlink via `readlink` returns a string containing the namespace kind name and the inode number of the namespace.
-
-
 
 A control group (cgroup) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, and so on) of a collection of processes.
 

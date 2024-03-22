@@ -8,9 +8,9 @@ tags:
   - heap
   - review
 draft: false
-sr-due: 2024-03-19
-sr-interval: 16
-sr-ease: 290
+sr-due: 2024-06-02
+sr-interval: 73
+sr-ease: 310
 ---
 
 ## Description
@@ -51,22 +51,24 @@ Time Complexity: $O(k \log k)$, Space Complexity: $O(k)$
 class Solution {
 public:
     vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        auto cmp = [](const tuple<int, int, int>& t1, const tuple<int, int, int>& t2){
-            return get<0>(t1) > get<0>(t2);
+        auto cmp = [&](const pair<int, int>& p1, const pair<int, int>& p2){
+            return nums1[p1.first] + nums2[p1.second] > nums1[p2.first] + nums2[p2.second];
         };
+        // min heap
+        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> pq(cmp);
 
-        priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, decltype(cmp)> pq(cmp);
-        for(int i = 0; i < nums1.size() && i < k; i++) {
-            pq.push({nums1[i] + nums2[0], i, 0});
+        for(int i = 0; i < nums1.size(); i++) {
+            pq.push({i, 0});
         }
-
+        
         vector<vector<int>> res;
-        while(k--) {
-            auto t = pq.top();
+        while(k-- && !pq.empty()) {
+            auto P = pq.top();
             pq.pop();
-            res.push_back({nums1[get<1>(t)], nums2[get<2>(t)]});
-            if(get<2>(t) == nums2.size() - 1) continue;
-            pq.push({nums1[get<1>(t)] + nums2[get<2>(t) + 1], get<1>(t), get<2>(t) + 1});
+            res.push_back({nums1[P.first], nums2[P.second]});
+            if(P.second == nums2.size() - 1)
+                continue;
+            pq.push({P.first, P.second + 1});
         }
         return res;
     }

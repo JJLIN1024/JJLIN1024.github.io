@@ -10,8 +10,8 @@ tags:
   - monotonic_stack
   - review
 draft: false
-sr-due: 2024-03-20
-sr-interval: 56
+sr-due: 2024-07-19
+sr-interval: 120
 sr-ease: 305
 ---
 

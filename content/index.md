@@ -32,6 +32,8 @@ draft: false
 - [[C]]
 - [[C++]]
 - [[Operating System]]
+- [[Git]]
+- 
 
 ## Life I Lived
 - [[Teddy]]

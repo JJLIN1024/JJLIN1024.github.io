@@ -8,9 +8,9 @@ tags:
   - binary_search
   - review
 draft: false
-sr-due: 2024-03-19
-sr-interval: 3
-sr-ease: 250
+sr-due: 2024-04-06
+sr-interval: 16
+sr-ease: 270
 ---
 
 ## Description
@@ -80,7 +80,7 @@ Time Complexity: $O(n \log n)$, Space Complexity: $O(1)$
 
 Intuition: 這題是 Min-Max Problem，所以使用 Binary Search。
 
-至於 `canRob` 為何使用 greedy ？
+至於 `canRob` 為何使用 greedy ？（類似 [[Maximum Tastiness of Candy Basket]]）
 
 考慮 `[2, 8, 5, 10], k = 2, m = 5`，則可以 rob `2, 5` ，但這樣做可能會有問題，如果說最好的選擇不是從 `2` 開始而是從 index = 1 開始呢？
 
