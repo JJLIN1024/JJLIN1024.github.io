@@ -8,9 +8,9 @@ tags:
   - heap
   - review
 draft: false
-sr-due: 2024-03-22
-sr-interval: 19
-sr-ease: 290
+sr-due: 2024-06-07
+sr-interval: 77
+sr-ease: 310
 ---
 
 ## Description
@@ -60,27 +60,28 @@ Time Complexity: $O(n \log n)$, Space Complexity: $O(n)$
 ```cpp
 class MedianFinder {
 public:
-    priority_queue<int> maxh; // store the first half
-    priority_queue<int, vector<int>, greater<int>> minh; // store the second half
+    priority_queue<int> max_heap;
+    priority_queue<int, vector<int>, greater<int>> min_heap;
     MedianFinder() {
         
     }
     
     void addNum(int num) {
-        maxh.push(num);
-        minh.push(maxh.top());
-        maxh.pop();
-        if(minh.size() > maxh.size()) {
-            maxh.push(minh.top());
-            minh.pop();
+        max_heap.push(num);
+        min_heap.push(max_heap.top());
+        max_heap.pop();
+        if(min_heap.size() > max_heap.size()) {
+            max_heap.push(min_heap.top());
+            min_heap.pop();
         }
     }
 
     
     double findMedian() {
-        if(maxh.size() == minh.size()) 
-            return (maxh.top() + minh.top()) / 2.0;
-        return maxh.top();
+        if(min_heap.size() == max_heap.size()) {
+            return (min_heap.top() + max_heap.top()) / 2.0;
+        }
+        return max_heap.top();
     }
 };
 

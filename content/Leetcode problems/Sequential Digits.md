@@ -4,7 +4,6 @@ date: 2024-02-02
 tags:
   - emunation
   - sliding_window
-  - review
 author:
   - Jimmy Lin
 draft: false

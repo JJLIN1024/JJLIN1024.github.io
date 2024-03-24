@@ -9,9 +9,9 @@ tags:
   - atMost
   - review
 draft: false
-sr-due: 2024-02-24
-sr-interval: 24
-sr-ease: 290
+sr-due: 2024-10-17
+sr-interval: 208
+sr-ease: 310
 ---
 
 ## Description

@@ -2,9 +2,16 @@
 title: Find the Duplicate Number
 date: 2023-02-03
 lastmod: 2023-02-03
-author: Jimmy Lin
-tags: ["two pointer", "hashset", "binary search"]
+author:
+  - Jimmy Lin
+tags:
+  - slow_and_fast_pointer
+  - binary_search
+  - review
 draft: false
+sr-due: 2024-03-25
+sr-interval: 1
+sr-ease: 230
 ---
 
 ## Description

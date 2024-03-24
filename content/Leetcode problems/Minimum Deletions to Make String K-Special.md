@@ -8,9 +8,9 @@ tags:
   - hashmap
   - review
 draft: false
-sr-due: 2024-03-22
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-04-05
+sr-interval: 14
+sr-ease: 290
 ---
 
 ## Description

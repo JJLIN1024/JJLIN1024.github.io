@@ -8,9 +8,9 @@ tags:
   - binary_tree
   - review
 draft: false
-sr-due: 2024-02-27
-sr-interval: 1
-sr-ease: 230
+sr-due: 2024-06-16
+sr-interval: 85
+sr-ease: 250
 ---
 
 ## Description
@@ -51,6 +51,8 @@ Key: The subtree of a complete binary tree is also a complete binary tree.
 compare the depth between left sub tree and right sub tree.  
 1. A, If it is equal, it means the left sub tree is a full binary tree  
 2. B, It it is not , it means the right sub tree is a full binary tree
+
+為何是 `pow(2, leftDepth)`(or `pow(2, rightDepth)`) 是因為，得知左右子節點的樹高後，為 complete binary tree 的子節點，樹高為 `h` 時，會具有 $2^h - 1$ 個節點，再加上自己，就會是 $2^h$，然後再遞迴加上另外一個子節點的回傳值即可。
 
 Time Complexity: $O(\log n \cdot \log n)$, Space Complexity: $O(1)$
 

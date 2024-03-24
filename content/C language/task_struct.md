@@ -127,7 +127,7 @@ struct vm_area_struct {
 ```
 
 Since v6.1-rc1:
-- [mm: remove rb tree.](https://github.com/torvalds/linux/commit/524e00b36e8c547f5582eef3fb645a8d9fc5e3df)：Remove the RB tree and start using the `maple tree` for `vm_area_struct` tracking.
+- [mm: remove rb tree.](https://github.com/torvalds/linux/commit/524e00b36e8c547f5582eef3fb645a8d9fc5e3df)：Remove the RB tree and start using the [maple tree](https://docs.kernel.org/core-api/maple_tree.html) for `vm_area_struct` tracking.
 
 ```c
 struct mm_struct {
@@ -192,6 +192,7 @@ struct vm_area_struct {
 
 - [Linux 核心設計: RCU 同步機制](https://hackmd.io/@sysprog/linux-rcu)
 - [The Maple Tree, A Modern Data Structure for a Complex Problem](https://blogs.oracle.com/linux/post/the-maple-tree-a-modern-data-structure-for-a-complex-problem)
+- [The Maple Tree - Liam Howlett](https://youtu.be/eKuTTpmllZ8?si=3Icl_zHjqwrNxNVv)
 ### Per Thread's Stack
 
 `sp` holds the start address of the stack pointer of the thread's stack. 

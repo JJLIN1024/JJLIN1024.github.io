@@ -7,9 +7,9 @@ tags:
   - review
   - monotonic_stack
 draft: false
-sr-due: 2024-02-07
-sr-interval: 14
-sr-ease: 290
+sr-due: 2024-11-16
+sr-interval: 238
+sr-ease: 310
 ---
 
 ## Description
@@ -37,7 +37,7 @@ Sum is 17.
 
 ## Code 
 
-以 `[11,81,94,43,3]` 為例，對於 `34` 來說，左邊比它小的是 `11`，右邊是 `3`，因此 `43` 這個數字對於 `sumSubarrayMins` 的貢獻為 $4 \cdot 2 \cdot 43$，把 `4, 2` 想成 subarray 在其左右的起點（包括自己）的選擇數量，因此總共會有 `8` 個 subarray 其 min 會是 `43`。
+以 `[11,81,94,43,3]` 為例，對於 `43` 來說，左邊比它小的是 `11`，右邊是 `3`，因此 `43` 這個數字對於 `sumSubarrayMins` 的貢獻為 $4 \cdot 2 \cdot 43$，把 `4, 2` 想成 subarray 在其左右的起點（包括自己）的選擇數量，因此總共會有 `8` 個 subarray 其 min 會是 `43`。
 
 至於對於一個 element 要怎麼找到其左右邊比它小的元素，就是使用 monotonic increasing stack。
 

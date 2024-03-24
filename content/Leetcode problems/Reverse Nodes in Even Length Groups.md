@@ -8,8 +8,8 @@ tags:
   - linked_list
   - review
 draft: false
-sr-due: 2024-02-24
-sr-interval: 4
+sr-due: 2024-05-03
+sr-interval: 41
 sr-ease: 230
 ---
 

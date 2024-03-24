@@ -9,7 +9,7 @@ draft: false
 
 ![](https://i.imgur.com/QVi0DMV.png)
 
-以 [[notes/C/預處理、編譯、彙編、連接]] 中的 `test.c`為例：
+以 [[預處理、編譯、彙編、連接]] 中的 `test.c`為例：
 
 ```sh
 parallels@ubuntu-linux-20-04-desktop:~/C_playground$ file test.c

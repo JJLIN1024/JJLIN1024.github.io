@@ -8,9 +8,9 @@ tags:
   - greedy
   - review
 draft: false
-sr-due: 2024-02-28
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-07-07
+sr-interval: 106
+sr-ease: 290
 ---
 
 ## Description

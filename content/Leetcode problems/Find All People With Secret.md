@@ -9,9 +9,9 @@ tags:
   - graph
   - review
 draft: false
-sr-due: 2024-02-25
-sr-interval: 1
-sr-ease: 230
+sr-due: 2024-06-22
+sr-interval: 91
+sr-ease: 250
 ---
 
 ## Description
