@@ -35,4 +35,5 @@ draft: false
 - [[Game of Life]]
 - [[Summary Ranges]]
 - [[Minimum Operations to Write the Letter Y on a Grid]]
-- 
+- [[Find the Duplicate Number]]
+- [[Find All Duplicates in an Array]]

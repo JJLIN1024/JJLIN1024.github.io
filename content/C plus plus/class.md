@@ -252,4 +252,5 @@ int main() {
     return 0;
 }
 ```
+
 Multiple Inheritance can result in ambiguous function calls. For example, a BadDude class could inherit two quite different Draw() methods from a Gunslinger class and a PokerPlayer class.

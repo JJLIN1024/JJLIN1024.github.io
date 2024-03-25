@@ -18,6 +18,9 @@ draft: false
 - [[Kth Largest Element in an Array|Kth Largest Element in an Array]]
 - [[K Closest Points to Origin|K Closest Points to Origin]]
 - [[The K Weakest Rows in a Matrix|The K Weakest Rows in a Matrix]]
+- [[Mark Elements on Array by Performing Queries]]
+- [[Replace Question Marks in String to Minimize Its Value]]
+- [[Most Frequent IDs]]
 - 
 - [[Reduce Array Size to The Half|Reduce Array Size to The Half]]
 - 
