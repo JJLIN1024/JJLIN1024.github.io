@@ -9,9 +9,9 @@ tags:
   - bit_manipulation
   - review
 draft: false
-sr-due: 2024-03-10
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-06-09
+sr-interval: 75
+sr-ease: 290
 ---
 
 ## Description
@@ -69,6 +69,32 @@ public:
 };
 ```
 
+### Recursion
+
+```cpp
+if(n < 0)
+	return 1/x * myPow(1/x, -(n + 1));
+```
+
+是為了避免 x =1.00000, n =-2147483648 這種 case 會導致 integer overflow。
+
+```cpp
+class Solution {
+public:
+    double myPow(double x, int n) {
+        if(n < 0)
+            return 1/x * myPow(1/x, -(n + 1));
+        if(n == 0)
+            return 1;
+        if(n == 1)
+            return x;
+        double res = myPow(x, n / 2);
+        if(n % 2)
+            return res * res * x;
+        return res * res;
+    }
+};
+```
 
 ### Log
 

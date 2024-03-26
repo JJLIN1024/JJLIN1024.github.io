@@ -42,7 +42,7 @@ draft: false
 - [[Copy List with Random Pointer]]
 - [[Merge In Between Linked Lists]]
 - [[Flatten a Multilevel Doubly Linked List]]
-- 
+- [[All O`one Data Structure]]
 - [[Reverse Nodes in k-Group]]
 - [[Reverse Nodes in Even Length Groups]]
 - 

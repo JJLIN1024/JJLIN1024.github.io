@@ -40,7 +40,7 @@ You must write an algorithm that runs in `O(n)` time and uses only constant ext
 
 ## Code 
 
-有點像 [[Find the Duplicate Number]]。
+有點像 [[Find the Duplicate Number]]。也有點像 [[First Missing Positive]]，利用 index 本身進行 counting。
 
 利用 `nums` 本身的 index 進行 counting，因為最多只會出現兩次，所以可以用正負號來判斷。
 

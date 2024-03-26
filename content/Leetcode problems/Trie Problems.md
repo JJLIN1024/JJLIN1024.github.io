@@ -10,3 +10,5 @@ draft: false
 - [[Implement Trie (Prefix Tree)]]
 - [[Design Add and Search Words Data Structure]]
 - [[Word Search II]]
+- [[Longest Common Suffix Queries]]
+- [[Shortest Uncommon Substring in an Array]]

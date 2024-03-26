@@ -11,6 +11,7 @@ draft: false
 - [[Dynamic Memory Allocation]]
 - [[Move Semantics]]
 - [[Smart Pointers]]
+- [[Containers]]
 - [[This Pointer]]
 - [[API Design]]
 - [[Value Semantics]]

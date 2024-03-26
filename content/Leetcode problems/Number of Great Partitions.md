@@ -7,7 +7,11 @@ author:
 tags:
   - knapsack
   - DP
+  - review
 draft: false
+sr-due: 2024-03-30
+sr-interval: 4
+sr-ease: 277
 ---
 
 ## Description
@@ -46,18 +50,121 @@ The great partitions will be (\[6\], \[6\]) and (\[6\], \[6\]).
 
 ## Code 
 
-和 [[Partition Equal Subset Sum|Partition Equal Subset Sum]] 一樣屬於 knapsack problem 系列。只是在這題中我們要找的是 `sum < k` 的組合。
+### Naive
+按照題意，但是這樣 solution space 太大，k 可以很大。
 
-```markdown
-we are asked to find the number of arrangement that both have size > k.
-We can find out the number of cases that have size <= k,
-then that a more regular Knapsack problem.
+```cpp
+class Solution {
+public:
+    int mod = 1e9 + 7;
+    int k_;
+    int countPartitions(vector<int>& nums, int k) {
+        k_ = k;
+        return partition(nums, 0, 0, 0);
+    }
+
+    int partition(vector<int>& nums, int i, long long group1, long long group2) {
+        if(i == nums.size()) {
+            return group1 >= k_ && group2 >= k_;
+        }
+        int toG1 = partition(nums, i + 1, group1 + nums[i], group2) % mod;
+        int toG2 = partition(nums, i + 1, group1, group2 + nums[i]) % mod;
+        return (toG1 + toG2) % mod;
+    }
+};
+```
+
+
+所以我們要反過來想，既然找比 k 大的不行，就找比ｋ小的。
+
+### Top Down DP
+
+和 [[Find the Sum of the Power of All Subsequences]] 類似，也是 knapsack 類型的題目（take or not take）。
+
+```      
+Suppose we partitioned our array into subsets s1 and s2 :-
+    
+Final subsets -> s1 and s2
+
+condition to be satisfied :  s1 >= k and s2 >= k
+            
+s1+s2 >= 2*k
+            
+s1+s2 = sum of array = s
+            
+so sum of array i.e s must be >= 2*k
+            
+Converse of the above condition : s1>=k and s2>=k
+            
+is :
+            
+(1) s1<k and s2<k
+(2) s1<k and s2>=k
+(3) s1>=k and s2<k
+            
+if(sum < 2 * k) {
+	return 0;
+}
+
+will eliminate (1), and (2) (3) 是對稱的，所以只需要計算 (2)（或 (3))。
+
+
+Final ans= 2^n - count in (2) - count in (3)
+         = 2^n - 2*(count in (2))   [as count in (2) = count in (3)]
+```
+
+```cpp
+class Solution {
+public:
+    int mod = 1e9 + 7;
+    int k_;
+    int countPartitions(vector<int>& nums, int k) {
+        k_ = k;
+        long long validWays = 1;
+        long long sum = 0;
+        for(auto& n: nums) {
+            sum += n;
+            validWays = (validWays * 2LL) % mod;
+        }
+        if(sum < 2 * k) {
+            return 0;
+        }
+        int n = nums.size();
+        vector<vector<int>> dp(n + 1, vector<int>(k + 1, -1));
+
+        int invalidWays = findLessThanK(nums, 0, 0, dp) % mod;
+        invalidWays = invalidWays * 2LL % mod;
+        long long res = (validWays - invalidWays + mod) % mod;
+        return res;
+    }
+
+    int findLessThanK(vector<int>& nums, int i, long long sum, vector<vector<int>>& dp) {
+        if(sum >= k_)
+            return 0;
+        if(i == nums.size()) 
+            return sum < k_;
+        if(dp[i][sum] != -1)
+            return dp[i][sum];
+        
+        int take = findLessThanK(nums, i + 1, sum + nums[i], dp) % mod;
+        int notTake = findLessThanK(nums, i + 1, sum, dp) % mod;
+        return dp[i][sum] = (take + notTake) % mod;
+    }
+};
 ```
 
 ### DP - 2D knapsack
 Time Complexity: $O(nk)$, Space Complexity: $O(nk)$
 
 注意 `total = (total % mod + mod) % mod;` ，因為有取 mod，所以在 `total -= 2*ways;` 之後值有可能是負的。就像是在計算 `-3 mod 7` 時，要先做 `-3 + 7 = 4`，再做 `4 % 7 = 4`。（ `%` 代表除法取餘數）
+
+和 [[Partition Equal Subset Sum|Partition Equal Subset Sum]] 一樣屬於 knapsack problem 系列。只是在這題中我們要找的是 `sum < k` 的組合。
+
+```markdown
+we are asked to find the number of arrangement that both have size > k.
+We can find out the number of cases that have size <= k, then that a more regular Knapsack problem.
+```
+
 
 ```cpp
 #define ll long long

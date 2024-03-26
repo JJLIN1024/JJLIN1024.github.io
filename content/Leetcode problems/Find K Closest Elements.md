@@ -9,9 +9,9 @@ tags:
   - two_pointer
   - review
 draft: false
-sr-due: 2024-03-26
-sr-interval: 10
-sr-ease: 250
+sr-due: 2024-04-30
+sr-interval: 35
+sr-ease: 270
 ---
 
 ## Description
@@ -80,6 +80,40 @@ public:
     }
 };
 ```
+
+```cpp
+class Solution {
+public:
+    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+        vector<int> res;
+        int idx = lower_bound(arr.begin(), arr.end(), x) - arr.begin();
+        if(idx == 0) {
+            res.assign(arr.begin(), arr.begin() + k);
+            return res;
+        }
+        if(idx == arr.size()) {
+            res.assign(arr.end() - k, arr.end());
+            return res;
+        }
+            
+        int l = idx - 1, r = idx;
+        while(k && (l >= 0 || r < arr.size())) {
+            k--;
+            if((l >= 0 ? abs(arr[l] - x) : INT_MAX) <= (r < arr.size() ? abs(arr[r] - x) : INT_MAX)) 
+                l--;
+            else 
+                r++;
+        }
+
+        for(int i = l + 1; i < r; i++) {
+            res.push_back(arr[i]);
+        }
+
+        return res;
+    }
+};
+```
+
 
 ### Binary Search  + sliding window
 

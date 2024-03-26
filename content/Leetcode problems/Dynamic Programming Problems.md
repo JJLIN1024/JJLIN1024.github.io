@@ -56,6 +56,9 @@ draft: false
 - [[Regular Expression Matching]]
 - [[Distinct Subsequences]]
 - [[Distinct Subsequences II]]
+- [[Find the Sum of the Power of All Subsequences]]
+- [[Number of Great Partitions|Number of Great Partitions]]
+- 
 - 
 - [[Burst Balloons]]
 - [[Maximal Square]]
@@ -97,7 +100,6 @@ draft: false
 - 
 - [[Jump Game II|Jump Game II]]
 - [[Maximum Profit in Job Scheduling|Maximum Profit in Job Scheduling]]
-- [[Number of Great Partitions|Number of Great Partitions]]
 - [[Count All Valid Pickup and Delivery Options|Count All Valid Pickup and Delivery Options]]
 - 
 - [[Number of Ways to Earn Points|Number of Ways to Earn Points]]
