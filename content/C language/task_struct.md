@@ -4,7 +4,12 @@ date: 2024-03-22
 lastmod: 2024-03-22
 author:
   - Jimmy Lin
-tags: 
+tags:
+  - process
+  - thread
+  - docker
+  - container
+  - file_system
 draft: false
 ---
 A Process(Thread) in [Linux Kernel](https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L748):
@@ -222,6 +227,9 @@ The Linux kernel does not provide any special scheduling semantics of data struc
 ## Files
 
 - [Linux 核心設計: 檔案系統概念及實作手法](https://hackmd.io/@sysprog/linux-file-system)
+- [File system drivers (Part 1)](https://linux-kernel-labs.github.io/refs/pull/187/merge/labs/filesystems_part1.html)
+
+![[Pasted image 20240326200659.png]]
 
 ![[Pasted image 20240322144722.png]]
 > [image source](https://images.slideplayer.com/16/5172630/slides/slide_10.jpg)

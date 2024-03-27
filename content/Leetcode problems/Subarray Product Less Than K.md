@@ -9,9 +9,9 @@ tags:
   - two_pointer
   - review
 draft: false
-sr-due: 2024-10-23
-sr-interval: 214
-sr-ease: 310
+sr-due: 2026-10-01
+sr-interval: 918
+sr-ease: 330
 ---
 
 ## Description

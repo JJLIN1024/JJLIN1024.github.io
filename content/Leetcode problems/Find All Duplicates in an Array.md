@@ -8,6 +8,9 @@ tags:
   - array
   - review
 draft: false
+sr-due: 2024-03-31
+sr-interval: 4
+sr-ease: 279
 ---
 
 ## Description

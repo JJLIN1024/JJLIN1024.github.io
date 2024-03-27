@@ -7,6 +7,7 @@ author:
 tags:
   - linked_list
   - doubly_linked_list
+  - review
 draft: false
 ---
 
@@ -54,6 +55,45 @@ lRUCache.get(4);    // return 4
 Time Complexity: $O()$, Space Complexity: $O()$
 
 ```cpp
+class LRUCache {   
+    size_t _capacity;
+    unordered_map<int, list<pair<int, int>>::iterator> _map;
+    list<pair<int, int>> _list;
+public:
+    LRUCache(int capacity) {
+        _capacity = capacity;
+    }
+    
+    int get(int key) {
+        if(_map.find(key) == _map.end()) return -1;
+        _list.splice(_list.begin(), _list, _map[key]);
+        return _map[key]->second;
+    }
+    
+    void put(int key, int value) {
+        if(_map.find(key) != _map.end()) {
+            _list.splice(_list.begin(), _list, _map[key]);
+            _map[key]->second = value;
+            return;
+        }
+
+        if(_list.size() == _capacity) {
+            int key_to_del = _list.back().first;
+            _list.pop_back();
+            _map.erase(key_to_del);
+        }
+
+        _list.push_front({key, value});
+        _map[key] = _list.begin();
+    }
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
 ```
 
 ## Source
