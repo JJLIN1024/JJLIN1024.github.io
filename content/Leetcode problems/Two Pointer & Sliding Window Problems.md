@@ -48,6 +48,7 @@ draft: false
 - [[Max Consecutive Ones III|Max Consecutive Ones III]]
 - [[Get Equal Substrings Within Budget|Get Equal Substrings Within Budget]]
 - [[Number of Subsequences That Satisfy the Given Sum Condition]]
+- [[Count Subarrays Where Max Element Appears at Least K Times]]
 - 
 - [[Longest Subarray of 1's After Deleting One Element|Longest Subarray of 1's After Deleting One Element]]
 - [[Maximum Erasure Value|Maximum Erasure Value]]

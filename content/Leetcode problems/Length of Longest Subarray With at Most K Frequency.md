@@ -7,9 +7,9 @@ tags:
   - sliding_window
   - review
 draft: false
-sr-due: 2024-10-20
-sr-interval: 211
-sr-ease: 310
+sr-due: 2026-09-19
+sr-interval: 905
+sr-ease: 330
 ---
 
 ## Description
