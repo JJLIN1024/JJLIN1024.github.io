@@ -31,9 +31,11 @@ draft: false
 - [[Codeforces]]
 - [[C]]
 - [[C++]]
+- [[Python]]
 - [[Operating System]]
 - [[Git]]
-- 
+- [[Design Pattern]]
+- [[Docker]]
 
 ## Life I Lived
 - [[Teddy]]
