@@ -32,3 +32,6 @@ draft: false
 - [[guaranteed copy elison]]
 - [[initializer_list]]
 - [[fold expressions]]
+- [[variant]]
+- [[span]]
+- 

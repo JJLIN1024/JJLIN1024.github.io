@@ -17,4 +17,5 @@ draft: false
 - [[Palindrome Number]]
 - [[Find the Sum of Encrypted Integers]]
 - [[Apply Operations to Make Sum of Array Greater Than or Equal to k]]
-- 
+- [[Maximum of Absolute Value Expression]]
+- [[Minimize Manhattan Distances]]

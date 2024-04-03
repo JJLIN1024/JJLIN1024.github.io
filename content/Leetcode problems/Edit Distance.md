@@ -8,9 +8,6 @@ tags:
   - DP
   - review
 draft: false
-sr-due: Invalid date
-sr-interval: NaN
-sr-ease: NaN
 ---
 
 ## Description
