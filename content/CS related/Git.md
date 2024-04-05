@@ -16,15 +16,58 @@ draft: false
 ![[Pasted image 20240403095006.png]]
 
 
+## Config
+- git config --global alias.staash 'stash --all'
+- git config --global alias.bb !better-branch.sh
+	- [better-branch.sh](https://gist.github.com/schacon/e9e743dee2e92db9a464619b99e94eff)
+- git config --global alias.unstage 'reset HEAD --'
+	- git unstage fileA 等價於 git reset HEAD -- fileA
+- git config --global rerere.enabled true
+	- tell git to remember how you resolve merge conflict, and do it automatically if it happens again
+- git config --global column.ui auto
+	- tell git to turn list output into column graph
+- git config --global branch.sort -committerdate
+- git maintenance start
+	- tell git to run background job everyhour to speed things up
+## Others
+- git blame path_to_file
+- git blame -L n1,n2 path_to_file
+	- only blame from line n1 to line n2
+	- 類似 git log -L n1,n2:path_to_file
+- better blame
+	- git blame -w -C -C -C
+- git diff --word-diff
+	- diff by word not line
+- git push --force-with-lease
+	- a safer git push --force
+	- git will check what you are gonna override, if there's a conflict, git will not force push it
+
+
 - git log -p
 - git log --stat
 - git log --pretty=oneline
 - git log --pretty=format:"%h - %an, %ar : %s"
 - git log --pretty=format:"%h %s" --graph
 - git log --oneline --decorate --graph --all
-- git config --global alias.unstage 'reset HEAD --'
-	- git unstage fileA 等價於 git reset HEAD -- fileA
+- set local branch(serverfix) to track remote branch(remote origin 上的 serverfix branch)
+	- `git checkout -b <branch> <remote>/<branch>`
+		- 等價於 `git checkout --track origin/serverfix`
+		- 等價於 `git checkout serverfix` （如果 local branch serverfix 不存在，git 會直接幫你創建一個）
+- git branch -vv
+	- 查看設定的所有跟蹤分支
+- git branch -f hotFix c6
+	- move hotFix to commit c6
+- git reset 適用在 local 端
+- git revert 適用在 remote history
+- git rebase -i HEAD^4
+	- 在 HEAD 往前的第四個 commit 長出另外一條 branch，並用互動式視窗選擇 commit 的順序以及要不要選取
+- git rebase -i 類似 git cherrypick
+- git rebase basebranch targetbranch
+- 若想要修改以前的某個 commit，可以先用 git rebase -i 將要修改 commit 順序換到最前面，然後 git commit --amend，然後再使用 git rebase -i 將順序重新排好。
+- 也可以使用 git cherrypick 把要修改的挑出來，接著 git commit --amend，然後再 git cherrypick 將原本在要修改的後面的那些 commit 挑出來接在後面
+- git describe <某個 commit> 會回傳離此 commit 最近的 tag 在哪
 - 
+
 ## Git Internal
 
 剛初始化的 .git 倉庫：
