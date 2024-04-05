@@ -21,8 +21,10 @@ draft: false
 - git log --pretty=oneline
 - git log --pretty=format:"%h - %an, %ar : %s"
 - git log --pretty=format:"%h %s" --graph
+- git log --oneline --decorate --graph --all
 - git config --global alias.unstage 'reset HEAD --'
 	- git unstage fileA 等價於 git reset HEAD -- fileA
+- 
 ## Git Internal
 
 剛初始化的 .git 倉庫：
@@ -127,3 +129,4 @@ tree
 
 Commit 物件會指向某個 Tree 物件。Tree 物件的內容會指向某個或某些 Blob 物件，或是其它的 Tree 物件。除了第一個 Commit 物件以外，所有 Commit 物件都會指向它的前一次的 Commit 物件。
 
+![[Pasted image 20240403170832.png]]
