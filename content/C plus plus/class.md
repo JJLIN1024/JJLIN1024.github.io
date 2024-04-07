@@ -254,3 +254,13 @@ int main() {
 ```
 
 Multiple Inheritance can result in ambiguous function calls. For example, a BadDude class could inherit two quite different Draw() methods from a Gunslinger class and a PokerPlayer class.
+
+
+## Design Principles
+- Single-Responsibility Principle
+	- Separation of Concerns
+	- High cohesion / low coupling
+	- Orthogonality
+- Open-Closed Principle
+	- prefer design by simplified the extension by types or operations
+- Don't Repeat Yourself(DRY)

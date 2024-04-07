@@ -42,6 +42,10 @@ The following rules define a **valid** string:
 
 解法和 [[Check if a Parentheses String Can Be Valid]] 幾乎一模一樣，只是將 unlock 的判斷條件換成 `if(s[i] == '*')` 而已，code 幾乎直接複製貼上就 AC 了。
 
+為何是 close - open：
+
+考慮 `()(((` ，這個 case 從左到右時，open 為 '('，close 為 ')'，valid，但是從右到左的時候會被檢查出是 invalid。這也是為什麼要做兩遍，由左到右再由右到左。
+
 ```cpp
 class Solution {
 public:

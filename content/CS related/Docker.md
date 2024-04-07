@@ -10,6 +10,21 @@ tags:
 draft: false
 ---
 - [《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbook.io/docker_practice)
+
+## Docker 基本操作
+
+更簡單的，建議大家下載 [.bashrc_docker](https://github.com/yeasy/docker_practice/raw/master/_local/.bashrc_docker)，並將內容放到 .bashrc 中。
+
+```
+$ wget -P ~ https://github.com/yeasy/docker_practice/raw/master/_local/.bashrc_docker;
+$ echo "[ -f ~/.bashrc_docker ] && . ~/.bashrc_docker" >> ~/.bashrc; source ~/.bashrc
+```
+
+這個檔案中定義了很多方便使用 Docker 的命令，例如 `docker-pid` 可以取得某個容器的 PID；而 `docker-enter` 可以進入容器或直接在容器內執行命令。
+
+
+## Docker Internal
+
 - [Building a container from scratch in Go - Liz Rice (Microscaling Systems)](https://youtu.be/Utf-A4rODH8?si=MhhXrEEQ2oIB4i_Y)
 - [unshare(1) — Linux manual page](https://man7.org/linux/man-pages/man1/unshare.1.html)
 - Namespace

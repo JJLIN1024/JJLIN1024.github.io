@@ -7,6 +7,7 @@ author:
 tags: 
 draft: false
 ---
+
 - [[strategy pattern]]
 - 
 

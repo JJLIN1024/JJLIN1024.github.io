@@ -2,9 +2,15 @@
 title: Minimum Remove to Make Valid Parentheses
 date: 2023-02-14
 lastmod: 2023-02-14
-author: Jimmy Lin
-tags: ["stack"]
+author:
+  - Jimmy Lin
+tags:
+  - stack
+  - review
 draft: false
+sr-due: 2024-04-10
+sr-interval: 4
+sr-ease: 270
 ---
 
 ## Description
@@ -71,5 +77,39 @@ public:
 };
 ```
 
+```cpp
+class Solution {
+public:
+    string minRemoveToMakeValid(string s) {
+        stack<int> st;
+        int n = s.length();
+        vector<bool> valid(n, false);
+        for(int i = 0; i < s.length(); i++) {
+            if(s[i] == '(') {
+                st.push(i);
+            } else if(s[i] == ')') {
+                if(!st.empty()) {
+                    valid[i] = true;
+                    valid[st.top()] = true;
+                    st.pop();
+                }
+            }
+        }
+
+        string res = "";
+        for(int i = 0; i < s.length(); i++) {
+            if(s[i] == '(' || s[i] == ')') {
+                if(valid[i])
+                    res += s[i];
+            } else {
+                res += s[i];
+            }
+        }
+        return res;
+    }
+
+};
+
+```
 ## Source
 - [Minimum Remove to Make Valid Parentheses - LeetCode](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/)
