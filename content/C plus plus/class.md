@@ -7,6 +7,153 @@ author:
 tags: 
 draft: false
 ---
+## Data Member Initialization
+- The compiler generated default constructor
+	- which initialize all data members of class (user-defined) type, but not the data member of fundamental type
+- The best way is to define your own default constructor, properly initialize all data member
+- Define and initialize member variables in the order of member declaration
+	- 在下面的例子中，`i(42), s("Hello World"), ps(nullptr)` 的順序不能變，因為他們被 declare 的順序就是如此
+
+```cpp
+// bad
+struct Widget {
+  int i;
+  std::string s;
+  int* ps;
+};
+```
+
+```cpp
+// better
+#include <string>
+#include <iostream>
+
+struct Widget {
+  int i;
+  std::string s;
+  int* ps;
+
+  Widget():
+    i(42),
+    s("Hello World"),
+    ps(nullptr)
+  {}
+};
+
+int main() {
+  Widget w{};
+  return 0;
+}
+```
+
+若有多個不同的 constructor，可以使用 value initialization ，這樣每個 constructor 只需要專注在自己要 initialize 的部分即可，因為其他的都有 default。如此一來就避免了 duplication（兩個 constructor initialize 相同的東西）。
+
+```cpp
+// Bad! Duplication!
+Widget():
+    i(42),
+    s("Hello World"),
+    ps(nullptr)
+{}
+
+Widget(int j):
+	i(j),
+    s("Hello World"),
+    ps(nullptr)
+{}
+```
+
+```cpp
+#include <string>
+#include <iostream>
+
+// even better
+struct Widget {
+  Widget(){}
+  Widget(int j):
+    i(j)
+  {}
+
+  int i{42};
+  std::string s{"Hello World"};
+  int* ps{};
+};
+
+int main() {
+  Widget w{};
+  return 0;
+}
+```
+
+## Constructor with explicit keyword
+
+- To prevent implicit conversion
+
+
+## Const and Reference to Data Member 
+
+- compiler 不知道該如何 initialize const data member
+- reference 同理（reference to what?）
+```cpp
+struct Widget {
+    int const i;
+    double& d;
+};
+
+int main() {
+    Widget w;
+}
+/*
+note: 'Widget::Widget()' is implicitly deleted because the default definition would be ill-formed:x86-64 gcc 13.2 #Executor 1
+error: uninitialized const member in 'struct Widget'x86-64 gcc 13.2 #Executor 1
+error: uninitialized reference member in 'struct Widget'x86-64 gcc 13.2 #Executor 1
+*/
+```
+
+對於 reference 而言，reference members can be stored as pointers:
+
+```cpp
+struct Widget {
+private:
+  double* pd_;
+public:
+  Widget(double& d):
+    pd_(&d)
+  {}
+  double& get() noexcept {return *pd_;};
+};
+
+int main() {
+  double d1 = 2.34;
+  Widget w{d1};
+  return 0;
+}
+```
+
+## Accessibility v.s. Visibility
+
+對於 compiler 來說，不論 private or public 都是可見的，所以會選擇要執行 `void doSomething(int d);`，然後才發現該 member function 為 private（accessibility），接著給出 error。
+
+```cpp
+struct Widget {
+private:
+  void doSomething(double d);
+public:
+  void doSomething(int d);
+};
+
+int main() {
+  Widget w{};
+  w.doSomething(1.0);
+  return 0;
+}
+/*
+<source>:10:16: error: 'void Widget::doSomething(double)' is private within this context
+   10 |   w.doSomething(1.0);
+      |   ~~~~~~~~~~~~~^~~~~
+*/
+```
+## Operator Overload
 ```cpp
 #include <iostream>
 using namespace std;
@@ -76,6 +223,8 @@ int main() {
     return 0;
 }
 ```
+
+## Rule of Three & Rule of Five
 
 - [Back to Basics: The Rule of Five in C++ - Andre Kostur - CppCon 2023](https://youtu.be/juAZDfsaMvY?si=wRiP8DbNKhPrNj4Z)
 - [The rule of three/five/zero](https://en.cppreference.com/w/cpp/language/rule_of_three)
@@ -253,8 +402,9 @@ int main() {
 }
 ```
 
-Multiple Inheritance can result in ambiguous function calls. For example, a BadDude class could inherit two quite different Draw() methods from a Gunslinger class and a PokerPlayer class.
+## Multiple Inheritance
 
+Multiple Inheritance can result in ambiguous function calls. For example, a BadDude class could inherit two quite different Draw() methods from a Gunslinger class and a PokerPlayer class.
 
 ## Design Principles
 - Single-Responsibility Principle
@@ -264,3 +414,5 @@ Multiple Inheritance can result in ambiguous function calls. For example, a BadD
 - Open-Closed Principle
 	- prefer design by simplified the extension by types or operations
 - Don't Repeat Yourself(DRY)
+- [[strategy pattern]]
+- 

@@ -9,7 +9,7 @@ draft: false
 ---
 
 - [[strategy pattern]]
-- 
+- [[template method pattern]]
 
 
 ## Reference
