@@ -30,6 +30,7 @@ draft: false
 - [[Remove Duplicate Letters]]
 - [[Max Chunks To Make Sorted]]
 - [[Max Chunks To Make Sorted II]]
+- [[Remove K Digits]]
 - 
 - [[Backspace String Compare|Backspace String Compare]]
 - [[Remove All Adjacent Duplicates In String]]

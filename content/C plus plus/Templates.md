@@ -85,3 +85,6 @@ int main() {
     return 0;
 }
 ```
+
+- [[template type deduction]]
+- 
