@@ -61,7 +61,7 @@ int main()
 ```
 
 - 只有在 `t.joinable()` 傳回 true 時才能對 `std::thread` 物件呼叫 `t.detach()`
-
+- 在 C++20 後，可以使用 [std::jthread](https://en.cppreference.com/w/cpp/thread/jthread)，即是 RAII 的 thread
 ## Pass arguments to thread's function
 
 預設傳遞參數的方式是 pass-by-value，所以以下的 code 會 fail。
@@ -86,10 +86,69 @@ int main()
 }
 ```
 
-## ownership of a thread 
+## mutex & lock_gaurd & jthread
 
 ```cpp
-
+#include <iostream>
+#include <mutex>
+#include <string_view>
+#include <thread>
+ 
+volatile int g_i = 0;
+std::mutex g_i_mutex;  // protects g_i
+ 
+void safe_increment(int iterations)
+{
+  const std::lock_guard<std::mutex> lock(g_i_mutex);
+  while (iterations-- > 0)
+    g_i = g_i + 1;
+  std::cout << "thread #" << std::this_thread::get_id() << ", g_i: " << g_i << '\n';
+}
+ 
+void unsafe_increment(int iterations)
+{
+  while (iterations-- > 0)
+    g_i = g_i + 1;
+  std::cout << "thread #" << std::this_thread::get_id()
+    << ", g_i: " << g_i << '\n';
+}
+ 
+int main()
+{
+  auto test = [](std::string_view fun_name, auto fun)
+  {
+      g_i = 0;
+      std::cout << fun_name << ":\nbefore, g_i: " << g_i << '\n';
+      {
+          std::jthread t1(fun, 1'000'000);
+          std::jthread t2(fun, 1'000'000);
+      }
+      std::cout << "after, g_i: " << g_i << "\n\n";
+  };
+  test("safe_increment", safe_increment);
+  test("unsafe_increment", unsafe_increment);
+}
 ```
+
+Output:
+
+```console
+safe_increment:
+before, g_i: 0
+thread #140458076403264, g_i: 1000000
+thread #140458068010560, g_i: 2000000
+after, g_i: 2000000
+
+unsafe_increment:
+before, g_i: 0
+thread #140458068010560, g_i: 1360377
+thread #140458076403264, g_i: 2000000
+after, g_i: 2000000
+```
+
+
+
+
+
 ## Reference
 - [C++ Concurrency in Action (1/9)](https://hackmd.io/@ZGt0WcJQQ_enG8iTXTGNWw/SkWEUg14O)

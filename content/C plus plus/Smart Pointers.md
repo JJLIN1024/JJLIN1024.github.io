@@ -62,6 +62,21 @@ class unique_ptr {
 
 ```
 
+### make_unique
+
+A simple version of `make_unique`:
+
+有用到 [[Templates]]、 [[universal reference]] 的概念。
+
+```cpp
+template<typename T, typename... Ts>
+std::unique_ptr<T> make_unique(Ts&&... params)
+{
+	return std::unique_ptr<T>(new T(std::forward<Ts>(params)...));
+}
+```
+
+
 ### Usage
 Usage demo with [make_unique](https://learn.microsoft.com/en-us/cpp/standard-library/memory-functions?view=msvc-170#make_unique).
 
@@ -96,6 +111,7 @@ int main() {
 }
 ```
 ### Double Free Problem
+
 Make sure only one `unique_ptr` for a block of memory!  Don't create a `unique_ptr` from a pointer unless you know where the pointer came from and that it needs and owner!
 
 ```cpp
@@ -142,15 +158,20 @@ int main() {
 }
 ```
 
-## shared_ptr
+Convert a unique pointer to shared pointer is easier than the other way around, so when not sure which to use, use unique pointer. If you change your mind later, it is easier to change your code base.
 
+## shared_ptr
 ### Concept
+
+![[Screenshot 2024-04-13 at 8.29.54 AM.png]]
+
 ![[截圖 2024-02-02 下午6.50.40.png]]
 > A Control Block (the green one with count = 2) is always on the heap, and the count is a atomic type
 
 ![[Pasted image 20240202185228.png]]
 
 關鍵在於：有 copy constructor and assignment operator，且沒有 `unique_ptr` 有的 `release` function，然後多了 `use_count` function（not thread-safe)。
+
 
 ```cpp
 template <typename T>
@@ -196,6 +217,19 @@ public:
 };
 ```
 
+盡量使用 `make_share` 來建立 shared pointer，因為使用 new 可能會有 memory leak，比如說就是當 new 的下一行程式碼是另一個會導致 exception 的 function call ，那就有可能會發生 share pointer 的 constructor 尚未被執行完成，就發生 exception。
+
+第二個原因是因為 `make_share` 建立 share pointer 只需要一次 memory allocation call 就可以建立 object & control block（一塊連續的記憶體），但是使用 new 的話，這兩塊記憶體會是不連續的。
+
+為什麼說盡量？因為有些情況不適合使用 `make_share`：
+
+Situations where use of make functions is inappropriate includes:
+
+1. the need to specify **custom deleters** 
+2. the desire to pass **braced initializers**（see [[Braced Initialization(Uniform Initialization)]], since constructor with std::initializer_list will always has higher priority)
+3. classes with custom memory management
+4. systems with memory concerns, and a very large objects needs a `shared_ptr`, and `std::weak_ptr` that outlive the corresponding `std::shared_ptr`。 因為 make_share 會分配連續的兩塊記憶體給 object 和 control block，如果使用 new，very large object 佔用的記憶體在 share pointer 的 reference count 歸零後就被釋放，只剩下 weak_ptr 佔用的 control block 的 memory 尚未被釋放。但是若使用 make_share，兩塊記憶體是一體的，所以儘管 shared pointer 的 reference count 已經歸零，但是因為 weak pointer 還在使用 control block，因此整塊記體體都不能被釋放。
+
 ### Double Free Problem
 
 To share ownership, additional `shared_ptr` objects must be created or assigned from an existing `shared_ptr`, not from the raw pointer!
@@ -231,9 +265,124 @@ int main() {
 }
 ```
 
+針對 double free problem，若一個 class 有需要回傳其 this pointer in a share pointer form，若直接將 this pointer 包裝成新的 share pointer，就可能會產生 double free。 
+
+解決方法是使用 [std::enable_shared_from_this](https://en.cppreference.com/w/cpp/memory/enable_shared_from_this) 搭配 [shared_from_this()](https://en.cppreference.com/w/cpp/memory/enable_shared_from_this/shared_from_this) 。
+
+```cpp
+#include <iostream>
+#include <memory>
+ 
+struct Foo : public std::enable_shared_from_this<Foo>
+{
+    Foo() { std::cout << "Foo::Foo\n"; }
+    ~Foo() { std::cout << "Foo::~Foo\n"; } 
+    std::shared_ptr<Foo> getFoo() { return shared_from_this(); }
+};
+ 
+int main()
+{
+    Foo *f = new Foo;
+    std::shared_ptr<Foo> pf1;
+ 
+    {
+        std::shared_ptr<Foo> pf2(f);
+        pf1 = pf2->getFoo(); // shares ownership of object with pf2
+    }
+ 
+    std::cout << "pf2 is gone\n";   
+}
+/*
+Foo::Foo
+pf2 is gone
+Foo::~Foo
+*/
+```
+
+對照組是：
+
+可看到 destructor 被呼叫了兩次，造成 double free。
+
+```cpp
+#include <iostream>
+#include <memory>
+ 
+struct Foo
+{
+    Foo() { std::cout << "Foo::Foo\n"; }
+    ~Foo() { std::cout << "Foo::~Foo\n"; } 
+    std::shared_ptr<Foo> getFoo() { 
+      return std::shared_ptr<Foo>(this); 
+    }
+};
+ 
+int main()
+{
+    Foo *f = new Foo;
+    std::shared_ptr<Foo> pf1;
+ 
+    {
+        std::shared_ptr<Foo> pf2(f);
+        pf1 = pf2->getFoo(); // shares ownership of object with pf2
+    }
+ 
+    std::cout << "pf2 is gone\n";   
+}
+
+/*
+Foo::Foo
+Foo::~Foo
+pf2 is gone
+Foo::~Foo
+=================================================================
+==80606==ERROR: AddressSanitizer: attempting double-free on 0x0001038006f0 in thread T0:
+*/
+```
 ### Thread Safety
 
 對於多個指向同一個 object 的 `shared_ptr` 來說，他們對於共同的 control block 的讀和寫是 thread safe，但是對於這些 `shared_ptr` 指向的那個 object 來說，需要額外的同步機制去避免 data race。
+## weak_ptr
+
+可以將 weak pointer 看成是不會增加 reference count ，且不能被 dereference 或測試是否為 nullptr 的一種 share pointer，專門用來對付可能會 dangling 的 share pointer。
+
+```
+std::weak_ptr is a smart pointer that holds a non-owning ("weak") reference to an object that is managed by std::shared_ptr. It must be converted to std::shared_ptr in order to access the referenced object.
+```
+>  [std::weak_ptr](https://en.cppreference.com/w/cpp/memory/weak_ptr)
+
+
+```cpp
+#include <iostream>
+#include <memory>
+ 
+std::weak_ptr<int> gw;
+ 
+void observe()
+{
+    std::cout << "gw.use_count() == " << gw.use_count() << "; ";
+    // we have to make a copy of shared pointer before usage:
+    if (std::shared_ptr<int> spt = gw.lock())
+        std::cout << "*spt == " << *spt << '\n';
+    else
+        std::cout << "gw is expired\n";
+}
+ 
+int main()
+{
+    {
+        auto sp = std::make_shared<int>(42);
+        gw = sp;
+ 
+        observe();
+    }
+ 
+    observe();
+}
+/*
+gw.use_count() == 1; *spt == 42
+gw.use_count() == 0; gw is expired
+*/
+```
 
 ## Reference
 - [Back to Basics: C++ Smart Pointers - David Olsen - CppCon 2022](https://youtu.be/YokY6HzLkXs?si=aEHb_Gt6k0RuttHX)

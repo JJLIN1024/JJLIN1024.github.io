@@ -87,4 +87,3 @@ int main() {
 ```
 
 - [[template type deduction]]
-- 

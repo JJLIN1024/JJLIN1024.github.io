@@ -17,6 +17,7 @@ draft: false
 - [[Braced Initialization(Uniform Initialization)]]
 - [[scoped enum]]
 - [[Smart Pointers]]
+- [[nullptr]]
 - [[Containers]]
 - [[constexpr]]
 - [[This Pointer]]
