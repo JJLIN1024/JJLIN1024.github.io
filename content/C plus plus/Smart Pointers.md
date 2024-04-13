@@ -172,7 +172,6 @@ Convert a unique pointer to shared pointer is easier than the other way around, 
 
 關鍵在於：有 copy constructor and assignment operator，且沒有 `unique_ptr` 有的 `release` function，然後多了 `use_count` function（not thread-safe)。
 
-
 ```cpp
 template <typename T>
 class shared_ptr {
@@ -342,6 +341,8 @@ Foo::~Foo
 
 對於多個指向同一個 object 的 `shared_ptr` 來說，他們對於共同的 control block 的讀和寫是 thread safe，但是對於這些 `shared_ptr` 指向的那個 object 來說，需要額外的同步機制去避免 data race。
 ## weak_ptr
+
+use case: [[observer pattern]]。
 
 可以將 weak pointer 看成是不會增加 reference count ，且不能被 dereference 或測試是否為 nullptr 的一種 share pointer，專門用來對付可能會 dangling 的 share pointer。
 

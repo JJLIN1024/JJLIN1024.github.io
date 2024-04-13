@@ -10,6 +10,8 @@ draft: false
 
 - [[strategy pattern]]
 - [[template method pattern]]
+- [[observer pattern]]
+- 
 
 
 ## Reference
