@@ -11,6 +11,8 @@ draft: false
 - [[strategy pattern]]
 - [[template method pattern]]
 - [[observer pattern]]
+- [[decorator pattern]]
+- [[factory pattern]]
 - 
 
 
