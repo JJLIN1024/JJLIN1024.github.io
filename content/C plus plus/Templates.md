@@ -7,7 +7,7 @@ author:
 tags: 
 draft: false
 ---
-
+## Basics
 ```cpp
 #include <iostream>
 #include <string>
@@ -86,4 +86,54 @@ int main() {
 }
 ```
 
+## Type Deduction
+
 - [[template type deduction]]
+
+## Variadic Template
+
+- 參數展開的方式
+	- 遞迴
+		- 要寫 base case
+		- C++17: using constexpr
+	- [Fold expressions (since C++17)](https://en.cppreference.com/w/cpp/language/fold)
+
+Recursion example:
+
+```cpp
+#include <iostream>
+
+template<typename T0, typename ...T>
+auto sum(T0 t0, T... t) {
+    if constexpr (sizeof...(t) > 0)
+        return t0 + sum(t...);
+    return t0;
+}
+
+int main() {
+    std::cout << sum(1, 2, 3, 2, 5) << std::endl;
+
+}
+```
+
+
+Fold Expression example:
+
+```cpp
+#include <iostream>
+
+template<typename ...T>
+auto sum(T ...t) {
+    return (t + ...);
+}
+
+template<typename ...T>
+auto average(T ...t) {
+    return (t + ...) / sizeof...(t);
+}
+
+int main() {
+    std::cout << sum(1, 2, 3, 2.3, 5) << std::endl;
+    std::cout << average(1, 2, 3, 2.3, 5) << std::endl;
+}
+```
