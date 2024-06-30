@@ -29,6 +29,7 @@ draft: false
 ## Tech I Learned
 - [[algorithm]]
 - [[leetcode]]
+- [[CSES Problem Set]]
 - [[Codeforces]]
 - [[C]]
 - [[C++]]
@@ -37,6 +38,8 @@ draft: false
 - [[Git]]
 - [[Design Pattern]]
 - [[Docker]]
+- [[editor]]
+- 
 
 ## Life I Lived
 - [[Teddy]]

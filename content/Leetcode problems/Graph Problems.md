@@ -60,6 +60,8 @@ draft: false
 ## Topological Sort
 - [[Find the Town Judge]]
 ## Connected Component (Disjoint Set)
+- [[Remove Max Number of Edges to Keep Graph Fully Traversable]]
+- 
 - [[Number of Provinces]]
 - [[Number of Operations to Make Network Connected]]
 - [[Accounts Merge]]

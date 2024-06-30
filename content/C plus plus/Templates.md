@@ -85,7 +85,6 @@ int main() {
     return 0;
 }
 ```
-
 ## Type Deduction
 
 - [[template type deduction]]
@@ -112,7 +111,6 @@ auto sum(T0 t0, T... t) {
 
 int main() {
     std::cout << sum(1, 2, 3, 2, 5) << std::endl;
-
 }
 ```
 
@@ -137,3 +135,82 @@ int main() {
     std::cout << average(1, 2, 3, 2.3, 5) << std::endl;
 }
 ```
+
+## auto returned type (C++ 14)
+
+```cpp
+#include <concepts>
+
+template<typename T1, typename T2>
+auto myMax(T1 a, T2 b) {
+    return a < b ? a : b;
+}
+
+int main() {
+    auto m = myMax(1, 2);
+    auto m2 = myMax(1, 2.9);
+}
+```
+
+## auto as function parameters(c++20) & Concepts
+
+Since C++20, we can use [[concepts]] to specify what we want with the template we defined.
+
+[[auto]] 相較於傳統的 template，給了我們更多自由，但同時也會造成 ambiguity，所以需要配合 Concepts 去限制它。
+
+下面的例子中，若不使用 `HasPushBack` ，就會造成 ambiguity，compiler 會不知道該 call 哪一個 add function。
+
+```cpp
+#include <concepts>
+#include <set>
+#include <vector>
+#include <concepts> 
+
+template<typename Container>
+concept HasPushBack = requires (Container c, Container::value_type v) {
+    c.push_back(v);
+};
+
+void add(HasPushBack auto& container, const auto& val) {
+    container.push_back(val);
+}
+
+void add(auto& container, const auto& val) {
+    container.insert(val);
+}
+
+int main() {
+    std::vector<int> container1;
+    std::set<int> container2;
+
+    add(container1, 22);
+    add(container2, 22);
+}
+```
+
+配合 [[constexpr]]（compile-time if）以上的 code 可以進一步改寫成：
+
+```cpp
+#include <concepts>
+#include <set>
+#include <vector>
+#include <concepts> 
+
+void add(auto& container, const auto& val) {
+    if constexpr (requires {container.push_back(val);})
+        container.push_back(val);
+    else
+        container.insert(val);
+}
+
+int main() {
+    std::vector<int> container1;
+    std::set<int> container2;
+
+    add(container1, 22);
+    add(container2, 22);
+}
+```
+
+## Reference
+- [Back to Basics: Templates in C++ - Nicolai Josuttis - CppCon 2022](https://youtu.be/HqsEHG0QJXU?si=FfeTcQD80qgLvuP-)
