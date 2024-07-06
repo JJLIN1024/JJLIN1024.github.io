@@ -14,7 +14,8 @@ draft: false
 ## Problems
 
 - [[Find the Maximum Length of Valid Subsequence II]]
-- [[]]
+- [[Find the Maximum Length of Valid Subsequence I]]
+- 
 - [[Triangle]]
 - [[Longest Common Subsequence]]
 - 
