@@ -19,3 +19,4 @@ draft: false
 ## Reference
 - [Linux kernel design patterns - part 1](https://lwn.net/Articles/336224/)
 - [Strategy Pattern – Design Patterns (ep 1)](https://youtu.be/v9ejT8FO-7I?si=A4wQ0iZa48gAQJ91)
+- [設計模式目錄](https://refactoringguru.cn/design-patterns/catalog)

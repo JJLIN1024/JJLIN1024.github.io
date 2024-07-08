@@ -2,11 +2,13 @@
 title: Word Break
 date: 2023-04-14
 lastmod: 2023-04-14
-author: Jimmy Lin
+author:
+  - Jimmy Lin
 tags:
   - DP
   - dfs
   - review
+  - trie
 draft: false
 sr-due: 2025-01-11
 sr-interval: 318
@@ -46,6 +48,98 @@ Note that you are allowed to reuse a dictionary word.
 *   All the strings of `wordDict` are **unique**.
 
 ## Code 
+
+### Trie
+
+要特別注意
+
+```cpp
+if(cur->isEndofWord && canBreak(root, s, i + 1, memo)){
+	memo[start] = 1;
+	return true;
+}
+```
+
+不能寫成
+
+```cpp
+if(cur->isEndofWord){
+	return memo[start] = canBreak(root, s, i + 1, memo);
+}
+```
+
+考慮例子：s = "aaaaaaa", wordDict = ["aaaa", "aaa"] 就知道了。
+
+```cpp
+class TrieNode {
+public:
+    char character;
+    bool isEndofWord;
+    TrieNode* children[26];
+    TrieNode(char c): character(c), isEndofWord(false) {
+        for(int i = 0; i < 26; i++) {
+            children[i] = nullptr;
+        }
+    }
+};
+
+class Solution {
+public:
+
+    void insertWord(TrieNode* node, string& s) {
+        TrieNode* cur = node;
+        for(auto c: s) {
+            int i = c - 'a';
+            if(cur->children[i] == nullptr) {
+                cur->children[i] = new TrieNode(c);
+            }
+            cur = cur->children[i];
+        }
+        cur->isEndofWord = true;
+    }
+
+    bool canBreak(TrieNode* root, string& s, int start, vector<int>& memo) {
+        
+        if(start == s.size()) {
+            return true;
+        }
+
+        if(memo[start] != -1)
+            return memo[start];
+
+        TrieNode* cur = root;
+        for(int i = start; i < s.size(); i++) {
+            int index = s[i] - 'a';
+            if(cur->children[index] == nullptr) {
+                memo[start] = 0;
+                return false;
+            }
+            cur = cur->children[index];
+            if(cur->isEndofWord && canBreak(root, s, i + 1, memo)){
+                memo[start] = 1;
+                return true;
+            }
+        }
+
+        memo[start] = 0;
+        return false;
+    }
+
+    bool wordBreak(string s, vector<string>& wordDict) {
+        TrieNode* root = new TrieNode('a');
+
+        for(auto& word: wordDict) {
+            insertWord(root, word);
+        }
+        int n = s.size();
+        vector<int> memo(n, -1);
+
+        return canBreak(root, s, 0, memo);
+    }
+};
+```
+
+
 
 ### Brute Force
 $O(2^n)$, TLE

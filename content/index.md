@@ -10,13 +10,12 @@ draft: false
 
 ## About Me
 
-台大經濟系 ➡ 台大電信研究所  ➡  Product Developer @ Synology
 喜歡閱讀，涉獵範圍包括經濟、金融、政治、心理學、物理學、哲學、文學等等。
 喜歡柴犬，和其他所有的狗狗。
-喜歡黑咖啡、普洱茶、抹茶，還有抹茶拿鐵。
+喜歡普洱茶、抹茶，還有抹茶拿鐵。
 喜歡健身，以 Calisthenics 為主，重量訓練為輔，偶爾無氧運動。
-喜歡聽流行音樂，從張學友聽到周杰倫，王菲聽到徐佳瑩，披頭四聽到想像龍。
-25 歲之後喜歡聽古典樂和爵士樂，喜歡在讀書時聽 [Lofi Girl](https://www.youtube.com/c/lofigirl)。
+喜歡聽流行音樂，從張學友聽到周杰倫，王菲聽到徐佳瑩，披頭四聽到想像龍，從宇多田光聽到 YOASOBI。
+25 歲之後喜歡聽古典樂和爵士樂，喜歡在工作和讀書時聽 [Lofi Girl](https://www.youtube.com/c/lofigirl)。
 喜歡晚上 10:30，和早上 6:30 台北的天空。喜歡早上起床之後沖 3:45 的冷水澡。
 
 期許自己的文字能在適當的時機出現在適當的地方，幫助到需要幫助的人們。
@@ -27,19 +26,28 @@ draft: false
 ## Book I Read
 - [[Books]]
 ## Tech I Learned
+
+### Algorithm
 - [[algorithm]]
 - [[leetcode]]
 - [[CSES Problem Set]]
 - [[Codeforces]]
+### Programming Language
 - [[C]]
 - [[C++]]
+- [[Lua]]
 - [[Python]]
+- [[go]]
+### OS
 - [[Operating System]]
+### Tools
 - [[Git]]
-- [[Design Pattern]]
-- [[Docker]]
 - [[editor]]
-- 
+### Misc
+- [[Docker]]
+- [[Design Pattern]]
+- [[Distributed System]]
+
 
 ## Life I Lived
 - [[Teddy]]
