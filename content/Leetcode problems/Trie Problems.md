@@ -12,3 +12,5 @@ draft: false
 - [[Word Search II]]
 - [[Longest Common Suffix Queries]]
 - [[Shortest Uncommon Substring in an Array]]
+- [[Construct String with Minimum Cost]]
+- [[Word Break]]
