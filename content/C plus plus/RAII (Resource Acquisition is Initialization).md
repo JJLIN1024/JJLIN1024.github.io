@@ -9,12 +9,12 @@ tags:
 draft: false
 ---
 
-- std::lock_guard
-- std::unique_ptr
-- std::shared_ptr
-- std::unique_lock
-- std::jthread
-- std::fstream
+- `std::lock_guard`
+- `std::unique_ptr`
+- `std::shared_ptr`
+- `std::unique_lock`
+- `std::jthread`
+- `std::fstream`
 
 ```cpp
 #include <iostream>
@@ -47,3 +47,6 @@ int main() {
     return 0;
 }
 ```
+
+## Reference
+- [Back to Basics: RAII in C++ - Andre Kostur - CppCon 2022](https://youtu.be/Rfu06XAhx90?si=1q9-3ebl5z-WeG65)
