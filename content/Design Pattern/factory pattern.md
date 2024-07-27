@@ -4,7 +4,8 @@ date: 2024-04-14
 lastmod: 2024-04-14
 author:
   - Jimmy Lin
-tags: 
+tags:
+  - design-pattern
 draft: false
 ---
 

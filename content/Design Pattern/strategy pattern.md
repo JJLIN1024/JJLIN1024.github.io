@@ -4,7 +4,8 @@ date: 2024-03-30
 lastmod: 2024-03-30
 author:
   - Jimmy Lin
-tags: 
+tags:
+  - design-pattern
 draft: false
 ---
 - extracted implementation details(SRP)

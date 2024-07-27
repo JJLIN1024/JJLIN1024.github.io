@@ -110,5 +110,59 @@ public:
 };
 ```
 
+
+## DFS(TLE)
+
+Why dfs will TLE?
+
+```cpp
+class Solution {
+public:
+    int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
+        // build adj
+        vector<vector<pair<int, int>>> adj(n);
+        for(auto edge: edges) {
+            int u = edge[0];
+            int v = edge[1];
+            int w = edge[2];
+            adj[u].push_back({v, w});
+            adj[v].push_back({u, w});
+        }
+
+        int res = -1;
+        int min_neighbors = n;
+        for(int i = 0; i < n; i++) {
+            vector<bool> visited(n, false);
+            vector<bool> added(n, false);
+            int neighbors = travel(i, adj, visited, added, 0, distanceThreshold);
+            if(neighbors <= min_neighbors) {
+                res = i;
+                min_neighbors = neighbors;
+            }
+        }
+        return res;
+    }
+
+    int travel(int node, vector<vector<pair<int, int>>>& adj, vector<bool>& visited, vector<bool>& added, int curDis, int distanceThreshold) {
+        if(visited[node])
+            return 0;
+ 
+        visited[node] = true;
+        int neighbors = added[node] ? 0 : 1;
+        added[node] = true;
+        for(auto neighbor_info: adj[node]) {
+            int v = neighbor_info.first;
+            int w = neighbor_info.second;
+            if(curDis + w <= distanceThreshold) {
+                int valid = travel(v, adj, visited, added, curDis + w, distanceThreshold);
+                neighbors += valid;
+                cout << node << " add: " << v << " " << valid << endl;
+            }
+        }
+        visited[node] = false;
+        return neighbors;
+    }
+};
+```
 ## Source
 - [Find the City With the Smallest Number of Neighbors at a Threshold Distance - LeetCode](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)
