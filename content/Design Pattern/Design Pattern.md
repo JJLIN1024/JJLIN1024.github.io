@@ -14,7 +14,7 @@ draft: false
 - [[observer pattern]]
 - [[decorator pattern]]
 - [[factory pattern]]
-- 
+- [[Singleton Pattern]]
 
 
 ## Reference

@@ -19,3 +19,4 @@ draft: false
 - [[Count Submatrices with Top-Left Element and Sum Less Than k]]
 - [[Sum of Total Strength of Wizards]]
 - [[Random Pick with Weight]]
+- [[Count the Number of Substrings With Dominant Ones]]

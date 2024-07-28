@@ -74,7 +74,8 @@ draft: false
 - [[Redundant Connection|Redundant Connection]]
 - 
 - [[Count Unreachable Pairs of Nodes in an Undirected Graph]]
-- Longest Consecutive Sequence
+- [[Check if the Rectangle Corner Is Reachable]]
+- 
 ## Bridges, Articulation Points
 - [[Critical Connections in a Network]]
 ## Shortest Path
@@ -82,6 +83,8 @@ draft: false
 - [[Network Delay Time]]
 - [[Number of Ways to Arrive at Destination]]
 - [[Path with Maximum Probability]]
+- [[Second Minimum Time to Reach Destination]]
+- 
 ## All Pair Shortest Path
 - [[Find the City With the Smallest Number of Neighbors at a Threshold Distance]]
 - [[Minimum Cost to Convert String I]]
