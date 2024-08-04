@@ -7,6 +7,7 @@ author:
 tags: 
 draft: false
 ---
+就是 C 的 function pointer 的 wrapper！可以用來把 [[lambdas]] 傳來傳去，不過要注意，lambdas 可能不是 copyable 的，要看他是否有 capture unique pointer 之類的東西。lambda 其實底層就是 class，所以是否是 copyable，其實就等價於底層的 class 是否是 copyable 的。
 
 `std::function` 是 C++11 中引入的一個模板類，用於封裝可呼叫對象（callable object），例如函數指針、函數對象、lambda 函數等。
 

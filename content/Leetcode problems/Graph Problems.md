@@ -75,7 +75,7 @@ draft: false
 - 
 - [[Count Unreachable Pairs of Nodes in an Undirected Graph]]
 - [[Check if the Rectangle Corner Is Reachable]]
-- 
+- [[Shortest Distance After Road Addition Queries II]]
 ## Bridges, Articulation Points
 - [[Critical Connections in a Network]]
 ## Shortest Path
@@ -84,7 +84,7 @@ draft: false
 - [[Number of Ways to Arrive at Destination]]
 - [[Path with Maximum Probability]]
 - [[Second Minimum Time to Reach Destination]]
-- 
+- [Shortest Distance After Road Addition Queries I]]
 ## All Pair Shortest Path
 - [[Find the City With the Smallest Number of Neighbors at a Threshold Distance]]
 - [[Minimum Cost to Convert String I]]
