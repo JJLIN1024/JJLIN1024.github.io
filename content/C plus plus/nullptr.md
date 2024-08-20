@@ -8,15 +8,17 @@ tags:
   - nullptr
 draft: false
 ---
-之所以要使用 nullptr 而非 NULL 的原因是因為 compiler 定義的 NULL 可能會是 0 或是 `void*(0)` 或是其他，這在 function overload 的情況下會造成混亂。
+nullptr 可以被 implicit convert to other type of pointer。
 
-考慮以下例子，我們原本設計了一個 function 接受 `char *` 當作 parameter，但是同時又定義了一個 int 的 function overload。
+在 C 中，空指標（`NULL`）被定義為 `void*(0)`，但是在 C++ 中，implicit conversion from a `void *` to other pointer type is not allowed，因此若 `NULL` 被 compiler 定義為 `void*(0)`，則 `FILE* fp = NULL` 會是 compile time error，所以在 C++ 中（C++98） compiler 只能將 `NULL` 定義為 `0`。
 
-當 NULL 被傳入時，先考慮 `#define NULL (void*)(0)` 的情況：
+但因為 C++ 有 function overload ，因此會造成混亂。
 
-因為 C++ 不允許 `void*(0)` 被 implicit 的轉成其他 pointer to some type，在此例可能的 type 為 pointer to char，所以 NULL 會被轉成 0，這就會造成真正被 call 的 function 是 `void foo(int i)` ，而非原本設計要被 call 的 `void foo(char *)`。
+考慮以下例子，我們原本設計了一個 function 接受 `char *` 當作 parameter，但是同時又定義了一個接受  `int` 當作 parameter 的 overloaded function。
 
-考慮第二個 case `define NULL 0`，`void foo(int i)` 會被 call 就顯而易見了。
+當 `NULL` 被傳入時，先考慮 `#define NULL (void*)(0)` 的情況：
+
+因為 C++ 不允許 `void*(0)` 被 implicit 的轉成其他 pointer to some type（如果可以轉的話應該要轉成 pointer to char），所以 compiler 會把 `NULL` 轉成 `0`，這就會造成真正被 call 的 function 是 `void foo(int i)` ，而非原本設計要被 call 的 `void foo(char *)`。
 
 ```cpp
 #include <iostream>
@@ -39,3 +41,6 @@ void foo(int i) {
 }
 ```
 >  Output: foo(int) is called
+
+## Reference
+- [wiki - nullptr](https://zh.wikipedia.org/zh-tw/Nullptr)

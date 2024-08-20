@@ -50,3 +50,4 @@ int main() {
 
 ## Reference
 - [Back to Basics: RAII in C++ - Andre Kostur - CppCon 2022](https://youtu.be/Rfu06XAhx90?si=1q9-3ebl5z-WeG65)
+- [Back to Basics: RAII and the Rule of Zero - Arthur O'Dwyer - CppCon 2019](https://youtu.be/7Qgd9B1KuMQ?si=_NLh-WNuDI6BP42r)

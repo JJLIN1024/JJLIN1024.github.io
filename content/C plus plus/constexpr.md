@@ -8,6 +8,8 @@ tags:
   - c_plus_plus
 draft: false
 ---
+如何使用 `constexpr` ？就是去思考，你的 program 有哪些部分你想要將他們從 runtiime 移動到 compile time 去執行？
+
 constexpr 是 C++11 引入的一個關鍵字，用於指示編譯器在編譯時計算表達式的值，從而在運行時達到更好的性能和效率。constexpr 的優點包括：
 
 1. 性能優化：constexpr 讓編譯器能夠在**編譯時**計算表達式的值，而不是在運行時計算。這意味著在運行時不需要執行相同的計算，可以節省運行時的計算時間，從而提高了程序的性能。

@@ -7,29 +7,45 @@ author:
 tags: 
 draft: false
 ---
+
+- [[class]]
+- [[The Rule of Zero]]
+- [[The Rule of Three]]
+- [[The Rule of Four and a half]]
+- [[The Rule of Five]]
+- [[Object-Oriented Programming]]
+
+
 - [[Concurrency]]
+
 - [[RAII (Resource Acquisition is Initialization)]]
+
 - [[Move Semantics]]
+
 - [[lambdas]]
 - [[std function]]
+
 - [[Containers]]
 - [[uniform initialization]]
-- [[class]]
 - [[Dynamic Memory Allocation]]
+
+
 - [[Templates]]
+
 - [[auto]]
 - [[decltype]]
 - [[Braced Initialization(Uniform Initialization)]]
 - [[scoped enum]]
+
 - [[Smart Pointers]]
 - [[nullptr]]
+
 - [[constexpr]]
 - [[structured bindings]]
 - [[This Pointer]]
 - [[API Design]]
 - [[Value Semantics]]
 - [[Debugging]]
-- [[Object-Oriented Programming]]
 - [[casting]]
 - [[concepts]]
 - [[format]]

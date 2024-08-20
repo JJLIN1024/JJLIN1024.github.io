@@ -35,9 +35,7 @@ draft: false
 ### Programming Language
 - [[C]]
 - [[C++]]
-- [[Lua]]
 - [[Python]]
-- [[go]]
 ### OS
 - [[Operating System]]
 ### Tools
@@ -46,6 +44,7 @@ draft: false
 ### Misc
 - [[Docker]]
 - [[Design Pattern]]
+- [[Design Data-Intensive Applications]]
 - [[Distributed System]]
 
 

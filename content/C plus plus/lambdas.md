@@ -51,7 +51,60 @@ __lambda_1_12 foo = __lambda_1_12{10};
 
 可以看到 compiler 其實只是將 lambdas function 的 capture list 裡面的 variable 換成 class 的 private member variable，然後 overload `operator()` ，所以當 `__lambda_1_12{10}` 被建立出來並 assign 給 `foo` 後，若 `foo()` 被執行，其實就是呼叫了被 overload 的 `()` operator。
 
+## Immediately Invoked Function Expressions(IIFE)
+
+A weird way to print out hello world.
+
+```cpp
+#include <iostream>
+int main() {
+    [](){std::cout << "hello world" << std::endl;}();
+}
+```
+
+什麼時候 IIFE 有用？看下面的例子，若今天要 initialize `foo`  的 if else 的判斷很複雜，通常我們就會想要抽 function，但是這樣就必須把 if else 要判斷的任何參數從 local 傳進 function parameter，而 lambda 可以直接 capture 這些必要的參數，且將判斷邏輯留在 local，在 trace code 時更好被理解。
+
+```cpp
+int main() {
+	// some code ...
+	const Foo foo = [&] {
+		if (hasDatabase) {
+			return getFooFromDatabase();
+		} else {
+			return getFooFromElsewhere()
+		}
+	}();
+	
+	// another example:
+	std::vector<Foo> foos;
+	foos.emplace_back([&]{
+		if (hasDatabase) {
+			return getFooFromDatabase();
+		} else {
+			return getFooFromElsewhere()
+		}
+	}());
+}
+```
+
+如果覺得 `()` invoke lambda function 的方式不太明顯，看的人會誤會的話，可以使用 `std::invoke`：
+
+```cpp
+int main() {
+	// another example:
+	std::vector<Foo> foos;
+	foos.emplace_back(std::invoke([&]{
+		if (hasDatabase) {
+			return getFooFromDatabase();
+		} else {
+			return getFooFromElsewhere()
+		}
+	};
+}
+```
+
 ## Capture List
+
 
 ```cpp
 #include <iostream>
@@ -315,3 +368,37 @@ class Widget {
 ```
 
 In the above example, if **this** refers to the lambda itself, we're in trouble.
+
+## the unary operatoron lambdas
+
+don't use this in production code!
+
+```cpp
+int main() {
+    auto* fptr = [](){ return 1;}; // error: unable to deduce 'auto*' from '<lambda closure object>main()::<lambda()>()'
+    auto* fptr2 = +[](){ return 1;}; // ok!
+    return 0;
+}
+```
+
+因為 unary operator 只作用在 pointer type 上，所以 compliler 會幫我們把 lambdas 轉成 pointer to function，而 + 在 function pointer 上等於 nop。
+
+## Only Called Once
+
+```cpp
+#include <iostream>
+#include <functional>
+
+struct X {
+    X(){
+        static auto _ = std::invoke([](){std::cout << "called once!" << std::endl; return 0;});
+    }
+};
+
+int main() {
+    X x1;
+    X x2;
+    X x3;
+    return 0;
+}
+```
