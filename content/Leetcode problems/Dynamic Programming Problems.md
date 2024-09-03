@@ -122,4 +122,4 @@ draft: false
 - [[Minimum Cost for Cutting Cake I]]
 - 
 - [[Stone Game II]]
-- 
+- [[Longest Path With Different Adjacent Characters]]
