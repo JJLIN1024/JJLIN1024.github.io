@@ -9,6 +9,7 @@ draft: false
 ---
 
 - Nexus: A Brief History of Information Networks from the Stone Age to AI
+- [[李光耀觀天下]]
 - [[The Singularity Is Nearer]]
 - [[白夜行]]
 - [[長安的荔枝]]
