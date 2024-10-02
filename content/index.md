@@ -45,10 +45,8 @@ draft: false
 - [[Docker]]
 - [[Design Pattern]]
 - [[Design Data-Intensive Applications]]
-- [[Distributed System]]
-
-
 ## Life I Lived
+- [[My Moral Code]]
 - [[Teddy]]
 - [[Coffee]]
 - [[法式吐司]]

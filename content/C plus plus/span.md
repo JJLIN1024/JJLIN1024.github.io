@@ -7,6 +7,10 @@ author:
 tags: []
 draft: false
 ---
+- [What is a "span" and when should I use one?](https://stackoverflow.com/questions/45723819/what-is-a-span-and-when-should-i-use-one)
+
+In short, use it when encounter a raw pointer and a size, e.g. a C-style array. But don't use it on existing C++ containers such as vector.
+
 From ChatGPT：
 
 `std::span` 是 C++20 中引入的一個範本類，用於表示一段連續的記憶體區域，類似於指針和長度的組合。它提供了對連續記憶體範圍的安全、簡潔的訪問和操作方式，避免了常見的指針錯誤和記憶體越界訪問。
