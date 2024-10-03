@@ -41,8 +41,6 @@ draft: false
 - git push --force-with-lease
 	- a safer git push --force
 	- git will check what you are gonna override, if there's a conflict, git will not force push it
-
-
 - git log -p
 - git log --stat
 - git log --pretty=oneline
@@ -66,7 +64,6 @@ draft: false
 - 若想要修改以前的某個 commit，可以先用 git rebase -i 將要修改 commit 順序換到最前面，然後 git commit --amend，然後再使用 git rebase -i 將順序重新排好。
 - 也可以使用 git cherrypick 把要修改的挑出來，接著 git commit --amend，然後再 git cherrypick 將原本在要修改的後面的那些 commit 挑出來接在後面
 - git describe <某個 commit> 會回傳離此 commit 最近的 tag 在哪
-- 
 
 ## Git Internal
 

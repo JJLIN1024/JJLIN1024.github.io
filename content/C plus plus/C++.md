@@ -14,7 +14,8 @@ draft: false
 - [[The Rule of Four and a half]]
 - [[The Rule of Five]]
 - [[Object-Oriented Programming]]
-
+- [[Error Handling]]
+- 
 
 - [[Concurrency]]
 

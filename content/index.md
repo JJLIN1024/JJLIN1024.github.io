@@ -40,7 +40,6 @@ draft: false
 - [[Operating System]]
 ### Tools
 - [[Git]]
-- [[editor]]
 ### Misc
 - [[Docker]]
 - [[Design Pattern]]
@@ -51,6 +50,7 @@ draft: false
 - [[Coffee]]
 - [[法式吐司]]
 - [[Stoicism]]
+- [[抹茶]]
 ## Contact Me
 - email: linchiachieh1024@gmail.com
 - [linkedin](https://www.linkedin.com/in/chia-chieh-lin-b15788167/)
