@@ -23,6 +23,14 @@ draft: false
 > The first principle is that you must not fool yourself and you are the easiest person to fool.
 > 
 > If you do what is easy, your life will be hard. But if you do what is hard your life will be easy.
+
+## Life I Lived
+- [[My Ideology 我的思想體系]]
+- [[Teddy]]
+- [[Coffee]]
+- [[法式吐司]]
+- [[Stoicism]]
+- [[抹茶]]
 ## Book I Read
 - [[Books]]
 ## Tech I Learned
@@ -44,13 +52,7 @@ draft: false
 - [[Docker]]
 - [[Design Pattern]]
 - [[Design Data-Intensive Applications]]
-## Life I Lived
-- [[My Moral Code]]
-- [[Teddy]]
-- [[Coffee]]
-- [[法式吐司]]
-- [[Stoicism]]
-- [[抹茶]]
+
 ## Contact Me
 - email: linchiachieh1024@gmail.com
 - [linkedin](https://www.linkedin.com/in/chia-chieh-lin-b15788167/)

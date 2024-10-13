@@ -8,6 +8,12 @@ tags:
 draft: false
 ---
 
+- 
+- [[社會性動物]]
+- [[人生的智慧]]
+- [[時間簡史2]]
+- [[時間簡史1]]
+- [[The Emperor of All Maladies - A Biography of Cancer]]
 - [[Software Engineering at Google]]
 - Nexus: A Brief History of Information Networks from the Stone Age to AI
 - [[李光耀觀天下]]
