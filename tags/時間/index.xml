@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>時間 on JJLIN&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E6%99%82%E9%96%93/</link>
+    <description>Recent content in 時間 on JJLIN&#39;s Blog</description>
+    <image>
+      <title>JJLIN&#39;s Blog</title>
+      <url>http://localhost:1313/</url>
+      <link>http://localhost:1313/</link>
+    </image>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>zh-tw</language>
+    <copyright>2025 JJLIN</copyright>
+    <lastBuildDate>Sat, 04 Oct 2025 16:19:44 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%99%82%E9%96%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>時間的本質</title>
+      <link>http://localhost:1313/posts/time/</link>
+      <pubDate>Sat, 04 Oct 2025 16:19:44 +0800</pubDate>
+      <guid>http://localhost:1313/posts/time/</guid>
+      <description>&lt;p&gt;什麼是時間？你低下頭看了看手錶上移動的指針，掏出手機看了看螢幕上顯示的幾點幾分，這是我們認知中的時間，在你的每個呼吸，每個動作，每個表情之間流逝。但如果有人跟你說，其實時間並不是我們所想像的那樣，甚至告訴你時間並不存在呢？&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;time.png&#34; width=&#34;800&#34; height=&#34;700&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;亞里斯多德的時間&#34;&gt;亞里斯多德的時間&lt;/h2&gt;
+&lt;p&gt;現代人普遍所認知的時間，是由牛頓定義出來的，而生活在牛頓時代之前的人們，對於時間的概念就是：從太陽升起到隔天太陽再次升起，就是稻子從播種到收割，生活在古埃及的男孩若要跟女孩約定見面的時間，他不會說確切的幾點幾分，男孩可能會說：在夕陽落下之前，在尼羅河畔，等我。&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;egyptBoy.png&#34; width=&#34;800&#34; height=&#34;600&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;古希臘哲學家，同時也是物理學家的亞里斯多德說過：時間是運動被計量的數 (number of the measure of motion)。&lt;/p&gt;
+&lt;p&gt;這句話聽起來很抽象，用白話文來說，意思就是，時間是對事物變化的度量衡。&lt;/p&gt;
+&lt;h2 id=&#34;牛頓的時間&#34;&gt;牛頓的時間&lt;/h2&gt;
+&lt;p&gt;隨著歷史的演進，自從某一天牛頓被樹上的蘋果砸到頭之後，時間就不再只是用來衡量事物的變化，而是一種絕對的、無論如何都會流逝的時間，也就是現代人所熟悉的時間的概念，每一分、每一秒，都滴滴答答的走。&lt;/p&gt;
+&lt;p&gt;這個絕對時間有三個特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;獨立性：它獨立於宇宙中發生的任何事件。無論是行星的運行，還是地球上的一場騷亂，這個「絕對時間」都以其固有的、不變的速率流逝&lt;/li&gt;
+&lt;li&gt;均勻性：它的流逝是完全均勻的，每一秒都和過去、未來的任何一秒完全相同&lt;/li&gt;
+&lt;li&gt;普適性：宇宙中任何角落的時間流逝速率都是一樣的。無論你在地球，還是在遙遠的星系，時間的「滴答」聲都是同步的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;愛因斯坦的時間&#34;&gt;愛因斯坦的時間&lt;/h2&gt;
+&lt;h3 id=&#34;狹義相對論&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA&#34;&gt;狹義相對論&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;原因很簡單，小明解得出加速度，但是有個方程式困擾著智商180的愛因斯坦，這個方程式就是鼎鼎大名的&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E7%B5%84&#34;&gt;馬克士威方程組(Maxwell&amp;rsquo;s equations)&lt;/a&gt;，而讓愛因斯坦解不出來方程式的原因就是絕對時間這個概念。&lt;/p&gt;
+&lt;p&gt;原來，要解出方程式，就不行用絕對時間的概念來解，必須打破時間的統一性才能辦到，於是狹義相對論就產生了，狹義相對論告訴我們：對於兩個用不同速度在移動的人來說，他們各自觀察到的時間是不一樣的，而這兩個相對的時間遵守以下定律：&lt;/p&gt;
+$$T : \frac{T_0}{\sqrt{1 - (\frac{v}{c})^2}}$$&lt;p&gt;
+其中 $T$ 為靜止觀察者的時間，$T_0$ 為正在運動的觀察者所觀察到的時間，$v$ 為正在運動的人所運動的速度，$c$ 為光速。&lt;/p&gt;
+&lt;p&gt;因為目前已知最快的速度就是光速，所以上面公式的分母不可能會大於一，也就代表 $T$ 會比$T_0$ 要來的大，也就是說在運動速度比較慢的人身上，時間（$T$）流逝的比較快，換句話說，運動速度越快的人，時間在他身上流逝的速度就越慢，如果說有艘太空船用接近光速離開地球，理論上來說，太空船上的一年就會是地球的永恆。&lt;/p&gt;
+&lt;h3 id=&#34;星際過客&#34;&gt;星際過客&lt;/h3&gt;
+&lt;p&gt;速度夠快，可以到達任何地方，飛一年等於在地球上看的無限年，雙生子悖論&lt;/p&gt;
+&lt;h3 id=&#34;廣義相對論&#34;&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E5%BB%A3%E7%BE%A9%E7%9B%B8%E5%B0%8D%E8%AB%96&#34;&gt;廣義相對論&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;根據狹義相對論，現在這個世界上已經不存在一個統一個時間，每個不同物體，又不同的速度在移動著，他們都具有不同的時間，那我們應該如何在這個有很多個相異時間的世界裡，去描述「時空」這個概念呢？&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/Oot8c6Y.jpg&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://spl-binal.blogspot.com/2019/02/theory-of-gravity-general-relativity.html&#34;&gt;image source&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;我們可以把這個宇宙想像成一塊平滑的大床單，床單代表著時間，而地球和太陽就像是大石頭一樣，使得床單下沉，產生了兩個大凹洞，然後我們可以把我們自己（或是太空船）想像成小石頭，若小石頭在床單的平滑處，滾動的速度會是ㄧ致的，代表著時間均勻流逝，若小石頭靠近凹洞，就會向凹洞滾下去，最後停在洞底不動，代表時間流逝的速度變慢，若將這個想法延伸到極限，也就是質量無限大的黑洞，黑洞就像是一顆非常大的石頭，床單被他壓出非常深的洞穴，因此時間在黑洞中可以說是幾乎停止流動。&lt;/p&gt;
+&lt;p&gt;自從愛因斯坦發明相對論之後，物理學就不再描述事物「在時間中」如何演化，而是描述事物在它們自己的時間中如何演化，以及「時間」相對於彼此怎樣演化，就像是在描述小石頭如何在床單上滾動，以及大石頭如何把床單壓的凹陷一樣。&lt;/p&gt;
+$$m : \frac{m_0}{\sqrt{1 - (\frac{v}{c})^2}}$$&lt;p&gt;
+其中 $m$ 為相對質量，$m_0$ 為靜止質量，$v$ 為運動者所運動的速度，$c$為光速。當物體運動的越快，相對質量就會越大。&lt;/p&gt;
+&lt;p&gt;地球質量很大，等價於速度很快，等價於時間流逝慢。&lt;/p&gt;
+&lt;h2 id=&#34;圈量子理論-loop-quantum-gravity&#34;&gt;圈量子理論 （Loop Quantum Gravity）&lt;/h2&gt;
+&lt;p&gt;圈量子引力試圖把廣義相對論和量子力學結合起來&lt;/p&gt;
+&lt;h2 id=&#34;熱力學第二定律&#34;&gt;熱力學第二定律&lt;/h2&gt;
+$$ΔS≥0$$&lt;p&gt;Delta S 永遠大於或等於零，我們把它稱爲“熱力學第二定律”（熱力學第一定律是能量守恆定律）。其核心在於熱量只能從高溫物體傳到低溫物體，而非反過來。&lt;/p&gt;
+&lt;p&gt;熵的增加只不過是普遍又常見的無序的自然增長。&lt;/p&gt;
+&lt;p&gt;如此看來，只有當我把目光聚焦於牌的特定方面時（在這個例子中是顏色），“某些排列比另一些更特殊”的概念纔有意義（比如二十六張紅色的牌，然後是二十六張黑色的牌）。如果我們從各個方面對牌進行區分，那所有排列就都是等價的：沒有哪個比其他的更特殊。只有當我們以一種模糊與近似的方式看待宇宙的時候，“特殊性”的概念纔會出現。&lt;/p&gt;
+&lt;p&gt;如果我去觀測事物的微觀狀態，那麼過去與未來的區別就會消失。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
