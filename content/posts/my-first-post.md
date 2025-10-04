@@ -1,13 +1,9 @@
 ---
 date: '2025-10-04T08:57:11+08:00'
-draft: true
+draft: false
 title: 'My First Post'
+comments: true
 ---
 ## Introduction
 
-This is **bold** text, and this is *emphasized* text.
-
-Visit the [Hugo](https://gohugo.io) website!
-
-
-dsifjadspifjd
+Hello World!

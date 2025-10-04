@@ -133,9 +133,6 @@ menu:
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
   highlight:
     noClasses: false
     # anchorLineNos: true
@@ -143,3 +140,7 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+services:
+  disqus:
+    shortname: jjlin1024-github-io
