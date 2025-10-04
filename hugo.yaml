@@ -44,6 +44,7 @@ params:
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: true
+  disqusShortname: https-jjlin1024-github-io
   hidemeta: false
   hideSummary: false
   showtoc: false
@@ -140,9 +141,3 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
-
-services:
-  disqus:
-    enable: true
-    shortname: https-jjlin1024-github-io
-    count: true
