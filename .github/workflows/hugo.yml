@@ -1,0 +1,39 @@
+name: Deploy Hugo site to Pages
+on:
+    push:
+        branches:
+            - source
+    workflow_dispatch:
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+concurrency:
+    group: "pages"
+    cancel-in-progress: true
+defaults:
+    run:
+        shell: bash
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  submodules: true # 如果你的 theme 是用 submodule 方式引入，這行必加
+                  fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v3
+              with:
+                  hugo-version: "latest" # 或者指定版本 '0.124.1'
+                  extended: true # 如果你的佈景主題需要 Sass/SCSS，請取消註解
+            - name: Build
+              run: hugo --minify # 執行 hugo 指令，--minify 會壓縮檔案
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./public
+                  publish_branch: main
+                  commit_message: "Deploy to GitHub Pages [skip ci]"
