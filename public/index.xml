@@ -15,12 +15,11 @@
     <lastBuildDate>Sat, 04 Oct 2025 08:57:11 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <title>我們應當活得像薛西弗斯</title>
+      <link>http://localhost:1313/posts/sisyphus/</link>
       <pubDate>Sat, 04 Oct 2025 08:57:11 +0800</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Hello World!&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/sisyphus/</guid>
+      <description>卡繆的荒謬哲學</description>
     </item>
   </channel>
 </rss>

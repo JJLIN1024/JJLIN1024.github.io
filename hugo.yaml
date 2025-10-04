@@ -49,6 +49,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  math: true
 
   assets:
     # disableHLJS: true
@@ -85,13 +86,15 @@ params:
   homeInfoParams:
     Title: "About Me"
     Content: |
-      喜歡閱讀，涉獵範圍包括經濟、金融、政治、心理學、物理學、哲學、文學等等。喜歡柴犬，和其他所有的狗狗。喜歡普洱茶、抹茶，還有抹茶拿鐵。喜歡健身。喜歡聽流行音樂，從張學友聽到周傑倫，王菲聽到徐佳瑩，披頭四聽到想像龍，從宇多田光聽到 YOASOBI。喜歡聽古典樂和爵士樂。喜歡晚上 10:30，和早上 6:30 台北的天空。喜歡早上起床之後沖 3:45 的冷水澡。期許自己的文字能在適當的時機出現在適當的地方，幫助到需要幫助的人們。
+      台大經濟系、電信研究所畢業，現在為五斗米折腰的軟體工程師。喜歡閱讀，涉獵範圍包括經濟、金融、政治、心理學、物理學、哲學、文學等等。喜歡柴犬，和其他所有的狗狗。喜歡普洱茶、抹茶，還有抹茶拿鐵。喜歡健身。喜歡聽流行音樂，從張學友聽到周傑倫，王菲聽到徐佳瑩，披頭四聽到想像龍，從宇多田光聽到 YOASOBI。喜歡聽古典樂和爵士樂。喜歡晚上 10:30，和早上 6:30 台北的天空。喜歡早上起床之後沖 3:45 的冷水澡。期許自己的文字能在適當的時機出現在適當的地方，幫助到需要幫助的人們。
 
   socialIcons:
     - name: email
       url: "mailto:linchiachieh1024@gmail.com"
     - name: linkedin
       url: "https://www.linkedin.com/in/chia-chieh-lin-b15788167/"
+    - name: rss
+      url: "index.xml"
 
   analytics:
     google:
@@ -135,9 +138,23 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    nchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+          inline:
+            - - \(
+              - \)
+            - - $
+              - $
+        enable: true
