@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>JJLIN&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on JJLIN&#39;s Blog</description>
+    <title>物理 on JJLIN&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E7%89%A9%E7%90%86/</link>
+    <description>Recent content in 物理 on JJLIN&#39;s Blog</description>
     <image>
       <title>JJLIN&#39;s Blog</title>
       <url>http://localhost:1313/</url>
@@ -13,7 +13,7 @@
     <language>zh-tw</language>
     <copyright>2025 JJLIN</copyright>
     <lastBuildDate>Sat, 04 Oct 2025 16:19:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>時間的本質</title>
       <link>http://localhost:1313/posts/time/</link>
@@ -66,13 +66,6 @@ $$ΔS≥0$$&lt;p&gt;Delta S 永遠大於或等於零，我們把它稱爲“熱�
 &lt;p&gt;熵的增加只不過是普遍又常見的無序的自然增長。&lt;/p&gt;
 &lt;p&gt;如此看來，只有當我把目光聚焦於牌的特定方面時（在這個例子中是顏色），“某些排列比另一些更特殊”的概念纔有意義（比如二十六張紅色的牌，然後是二十六張黑色的牌）。如果我們從各個方面對牌進行區分，那所有排列就都是等價的：沒有哪個比其他的更特殊。只有當我們以一種模糊與近似的方式看待宇宙的時候，“特殊性”的概念纔會出現。&lt;/p&gt;
 &lt;p&gt;如果我去觀測事物的微觀狀態，那麼過去與未來的區別就會消失。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我們應當活得像薛西弗斯</title>
-      <link>http://localhost:1313/posts/sisyphus/</link>
-      <pubDate>Sat, 04 Oct 2025 08:57:11 +0800</pubDate>
-      <guid>http://localhost:1313/posts/sisyphus/</guid>
-      <description>卡繆的荒謬哲學</description>
     </item>
   </channel>
 </rss>
