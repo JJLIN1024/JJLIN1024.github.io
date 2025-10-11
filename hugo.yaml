@@ -97,12 +97,12 @@ params:
       url: "index.xml"
 
   analytics:
-    google:
-      SiteVerificationTag: "Y00Y9okhUVTYrkA_nNE_ycx9aEJ5x84jIGAzG94Fe6o"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+    # google:
+    # SiteVerificationTag: "Y00Y9okhUVTYrkA_nNE_ycx9aEJ5x84jIGAzG94Fe6o"
+    # bing:
+    #   SiteVerificationTag: "XYZabc"
+    # yandex:
+    #   SiteVerificationTag: "XYZabc"
 
   cover:
     hidden: true # hide everywhere but not in structured data

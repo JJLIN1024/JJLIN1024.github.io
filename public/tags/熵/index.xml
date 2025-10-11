@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>熵 on JJLIN&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E7%86%B5/</link>
+    <description>Recent content in 熵 on JJLIN&#39;s Blog</description>
+    <image>
+      <title>JJLIN&#39;s Blog</title>
+      <url>http://localhost:1313/</url>
+      <link>http://localhost:1313/</link>
+    </image>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>zh-tw</language>
+    <copyright>2025 JJLIN</copyright>
+    <lastBuildDate>Sun, 05 Oct 2025 15:52:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%86%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Entropy</title>
+      <link>http://localhost:1313/posts/entropy/</link>
+      <pubDate>Sun, 05 Oct 2025 15:52:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/entropy/</guid>
+      <description>&lt;h2 id=&#34;熵的起源&#34;&gt;熵的起源&lt;/h2&gt;
+&lt;p&gt;熵的概念植根於19世紀工業革命的實踐需求，其核心是理解並優化驅動時代進步的蒸汽機（熱機）。當時的科學家與工程師面臨一個核心挑戰：如何最有效地將熱能轉化為有用的機械功。熱力學第一定律，即能量守恆定律，確立了能量不會無故產生或消失，但它並未解釋能量轉換的方向性。一個顯而易見的不對稱性是，功可以輕易且完全地透過摩擦轉化為熱，但熱量卻無法毫無損耗地完全轉化回功，就像鑽木取火，我們只能看到木頭因摩擦而生熱，卻永遠看不到那股熱能反過來讓木鑽自己旋轉。正是為瞭解釋這種不可逆的能量耗散，熵的概念應運而生。&lt;/p&gt;
+&lt;h2 id=&#34;卡諾定理&#34;&gt;卡諾定理&lt;/h2&gt;
+&lt;p&gt;熵這個概念是由德國物理學家魯道夫·克勞修斯（Rudolf Clausius）提出的，但在介紹他之前，我們先來介紹他的前輩，法國工程師卡諾，以及他所提出的卡諾定理 (Carnot&amp;rsquo;s Theorem)。&lt;/p&gt;
+&lt;p&gt;卡諾當時為了研究了理想熱機的效率，提出了一個關鍵性的思想，後來被稱為卡諾定理 (Carnot&amp;rsquo;s Theorem)：&lt;/p&gt;
+&lt;p&gt;在相同的高溫熱源 (TH​) 和低溫熱源 (TC​) 之間工作的所有熱機，沒有任何熱機的效率能超過一個「可逆熱機」。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;這裡的可逆熱機是一個理論上的理想熱機，其運作的每一個環節皆為「可逆過程」。這意味著整個熱機的循環過程可以完全反向進行，且在反向過程中，系統與外界環境都能恢復到最初的狀態，不會留下任何淨效應。&lt;/p&gt;
+&lt;p&gt;至於不可逆熱機指的就是所有真實的熱機，包含摩擦、快速膨脹等不可逆因素。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;這個定理是熱力學第二定律的早期表述之一，它符合我們的所有經驗：現實世界的機器總是有能量損失，效率總是比理想情況低。&lt;/p&gt;
+&lt;p&gt;所以，卡諾定理可以表示成：
+&lt;/p&gt;
+$$η_{irrev​} \le η_{rev}​$$&lt;blockquote&gt;
+&lt;p&gt;其中 $η$ 是熱機效率。下標 $irrev$ 以及 $rev$ 分別代表不可逆與可逆。等號只在（理論上的）可逆情況下成立。&lt;/p&gt;
+&lt;p&gt;$η$ 的定義為：
+&lt;/p&gt;
+$$η = \frac{Q_H​ − Q_C​​}{Q_H​}= 1 − \frac{Q_C}{Q_H​}$$&lt;p&gt;
+其中 $Q_H​$ 是從高溫熱源吸收的熱量（正值）。$Q_C$​ 是向低溫熱源放出的熱量（也是正值，這裡指量值）。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;魯道夫克勞修斯的貢獻&#34;&gt;魯道夫·克勞修斯的貢獻&lt;/h2&gt;
+&lt;p&gt;德國物理學家魯道夫·克勞修斯（Rudolf Clausius）承先啟後，在1865年首次提出了「熵」（Entropy）這一概念，旨在為這種能量轉換過程中的「不可用性」提供一個定量的描述。&lt;/p&gt;
+&lt;p&gt;他觀察到，在所有真實的熱機中，諸如摩擦等因素總是會產生無法被利用的熱量，他將此描述為能量的耗散。&lt;/p&gt;
+&lt;p&gt;克勞修斯試圖量化這種物理量 。他從希臘語「εντροπια」（entropia）中創造了「entropy」一詞。「εντροπια」的原意為「內向」，亦即「一個系統不受外部干擾時往內部最穩定狀態發展的特性」，因此，「entropy」象徵著一個系統在不受外部干擾時，會自發地向內部的最穩定狀態演化 。&lt;/p&gt;
+&lt;p&gt;這個詞的中文翻譯「熵」則更為巧妙，由物理學家胡剛復教授在1923年創造，結合了「火」字旁與「商」字，直接體現了其數學定義——熱量與溫度的商數。&lt;/p&gt;
+&lt;h3 id=&#34;熵的宏觀定義&#34;&gt;熵的宏觀定義&lt;/h3&gt;
+&lt;p&gt;克勞修斯為熵($S$)的變化量 ($dS$) 給出了一個嚴謹的宏觀定義：在一個可逆過程中，系統吸收或放出的熱量($\delta Q$) 除以該過程發生時的絕對溫度($T$)。&lt;/p&gt;
+$${d} S={\frac {\delta Q_{rev}}{T}}$$&lt;blockquote&gt;
+&lt;p&gt;$Q_{rev}$ 代表這是可逆過程中的熱交換&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;這裡的可逆過程一個理想化（在現實中幾乎不存在）的過程：系統在其中的每一個瞬間都處於平衡狀態，並且可以隨時反向進行，且不對外界造成任何永久性的改變。&lt;/p&gt;
+&lt;p&gt;一個現實世界中比較接近這個理想化過程的例子是在恆溫 0°C 環境下融化的冰塊，因為冰和水在 0°C 時可以視為處於平衡狀態，微小的溫度變化就能讓過程反向（凝結或融化）。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
