@@ -9,11 +9,18 @@
       <url>https://jjlin1024.github.io/</url>
       <link>https://jjlin1024.github.io/</link>
     </image>
-    <generator>Hugo -- 0.151.0</generator>
+    <generator>Hugo -- 0.153.1</generator>
     <language>zh-tw</language>
     <copyright>2025 JJLIN</copyright>
-    <lastBuildDate>Sat, 04 Oct 2025 08:57:11 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 16:34:10 +0800</lastBuildDate>
     <atom:link href="https://jjlin1024.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shadow</title>
+      <link>https://jjlin1024.github.io/posts/shadow/</link>
+      <pubDate>Sun, 21 Dec 2025 16:34:10 +0800</pubDate>
+      <guid>https://jjlin1024.github.io/posts/shadow/</guid>
+      <description>人格陰影</description>
+    </item>
     <item>
       <title>我們應當活得像薛西弗斯</title>
       <link>https://jjlin1024.github.io/posts/sisyphus/</link>
