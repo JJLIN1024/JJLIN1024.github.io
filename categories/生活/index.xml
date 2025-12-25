@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>JJLIN&#39;s Blog</title>
-    <link>https://jjlin1024.github.io/</link>
-    <description>Recent content on JJLIN&#39;s Blog</description>
+    <title>生活 on JJLIN&#39;s Blog</title>
+    <link>https://jjlin1024.github.io/categories/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on JJLIN&#39;s Blog</description>
     <image>
       <title>JJLIN&#39;s Blog</title>
       <url>https://jjlin1024.github.io/</url>
@@ -13,7 +13,7 @@
     <language>zh-tw</language>
     <copyright>2025 JJLIN</copyright>
     <lastBuildDate>Thu, 25 Dec 2025 13:02:52 +0800</lastBuildDate>
-    <atom:link href="https://jjlin1024.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jjlin1024.github.io/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deepwork</title>
       <link>https://jjlin1024.github.io/posts/deepwork/</link>
@@ -23,20 +23,6 @@
 &lt;p&gt;改成 10:30 上班後，在上班之前，我有了完整的兩個小時多的時間，完全屬於我自己的時間。&lt;/p&gt;
 &lt;p&gt;找間 7:00 就開始營業的咖啡廳，點杯 Decaf，戴上耳機，每天早晨心無旁騖的兩個小時，不管是寫程式、學習、看書、研究投資、規劃生活與旅行，都讓我的生活有了重心。&lt;/p&gt;
 &lt;p&gt;我深刻的體會到，當我不好好管理我自己的生活時，就會反過來被生活中的各種事情、意外、混亂給衝撞的七零八落。我們確實如同薛西弗斯，每天都必須推著大石頭上山，且如果不推，石頭就會滾下來把你壓死。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Shadow</title>
-      <link>https://jjlin1024.github.io/posts/shadow/</link>
-      <pubDate>Sun, 21 Dec 2025 16:34:10 +0800</pubDate>
-      <guid>https://jjlin1024.github.io/posts/shadow/</guid>
-      <description>人格陰影</description>
-    </item>
-    <item>
-      <title>我們應當活得像薛西弗斯</title>
-      <link>https://jjlin1024.github.io/posts/sisyphus/</link>
-      <pubDate>Sat, 04 Oct 2025 08:57:11 +0800</pubDate>
-      <guid>https://jjlin1024.github.io/posts/sisyphus/</guid>
-      <description>卡繆的荒謬哲學</description>
     </item>
   </channel>
 </rss>
