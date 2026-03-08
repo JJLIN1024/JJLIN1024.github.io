@@ -9,31 +9,9 @@
       <url>https://jjlin1024.github.io/</url>
       <link>https://jjlin1024.github.io/</link>
     </image>
-    <generator>Hugo -- 0.153.2</generator>
+    <generator>Hugo -- 0.157.0</generator>
     <language>zh-tw</language>
     <copyright>2025 JJLIN</copyright>
-    <lastBuildDate>Thu, 25 Dec 2025 13:02:52 +0800</lastBuildDate>
     <atom:link href="https://jjlin1024.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>生活</title>
-      <link>https://jjlin1024.github.io/categories/%E7%94%9F%E6%B4%BB/</link>
-      <pubDate>Thu, 25 Dec 2025 13:02:52 +0800</pubDate>
-      <guid>https://jjlin1024.github.io/categories/%E7%94%9F%E6%B4%BB/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>心理</title>
-      <link>https://jjlin1024.github.io/categories/%E5%BF%83%E7%90%86/</link>
-      <pubDate>Sun, 21 Dec 2025 16:34:10 +0800</pubDate>
-      <guid>https://jjlin1024.github.io/categories/%E5%BF%83%E7%90%86/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>哲學</title>
-      <link>https://jjlin1024.github.io/categories/%E5%93%B2%E5%AD%B8/</link>
-      <pubDate>Sat, 04 Oct 2025 08:57:11 +0800</pubDate>
-      <guid>https://jjlin1024.github.io/categories/%E5%93%B2%E5%AD%B8/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
